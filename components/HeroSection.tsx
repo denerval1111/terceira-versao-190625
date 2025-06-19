@@ -164,11 +164,13 @@ const HeroSection: React.FC<HeroSectionProps> = ({
           </div>
         </div>
       </div>
+      {/* FORÇA CACHE BUST - COMENTÁRIO PARA FORÇAR REBUILD */}
     </div>
   );
 };
 
 export default HeroSection;
+
 
 
 
