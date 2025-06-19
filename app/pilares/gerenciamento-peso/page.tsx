@@ -1,5 +1,6 @@
 // app/pilares/gerenciamento-peso/page.tsx
 import React from 'react';
+import ActionButton from '@/components/ActionButton';
 
 export default function GerenciamentoPesoPage() {
   return (
@@ -10,7 +11,7 @@ export default function GerenciamentoPesoPage() {
     }}>
       {/* Hero Section */}
       <div style={{
-        backgroundImage: 'linear-gradient(rgba(139, 92, 246, 0.8), rgba(124, 58, 237, 0.8)), url(https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1920&auto=format&fit=crop)',
+        backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/images/mulher-gerenciamento-peso.png)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         color: 'white',
@@ -94,47 +95,49 @@ export default function GerenciamentoPesoPage() {
         </div>
       </div>
 
-      {/* Benefícios */}
+      {/* Seção de Benefícios */}
       <div style={{
         backgroundColor: '#f8f9fa',
-        padding: '2rem',
+        padding: '3rem 2rem',
         borderRadius: '8px',
         marginBottom: '3rem'
       }}>
         <h2 style={{
-          fontSize: '1.75rem',
+          fontSize: '2rem',
           color: '#343A40',
-          marginBottom: '1.5rem',
-          textAlign: 'center',
-          fontWeight: '600'
+          marginBottom: '2rem',
+          fontWeight: '600',
+          textAlign: 'center'
         }}>
           Benefícios do Gerenciamento de Peso Científico
         </h2>
+        
         <div style={{
           display: 'grid',
           gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
-          gap: '1.5rem'
+          gap: '2rem'
         }}>
           <div style={{
             backgroundColor: 'white',
             padding: '1.5rem',
             borderRadius: '8px',
-            boxShadow: '0 2px 4px rgba(0,0,0,0.05)',
-            borderTop: '4px solid #8b5cf6'
+            boxShadow: '0 2px 4px rgba(0,0,0,0.1)',
+            textAlign: 'center'
           }}>
             <h3 style={{
               fontSize: '1.25rem',
               color: '#8b5cf6',
-              marginBottom: '0.75rem',
+              marginBottom: '1rem',
               fontWeight: '600'
             }}>
-              Perda de Peso Sustentável
+              🔥 Aceleração Metabólica
             </h3>
             <p style={{
-              color: '#555',
+              fontSize: '0.95rem',
+              color: '#666',
               lineHeight: '1.5'
             }}>
-              Estratégias que promovem perda de peso gradual e duradoura, evitando o efeito sanfona e preservando o metabolismo.
+              Estratégias para aumentar o metabolismo basal e otimizar a queima de calorias.
             </p>
           </div>
 
@@ -142,22 +145,23 @@ export default function GerenciamentoPesoPage() {
             backgroundColor: 'white',
             padding: '1.5rem',
             borderRadius: '8px',
-            boxShadow: '0 2px 4px rgba(0,0,0,0.05)',
-            borderTop: '4px solid #8b5cf6'
+            boxShadow: '0 2px 4px rgba(0,0,0,0.1)',
+            textAlign: 'center'
           }}>
             <h3 style={{
               fontSize: '1.25rem',
               color: '#8b5cf6',
-              marginBottom: '0.75rem',
+              marginBottom: '1rem',
               fontWeight: '600'
             }}>
-              Melhora da Composição Corporal
+              💪 Preservação Muscular
             </h3>
             <p style={{
-              color: '#555',
+              fontSize: '0.95rem',
+              color: '#666',
               lineHeight: '1.5'
             }}>
-              Aumento da massa muscular magra e redução da gordura corporal, especialmente a gordura visceral prejudicial à saúde.
+              Protocolos para manter e aumentar massa muscular durante o processo de emagrecimento.
             </p>
           </div>
 
@@ -165,22 +169,23 @@ export default function GerenciamentoPesoPage() {
             backgroundColor: 'white',
             padding: '1.5rem',
             borderRadius: '8px',
-            boxShadow: '0 2px 4px rgba(0,0,0,0.05)',
-            borderTop: '4px solid #8b5cf6'
+            boxShadow: '0 2px 4px rgba(0,0,0,0.1)',
+            textAlign: 'center'
           }}>
             <h3 style={{
               fontSize: '1.25rem',
               color: '#8b5cf6',
-              marginBottom: '0.75rem',
+              marginBottom: '1rem',
               fontWeight: '600'
             }}>
-              Saúde Metabólica Otimizada
+              🎯 Controle Hormonal
             </h3>
             <p style={{
-              color: '#555',
+              fontSize: '0.95rem',
+              color: '#666',
               lineHeight: '1.5'
             }}>
-              Melhora na sensibilidade à insulina, perfil lipídico e marcadores inflamatórios, promovendo saúde cardiovascular.
+              Regulação de hormônios relacionados à fome, saciedade e metabolismo.
             </p>
           </div>
 
@@ -188,172 +193,96 @@ export default function GerenciamentoPesoPage() {
             backgroundColor: 'white',
             padding: '1.5rem',
             borderRadius: '8px',
-            boxShadow: '0 2px 4px rgba(0,0,0,0.05)',
-            borderTop: '4px solid #8b5cf6'
+            boxShadow: '0 2px 4px rgba(0,0,0,0.1)',
+            textAlign: 'center'
           }}>
             <h3 style={{
               fontSize: '1.25rem',
               color: '#8b5cf6',
-              marginBottom: '0.75rem',
+              marginBottom: '1rem',
               fontWeight: '600'
             }}>
-              Energia e Vitalidade
+              🔄 Sustentabilidade
             </h3>
             <p style={{
-              color: '#555',
+              fontSize: '0.95rem',
+              color: '#666',
               lineHeight: '1.5'
             }}>
-              Aumento significativo nos níveis de energia, disposição e qualidade do sono através da otimização do peso corporal.
-            </p>
-          </div>
-
-          <div style={{
-            backgroundColor: 'white',
-            padding: '1.5rem',
-            borderRadius: '8px',
-            boxShadow: '0 2px 4px rgba(0,0,0,0.05)',
-            borderTop: '4px solid #8b5cf6'
-          }}>
-            <h3 style={{
-              fontSize: '1.25rem',
-              color: '#8b5cf6',
-              marginBottom: '0.75rem',
-              fontWeight: '600'
-            }}>
-              Autoestima e Confiança
-            </h3>
-            <p style={{
-              color: '#555',
-              lineHeight: '1.5'
-            }}>
-              Melhora significativa na autoestima, confiança e bem-estar psicológico através de resultados visíveis e sustentáveis.
-            </p>
-          </div>
-
-          <div style={{
-            backgroundColor: 'white',
-            padding: '1.5rem',
-            borderRadius: '8px',
-            boxShadow: '0 2px 4px rgba(0,0,0,0.05)',
-            borderTop: '4px solid #8b5cf6'
-          }}>
-            <h3 style={{
-              fontSize: '1.25rem',
-              color: '#8b5cf6',
-              marginBottom: '0.75rem',
-              fontWeight: '600'
-            }}>
-              Longevidade Saudável
-            </h3>
-            <p style={{
-              color: '#555',
-              lineHeight: '1.5'
-            }}>
-              Redução de riscos de doenças crônicas e promoção de envelhecimento saudável através do controle de peso adequado.
+              Criação de hábitos duradouros que mantêm os resultados a longo prazo.
             </p>
           </div>
         </div>
       </div>
 
-      {/* Metodologia */}
+      {/* Depoimentos */}
       <div style={{
+        backgroundColor: 'white',
+        padding: '3rem 2rem',
+        borderRadius: '8px',
+        boxShadow: '0 4px 6px rgba(0,0,0,0.05)',
         marginBottom: '3rem'
       }}>
         <h2 style={{
-          fontSize: '1.75rem',
+          fontSize: '2rem',
           color: '#343A40',
-          marginBottom: '1.5rem',
-          textAlign: 'center',
-          fontWeight: '600'
+          marginBottom: '2rem',
+          fontWeight: '600',
+          textAlign: 'center'
         }}>
-          Nossa Metodologia Científica
+          Transformações Reais
         </h2>
+        
         <div style={{
           display: 'grid',
           gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
           gap: '2rem'
         }}>
           <div style={{
-            padding: '1.5rem',
-            border: '1px solid #e9ecef',
-            borderRadius: '8px'
+            backgroundColor: '#f8f9fa',
+            padding: '2rem',
+            borderRadius: '8px',
+            borderLeft: '4px solid #8b5cf6'
           }}>
-            <h3 style={{
-              fontSize: '1.25rem',
-              color: '#8b5cf6',
+            <p style={{
+              fontSize: '1rem',
+              color: '#555',
+              lineHeight: '1.6',
               marginBottom: '1rem',
+              fontStyle: 'italic'
+            }}>
+              "Perdi 12kg em 30 dias, mas o mais importante foi aprender a manter o peso. Já se passaram 6 meses e continuo no meu peso ideal."
+            </p>
+            <p style={{
+              fontSize: '0.9rem',
+              color: '#8b5cf6',
               fontWeight: '600'
             }}>
-              1. Avaliação Personalizada
-            </h3>
-            <p style={{
-              color: '#555',
-              lineHeight: '1.6'
-            }}>
-              Análise completa da composição corporal, metabolismo basal, histórico médico e preferências individuais para criar um plano personalizado.
+              - Ana Paula, 38 anos
             </p>
           </div>
 
           <div style={{
-            padding: '1.5rem',
-            border: '1px solid #e9ecef',
-            borderRadius: '8px'
+            backgroundColor: '#f8f9fa',
+            padding: '2rem',
+            borderRadius: '8px',
+            borderLeft: '4px solid #8b5cf6'
           }}>
-            <h3 style={{
-              fontSize: '1.25rem',
-              color: '#8b5cf6',
-              marginBottom: '1rem',
-              fontWeight: '600'
-            }}>
-              2. Estratégia Nutricional
-            </h3>
             <p style={{
+              fontSize: '1rem',
               color: '#555',
-              lineHeight: '1.6'
+              lineHeight: '1.6',
+              marginBottom: '1rem',
+              fontStyle: 'italic'
             }}>
-              Protocolos nutricionais baseados em evidências, incluindo timing de refeições, macronutrientes otimizados e suplementação estratégica.
+              "Não foi só o peso que mudou, mas toda minha relação com a comida. Agora tenho controle e não vivo fazendo dietas malucas."
             </p>
-          </div>
-
-          <div style={{
-            padding: '1.5rem',
-            border: '1px solid #e9ecef',
-            borderRadius: '8px'
-          }}>
-            <h3 style={{
-              fontSize: '1.25rem',
+            <p style={{
+              fontSize: '0.9rem',
               color: '#8b5cf6',
-              marginBottom: '1rem',
               fontWeight: '600'
             }}>
-              3. Exercício Inteligente
-            </h3>
-            <p style={{
-              color: '#555',
-              lineHeight: '1.6'
-            }}>
-              Combinação estratégica de exercícios de resistência e cardiovasculares para maximizar a queima de gordura e preservação muscular.
-            </p>
-          </div>
-
-          <div style={{
-            padding: '1.5rem',
-            border: '1px solid #e9ecef',
-            borderRadius: '8px'
-          }}>
-            <h3 style={{
-              fontSize: '1.25rem',
-              color: '#8b5cf6',
-              marginBottom: '1rem',
-              fontWeight: '600'
-            }}>
-              4. Monitoramento Contínuo
-            </h3>
-            <p style={{
-              color: '#555',
-              lineHeight: '1.6'
-            }}>
-              Acompanhamento regular dos resultados com ajustes baseados em dados objetivos e feedback individual para otimização contínua.
+              - Carlos Eduardo, 45 anos
             </p>
           </div>
         </div>
@@ -361,46 +290,46 @@ export default function GerenciamentoPesoPage() {
 
       {/* Call to Action */}
       <div style={{
-        textAlign: 'center',
-        marginBottom: '3rem'
+        backgroundColor: '#8b5cf6',
+        color: 'white',
+        padding: '3rem 2rem',
+        borderRadius: '8px',
+        textAlign: 'center'
       }}>
         <h2 style={{
-          fontSize: '1.75rem',
-          color: '#343A40',
+          fontSize: '2rem',
           marginBottom: '1rem',
           fontWeight: '600'
         }}>
-          Pronto para transformar sua composição corporal?
+          Transforme seu Corpo de Forma Sustentável
         </h2>
         <p style={{
           fontSize: '1.1rem',
-          color: '#555',
-          maxWidth: '700px',
+          marginBottom: '2rem',
+          maxWidth: '600px',
           margin: '0 auto 2rem auto',
           lineHeight: '1.6'
         }}>
-          Junte-se ao Desafio Vitalidade e tenha acesso a estratégias científicas de gerenciamento de peso que promovem resultados duradouros e saúde metabólica otimizada.
+          Aprenda estratégias científicas para alcançar e manter seu peso ideal sem dietas restritivas ou métodos extremos.
         </p>
-        <a 
-          href="/inscricao"
-          style={{
-            display: 'inline-block',
-            backgroundColor: '#8b5cf6',
-            color: 'white',
-            padding: '1rem 2rem',
-            borderRadius: '8px',
-            textDecoration: 'none',
-            fontWeight: '600',
-            fontSize: '1.1rem',
-            transition: 'background-color 0.3s ease'
-          }}
-        >
-          Participe do Desafio Vitalidade
-        </a>
+        <div style={{
+          display: 'flex',
+          justifyContent: 'center',
+          gap: '1rem',
+          flexWrap: 'wrap'
+        }}>
+          <ActionButton 
+            href="/inscricao"
+            text="Quero Participar"
+            primary={false}
+          />
+        </div>
       </div>
     </div>
   );
 }
+
+
 
 
 
