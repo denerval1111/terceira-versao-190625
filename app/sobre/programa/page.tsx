@@ -435,23 +435,9 @@ export default function SobreProgramaPage() {
         }}>
           <ActionButton 
             href="/inscricao"
-            variant="secondary"
-            style={{
-              backgroundColor: 'white',
-              color: '#10b981',
-              padding: '1rem 2rem',
-              fontSize: '1.1rem',
-              fontWeight: '600',
-              border: 'none',
-              borderRadius: '8px',
-              textDecoration: 'none',
-              display: 'inline-block',
-              transition: 'all 0.3s ease',
-              boxShadow: '0 4px 6px rgba(0,0,0,0.1)'
-            }}
-          >
-            Quero Me Inscrever Agora
-          </ActionButton>
+            text="Quero Me Inscrever Agora"
+            primary={false}
+          />
         </div>
         <p style={{
           fontSize: '0.9rem',
@@ -464,6 +450,7 @@ export default function SobreProgramaPage() {
     </div>
   );
 }
+
 
 
 
