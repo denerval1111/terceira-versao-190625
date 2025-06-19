@@ -15,15 +15,15 @@ interface Post {
 }
 
 interface BlogClientProps {
-  posts: Post[];
+  posts?: Post[];
 }
 
-const BlogClient: React.FC<BlogClientProps> = ({ posts }) => {
+const BlogClient: React.FC<BlogClientProps> = ({ posts = [] }) => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('Todos');
 
-  // Posts fallback garantidos com as 4 categorias dos Pilares
-  const fallbackPosts: Post[] = [
+  // Posts garantidos - sempre usar estes
+  const guaranteedPosts: Post[] = [
     {
       slug: 'ansiedade-estresse-moderno',
       title: 'Ansiedade e Estresse Moderno: Estratégias Científicas para o Bem-Estar Mental',
@@ -81,26 +81,11 @@ const BlogClient: React.FC<BlogClientProps> = ({ posts }) => {
     }
   ];
 
-  // Lógica inteligente para usar posts
-  let activePosts = fallbackPosts; // Sempre começar com fallback
+  // Sempre usar os posts garantidos
+  const activePosts = guaranteedPosts;
 
-  // Se posts foram recebidos e são válidos, usar eles
-  if (posts && Array.isArray(posts) && posts.length > 0) {
-    // Verificar se os posts têm estrutura válida
-    const validPosts = posts.filter(post => 
-      post && typeof post === 'object' && post.title && post.category
-    );
-    
-    if (validPosts.length > 0) {
-      activePosts = validPosts;
-    }
-  }
-
-  // Garantir que sempre temos as 4 categorias dos Pilares
-  const pilarCategories = ['Medicina Regenerativa', 'Nutrologia', 'Saúde Mental', 'Gerenciamento de Peso'];
-  const postCategories = Array.from(new Set(activePosts.map(post => post.category)));
-  const allCategories = Array.from(new Set([...pilarCategories, ...postCategories]));
-  const categories = ['Todos', ...allCategories];
+  // Categorias fixas
+  const categories = ['Todos', 'Medicina Regenerativa', 'Nutrologia', 'Saúde Mental', 'Gerenciamento de Peso'];
 
   // Filtrar posts
   const filteredPosts = useMemo(() => {
@@ -110,7 +95,13 @@ const BlogClient: React.FC<BlogClientProps> = ({ posts }) => {
       const matchesCategory = selectedCategory === 'Todos' || post.category === selectedCategory;
       return matchesSearch && matchesCategory;
     });
-  }, [activePosts, searchTerm, selectedCategory]);
+  }, [searchTerm, selectedCategory]);
+
+  const handleCardClick = (slug: string) => {
+    if (typeof window !== 'undefined') {
+      window.location.href = `/blog/${slug}`;
+    }
+  };
 
   return (
     <div style={{ 
@@ -120,7 +111,7 @@ const BlogClient: React.FC<BlogClientProps> = ({ posts }) => {
     }}>
       <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 1rem' }}>
         
-        {/* Header Section - Igual aos Pilares */}
+        {/* Header Section */}
         <div style={{ 
           textAlign: 'center',
           marginBottom: '3rem',
@@ -182,8 +173,6 @@ const BlogClient: React.FC<BlogClientProps> = ({ posts }) => {
                   transition: 'all 0.2s ease',
                   outline: 'none'
                 }}
-                onFocus={(e) => (e.target as HTMLInputElement).style.borderColor = '#10b981'}
-                onBlur={(e) => (e.target as HTMLInputElement).style.borderColor = '#d1d5db'}
               />
             </div>
           </div>
@@ -211,22 +200,8 @@ const BlogClient: React.FC<BlogClientProps> = ({ posts }) => {
                     fontWeight: '500',
                     cursor: 'pointer',
                     transition: 'all 0.2s ease',
-                    background: selectedCategory === category 
-                      ? '#10b981' 
-                      : 'white',
-                    color: selectedCategory === category 
-                      ? 'white' 
-                      : '#374151'
-                  }}
-                  onMouseEnter={(e) => {
-                    if (selectedCategory !== category) {
-                      (e.target as HTMLButtonElement).style.backgroundColor = '#f3f4f6';
-                    }
-                  }}
-                  onMouseLeave={(e) => {
-                    if (selectedCategory !== category) {
-                      (e.target as HTMLButtonElement).style.backgroundColor = 'white';
-                    }
+                    background: selectedCategory === category ? '#10b981' : 'white',
+                    color: selectedCategory === category ? 'white' : '#374151'
                   }}
                 >
                   {category}
@@ -236,16 +211,17 @@ const BlogClient: React.FC<BlogClientProps> = ({ posts }) => {
           </div>
         </div>
 
-        {/* Grid de Posts - Layout dos Pilares */}
+        {/* Grid de Posts */}
         <div style={{ 
           display: 'grid', 
           gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', 
           gap: '2rem',
           marginBottom: '3rem'
         }}>
-          {filteredPosts.map((post, index) => (
+          {filteredPosts.map((post) => (
             <article
               key={post.slug}
+              onClick={() => handleCardClick(post.slug)}
               style={{
                 background: 'white',
                 borderRadius: '12px',
@@ -254,19 +230,6 @@ const BlogClient: React.FC<BlogClientProps> = ({ posts }) => {
                 border: '1px solid #e5e7eb',
                 transition: 'all 0.2s ease',
                 cursor: 'pointer'
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.transform = 'translateY(-4px)';
-                e.currentTarget.style.boxShadow = '0 8px 25px rgba(0, 0, 0, 0.1)';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.transform = 'translateY(0)';
-                e.currentTarget.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.05)';
-              }}
-              onClick={() => {
-                if (typeof window !== 'undefined') {
-                  window.location.href = `/blog/${post.slug}`;
-                }
               }}
             >
               {/* Imagem do Post */}
@@ -323,34 +286,25 @@ const BlogClient: React.FC<BlogClientProps> = ({ posts }) => {
                   gap: '1rem',
                   fontSize: '0.75rem',
                   color: '#9ca3af',
-                  marginBottom: '1rem'
+                  marginBottom: '1rem',
+                  flexWrap: 'wrap'
                 }}>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.25rem' }}>
-                    <span>📅</span>
-                    <span>{new Date(post.date).toLocaleDateString('pt-BR')}</span>
-                  </div>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.25rem' }}>
-                    <span>👤</span>
-                    <span>{post.author}</span>
-                  </div>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.25rem' }}>
-                    <span>⏱️</span>
-                    <span>{post.readTime}</span>
-                  </div>
+                  <span>📅 {new Date(post.date).toLocaleDateString('pt-BR')}</span>
+                  <span>👤 {post.author}</span>
+                  <span>⏱️ {post.readTime}</span>
                 </div>
 
-                {/* Link para ler mais - Estilo dos Pilares */}
+                {/* Link para ler mais */}
                 <div style={{
                   display: 'flex',
                   alignItems: 'center',
                   gap: '0.5rem',
                   color: '#10b981',
                   fontWeight: '600',
-                  fontSize: '0.875rem',
-                  textDecoration: 'none'
+                  fontSize: '0.875rem'
                 }}>
                   <span>Saiba mais</span>
-                  <span style={{ fontSize: '0.75rem' }}>→</span>
+                  <span>→</span>
                 </div>
               </div>
             </article>
@@ -381,6 +335,8 @@ const BlogClient: React.FC<BlogClientProps> = ({ posts }) => {
 };
 
 export default BlogClient;
+
+
 
 
 
