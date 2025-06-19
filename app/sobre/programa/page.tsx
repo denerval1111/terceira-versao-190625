@@ -266,7 +266,7 @@ export default function SobreProgramaPage() {
               lineHeight: '1.6',
               paddingLeft: '1.5rem'
             }}>
-              <li>30 aulas em vídeo com especialistas</li>
+              <li>04 lives ao longo de 30 dias, uma por semana </li>
               <li>E-books com protocolos detalhados</li>
               <li>Planilhas de acompanhamento</li>
               <li>Receitas funcionais exclusivas</li>
@@ -288,10 +288,10 @@ export default function SobreProgramaPage() {
               lineHeight: '1.6',
               paddingLeft: '1.5rem'
             }}>
-              <li>Grupo VIP no Telegram</li>
-              <li>Lives semanais com especialistas</li>
-              <li>Suporte direto da equipe</li>
-              <li>Comunidade de participantes</li>
+              <li>Grupo VIP no Telegram ou whatsApp</li>
+              <li>Lives semanais com tira dúvidas</li>
+              <li>Suporte direto para quem adquirir mentoria</li>
+              <li>Será criada uma Comunidade de participantes</li>
             </ul>
           </div>
 
@@ -302,7 +302,7 @@ export default function SobreProgramaPage() {
               marginBottom: '1rem',
               fontWeight: '600'
             }}>
-              🎯 Resultados Garantidos
+              🎯 Resultados já comprovados 
             </h3>
             <ul style={{
               fontSize: '0.95rem',
@@ -333,7 +333,7 @@ export default function SobreProgramaPage() {
               paddingLeft: '1.5rem'
             }}>
               <li>Masterclass de Longevidade</li>
-              <li>Kit de Suplementação</li>
+              
               <li>Acesso vitalício ao conteúdo</li>
               <li>Certificado de conclusão</li>
             </ul>
@@ -478,7 +478,7 @@ export default function SobreProgramaPage() {
           marginTop: '1rem',
           opacity: '0.9'
         }}>
-          ⚡ Vagas limitadas • 🎯 Garantia de 30 dias • 🔒 Pagamento seguro
+          ⚡ Vagas limitadas • 🎯 Garantia de 07 dias • 🔒 Pagamento seguro
         </p>
       </div>
     </div>
