@@ -17,11 +17,11 @@ const HeroSection: React.FC<HeroSectionProps> = ({
   ctaLink = "/inscricao",
   secondaryCtaText,
   secondaryCtaLink,
-  backgroundImage = "https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?w=1920&auto=format&fit=crop", // URL externa padrão
-} ) => {
+  backgroundImage = "/mulher-aquarela-blog.png", // NOVA IMAGEM AQUARELA
+}) => {
   // Estado para controlar se as animações devem ser exibidas
   const [animationsEnabled, setAnimationsEnabled] = useState(true);
-  
+
   // Verificar preferência do usuário por movimento reduzido
   useEffect(() => {
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -31,16 +31,19 @@ const HeroSection: React.FC<HeroSectionProps> = ({
   }, []);
 
   // Garantir que sempre temos uma imagem de fundo, mesmo se não for passada
-  const bgImage = backgroundImage || "https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?w=1920&auto=format&fit=crop";
-  
+  const bgImage = backgroundImage || "/mulher-aquarela-blog.png";
+
   return (
-    <div className={`hero-section w-full relative ${!animationsEnabled ? 'no-animations' : ''}`} style={{ 
-      margin: 0, 
-      padding: 0,
-      backgroundColor: '#333333' /* Cor que combina com a borda da imagem */
-    }}>
+    <div
+      className={`hero-section w-full relative ${!animationsEnabled ? 'no-animations' : ''}`}
+      style={{
+        margin: 0,
+        padding: 0,
+        backgroundColor: '#f4a261' /* Cor que combina com a aquarela */
+      }}
+    >
       {/* Container externo com altura fixa */}
-      <div 
+      <div
         style={{
           position: 'relative',
           width: '100%',
@@ -52,7 +55,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
         }}
       >
         {/* Imagem de fundo com posição absoluta para cobrir todo o container */}
-        <div 
+        <div
           className={animationsEnabled ? "hero-bg-animate" : ""}
           style={{
             position: 'absolute',
@@ -60,16 +63,16 @@ const HeroSection: React.FC<HeroSectionProps> = ({
             left: 0,
             width: '100%',
             height: '100%',
-            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5 ), rgba(0, 0, 0, 0.5)), url(${bgImage})`,
+            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${bgImage})`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat',
             zIndex: 0
           }}
         ></div>
-        
+
         {/* Conteúdo centralizado */}
-        <div 
+        <div
           style={{
             position: 'relative',
             zIndex: 1,
@@ -82,33 +85,30 @@ const HeroSection: React.FC<HeroSectionProps> = ({
           }}
         >
           <div style={{ maxWidth: '800px', textAlign: 'center', color: 'white' }}>
-            <h1 
+            <h1
               className={animationsEnabled ? "hero-animate hero-animate-title" : ""}
-              style={{ 
-                fontSize: '2.5rem', 
-                fontWeight: 'bold', 
-                marginBottom: '1rem'
+              style={{
+                fontSize: '2.5rem',
+                fontWeight: 'bold',
+                marginBottom: '1rem',
+                textShadow: '2px 2px 4px rgba(0,0,0,0.7)' /* Melhor legibilidade */
               }}
             >
               {title}
             </h1>
-            <p 
+            <p
               className={animationsEnabled ? "hero-animate hero-animate-subtitle" : ""}
-              style={{ 
-                fontSize: '1.25rem', 
-                marginBottom: '2rem'
+              style={{
+                fontSize: '1.25rem',
+                marginBottom: '2rem',
+                textShadow: '1px 1px 2px rgba(0,0,0,0.7)' /* Melhor legibilidade */
               }}
             >
               {subtitle}
             </p>
-            <div style={{ 
-              display: 'flex', 
-              flexDirection: 'column', 
-              gap: '1rem',
-              alignItems: 'center'
-            }}>
-              <a 
-                href={ctaLink} 
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', alignItems: 'center' }}>
+              <a
+                href={ctaLink}
                 className={animationsEnabled ? "btn-animate hero-animate hero-animate-cta" : ""}
                 style={{
                   backgroundColor: '#4CAF50',
@@ -118,14 +118,15 @@ const HeroSection: React.FC<HeroSectionProps> = ({
                   fontWeight: 'bold',
                   textDecoration: 'none',
                   display: 'inline-block',
-                  textAlign: 'center'
+                  textAlign: 'center',
+                  boxShadow: '0 4px 8px rgba(0,0,0,0.3)' /* Sombra para destaque */
                 }}
               >
                 {ctaText}
               </a>
               {secondaryCtaText && secondaryCtaLink && (
-                <a 
-                  href={secondaryCtaLink} 
+                <a
+                  href={secondaryCtaLink}
                   className={animationsEnabled ? "btn-animate hero-animate hero-animate-secondary-cta" : ""}
                   style={{
                     backgroundColor: 'transparent',
@@ -134,15 +135,15 @@ const HeroSection: React.FC<HeroSectionProps> = ({
                     borderRadius: '0.375rem',
                     fontWeight: 'bold',
                     textDecoration: 'none',
-                    border: '1px solid white',
+                    border: '2px solid white',
                     display: 'inline-block',
-                    textAlign: 'center'
+                    textAlign: 'center',
+                    boxShadow: '0 4px 8px rgba(0,0,0,0.3)' /* Sombra para destaque */
                   }}
                 >
                   {secondaryCtaText}
                 </a>
               )}
-              
               {/* Botão para ativar/desativar animações (acessibilidade) */}
               <button
                 onClick={() => setAnimationsEnabled(!animationsEnabled)}
@@ -168,5 +169,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
 };
 
 export default HeroSection;
+
+
 
 
