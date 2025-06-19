@@ -10,21 +10,29 @@ export default function SobreProgramaPage() {
       margin: '0 auto',
       padding: '2rem 1rem'
     }}>
-      {/* Hero Section */}
+      {/* Hero Section - Similar à página principal */}
       <div style={{
         backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/images/aquarela-jovem-correndo-parque.png)',
-        backgroundSize: 'cover',
+        backgroundSize: 'contain',
         backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        backgroundColor: '#f4a261', // Cor de fundo que combina com a aquarela
         color: 'white',
-        padding: '4rem 2rem',
+        padding: '6rem 2rem',
         borderRadius: '8px',
         marginBottom: '3rem',
-        textAlign: 'center'
+        textAlign: 'center',
+        minHeight: '500px',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center'
       }}>
         <h1 style={{
           fontSize: '2.5rem',
           marginBottom: '1rem',
-          fontWeight: 'bold'
+          fontWeight: 'bold',
+          textShadow: '2px 2px 4px rgba(0,0,0,0.7)'
         }}>
           Desafio Vitalidade: Transforme sua Saúde em 30 Dias
         </h1>
@@ -32,7 +40,8 @@ export default function SobreProgramaPage() {
           fontSize: '1.25rem',
           maxWidth: '800px',
           margin: '0 auto',
-          lineHeight: '1.6'
+          lineHeight: '1.6',
+          textShadow: '1px 1px 2px rgba(0,0,0,0.7)'
         }}>
           Um programa multidisciplinar baseado em ciência que já transformou a vida de milhares de pessoas. Chegou a sua vez!
         </p>
@@ -475,6 +484,8 @@ export default function SobreProgramaPage() {
     </div>
   );
 }
+
+
 
 
 
