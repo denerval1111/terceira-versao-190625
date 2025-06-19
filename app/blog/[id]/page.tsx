@@ -72,8 +72,14 @@ const allPosts: PostData[] = [
   }
 ];
 
-export default function BlogPostPage({ params }: { params: { id: string } }) {
-  const post = allPosts.find(p => p.slug === params.id);
+// COMPATÍVEL COM NEXT.JS 15+ (params assíncrono)
+export default async function BlogPostPage({ 
+  params 
+}: { 
+  params: Promise<{ id: string }> 
+}) {
+  const { id } = await params;
+  const post = allPosts.find(p => p.slug === id);
   
   if (!post) {
     notFound();
@@ -87,6 +93,7 @@ export async function generateStaticParams() {
     id: post.slug,
   }));
 }
+
 
 
 
