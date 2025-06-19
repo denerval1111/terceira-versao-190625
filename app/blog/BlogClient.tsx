@@ -19,7 +19,6 @@ interface BlogClientProps {
 }
 
 const BlogClient: React.FC<BlogClientProps> = ({ posts = [] }) => {
-  const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('Todos');
 
   // Posts garantidos - sempre usar estes
@@ -87,15 +86,12 @@ const BlogClient: React.FC<BlogClientProps> = ({ posts = [] }) => {
   // Categorias fixas
   const categories = ['Todos', 'Medicina Regenerativa', 'Nutrologia', 'Saúde Mental', 'Gerenciamento de Peso'];
 
-  // Filtrar posts
+  // Filtrar posts apenas por categoria
   const filteredPosts = useMemo(() => {
     return activePosts.filter(post => {
-      const matchesSearch = post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           post.excerpt.toLowerCase().includes(searchTerm.toLowerCase());
-      const matchesCategory = selectedCategory === 'Todos' || post.category === selectedCategory;
-      return matchesSearch && matchesCategory;
+      return selectedCategory === 'Todos' || post.category === selectedCategory;
     });
-  }, [searchTerm, selectedCategory]);
+  }, [selectedCategory]);
 
   const handleCardClick = (slug: string) => {
     if (typeof window !== 'undefined') {
@@ -136,7 +132,7 @@ const BlogClient: React.FC<BlogClientProps> = ({ posts = [] }) => {
           </p>
         </div>
 
-        {/* Controles de Busca e Filtro */}
+        {/* Filtros de Categoria */}
         <div style={{ 
           background: 'white', 
           borderRadius: '12px', 
@@ -145,69 +141,34 @@ const BlogClient: React.FC<BlogClientProps> = ({ posts = [] }) => {
           boxShadow: '0 4px 6px rgba(0, 0, 0, 0.05)', 
           border: '1px solid #e5e7eb' 
         }}>
-          
-          {/* Busca */}
-          <div style={{ marginBottom: '1.5rem' }}>
-            <div style={{ position: 'relative' }}>
-              <span style={{ 
-                position: 'absolute', 
-                left: '1rem', 
-                top: '50%', 
-                transform: 'translateY(-50%)', 
-                color: '#9ca3af', 
-                fontSize: '1rem' 
-              }}>
-                🔍
-              </span>
-              <input
-                type="text"
-                placeholder="Buscar artigos..."
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
+          <h3 style={{ 
+            fontSize: '1rem', 
+            fontWeight: '600', 
+            marginBottom: '1rem', 
+            color: '#374151' 
+          }}>
+            Filtrar por categoria:
+          </h3>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
+            {categories.map(category => (
+              <button
+                key={category}
+                onClick={() => setSelectedCategory(category)}
                 style={{
-                  width: '100%',
-                  padding: '0.75rem 1rem 0.75rem 2.5rem',
+                  padding: '0.5rem 1rem',
+                  borderRadius: '20px',
                   border: '1px solid #d1d5db',
-                  borderRadius: '8px',
-                  fontSize: '1rem',
+                  fontSize: '0.875rem',
+                  fontWeight: '500',
+                  cursor: 'pointer',
                   transition: 'all 0.2s ease',
-                  outline: 'none'
+                  background: selectedCategory === category ? '#10b981' : 'white',
+                  color: selectedCategory === category ? 'white' : '#374151'
                 }}
-              />
-            </div>
-          </div>
-
-          {/* Filtros de Categoria */}
-          <div>
-            <h3 style={{ 
-              fontSize: '1rem', 
-              fontWeight: '600', 
-              marginBottom: '1rem', 
-              color: '#374151' 
-            }}>
-              Filtrar por categoria:
-            </h3>
-            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
-              {categories.map(category => (
-                <button
-                  key={category}
-                  onClick={() => setSelectedCategory(category)}
-                  style={{
-                    padding: '0.5rem 1rem',
-                    borderRadius: '20px',
-                    border: '1px solid #d1d5db',
-                    fontSize: '0.875rem',
-                    fontWeight: '500',
-                    cursor: 'pointer',
-                    transition: 'all 0.2s ease',
-                    background: selectedCategory === category ? '#10b981' : 'white',
-                    color: selectedCategory === category ? 'white' : '#374151'
-                  }}
-                >
-                  {category}
-                </button>
-              ))}
-            </div>
+              >
+                {category}
+              </button>
+            ))}
           </div>
         </div>
 
@@ -325,7 +286,7 @@ const BlogClient: React.FC<BlogClientProps> = ({ posts = [] }) => {
               Nenhum artigo encontrado
             </p>
             <p style={{ fontSize: '0.9rem' }}>
-              Tente ajustar os filtros ou termo de busca
+              Tente selecionar uma categoria diferente
             </p>
           </div>
         )}
@@ -335,6 +296,8 @@ const BlogClient: React.FC<BlogClientProps> = ({ posts = [] }) => {
 };
 
 export default BlogClient;
+
+
 
 
 
