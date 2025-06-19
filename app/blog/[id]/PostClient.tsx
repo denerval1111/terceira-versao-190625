@@ -3,21 +3,35 @@
 import React from 'react';
 import { FaCalendar, FaUser, FaClock, FaTag, FaArrowLeft } from 'react-icons/fa';
 
+interface PostData {
+  title: string;
+  excerpt: string;
+  content: string;
+  date: string;
+  author: string;
+  category: string;
+  image: string;
+  readTime: string;
+  tags: string[];
+}
+
 interface PostClientProps {
-  post: {
-    title: string;
-    excerpt: string;
-    content: string;
-    date: string;
-    author: string;
-    category: string;
-    image: string;
-    readTime: string;
-    tags: string[];
-  };
+  post: PostData;
 }
 
 const PostClient: React.FC<PostClientProps> = ({ post }) => {
+  const handleBackClick = () => {
+    if (typeof window !== 'undefined') {
+      window.history.back();
+    }
+  };
+
+  const handleProgramClick = () => {
+    if (typeof window !== 'undefined') {
+      window.location.href = '/inscricao';
+    }
+  };
+
   return (
     <div style={{ 
       minHeight: '100vh', 
@@ -93,7 +107,8 @@ const PostClient: React.FC<PostClientProps> = ({ post }) => {
             justifyContent: 'center',
             gap: '2rem',
             fontSize: '0.875rem',
-            opacity: 0.9
+            opacity: 0.9,
+            flexWrap: 'wrap'
           }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
               <FaCalendar />
@@ -121,7 +136,7 @@ const PostClient: React.FC<PostClientProps> = ({ post }) => {
         {/* Botão Voltar */}
         <div style={{ marginBottom: '2rem' }}>
           <button
-            onClick={() => window.history.back()}
+            onClick={handleBackClick}
             style={{
               display: 'flex',
               alignItems: 'center',
@@ -135,12 +150,6 @@ const PostClient: React.FC<PostClientProps> = ({ post }) => {
               fontWeight: '500',
               cursor: 'pointer',
               transition: 'all 0.2s ease'
-            }}
-            onMouseEnter={(e) => {
-              (e.target as HTMLButtonElement).style.backgroundColor = '#f3f4f6';
-            }}
-            onMouseLeave={(e) => {
-              (e.target as HTMLButtonElement).style.backgroundColor = 'white';
             }}
           >
             <FaArrowLeft />
@@ -168,45 +177,47 @@ const PostClient: React.FC<PostClientProps> = ({ post }) => {
           />
 
           {/* Tags */}
-          <div style={{
-            marginTop: '3rem',
-            paddingTop: '2rem',
-            borderTop: '1px solid #e5e7eb'
-          }}>
-            <h3 style={{
-              fontSize: '1rem',
-              fontWeight: '600',
-              marginBottom: '1rem',
-              color: '#374151',
-              display: 'flex',
-              alignItems: 'center',
-              gap: '0.5rem'
-            }}>
-              <FaTag />
-              Tags
-            </h3>
+          {post.tags && post.tags.length > 0 && (
             <div style={{
-              display: 'flex',
-              flexWrap: 'wrap',
-              gap: '0.75rem'
+              marginTop: '3rem',
+              paddingTop: '2rem',
+              borderTop: '1px solid #e5e7eb'
             }}>
-              {post.tags.map(tag => (
-                <span
-                  key={tag}
-                  style={{
-                    padding: '0.5rem 1rem',
-                    background: '#f3f4f6',
-                    color: '#6b7280',
-                    borderRadius: '20px',
-                    fontSize: '0.875rem',
-                    fontWeight: '500'
-                  }}
-                >
-                  #{tag}
-                </span>
-              ))}
+              <h3 style={{
+                fontSize: '1rem',
+                fontWeight: '600',
+                marginBottom: '1rem',
+                color: '#374151',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '0.5rem'
+              }}>
+                <FaTag />
+                Tags
+              </h3>
+              <div style={{
+                display: 'flex',
+                flexWrap: 'wrap',
+                gap: '0.75rem'
+              }}>
+                {post.tags.map((tag, index) => (
+                  <span
+                    key={`${tag}-${index}`}
+                    style={{
+                      padding: '0.5rem 1rem',
+                      background: '#f3f4f6',
+                      color: '#6b7280',
+                      borderRadius: '20px',
+                      fontSize: '0.875rem',
+                      fontWeight: '500'
+                    }}
+                  >
+                    #{tag}
+                  </span>
+                ))}
+              </div>
             </div>
-          </div>
+          )}
 
           {/* Call to Action */}
           <div style={{
@@ -231,6 +242,7 @@ const PostClient: React.FC<PostClientProps> = ({ post }) => {
               Descubra como nosso programa de 30 dias pode revolucionar sua longevidade e bem-estar.
             </p>
             <button
+              onClick={handleProgramClick}
               style={{
                 padding: '0.75rem 2rem',
                 background: 'white',
@@ -241,14 +253,6 @@ const PostClient: React.FC<PostClientProps> = ({ post }) => {
                 fontWeight: '600',
                 cursor: 'pointer',
                 transition: 'all 0.2s ease'
-              }}
-              onMouseEnter={(e) => {
-                (e.target as HTMLButtonElement).style.transform = 'translateY(-2px)';
-                (e.target as HTMLButtonElement).style.boxShadow = '0 4px 12px rgba(0,0,0,0.15)';
-              }}
-              onMouseLeave={(e) => {
-                (e.target as HTMLButtonElement).style.transform = 'translateY(0)';
-                (e.target as HTMLButtonElement).style.boxShadow = 'none';
               }}
             >
               Saiba Mais sobre o Programa
@@ -261,6 +265,7 @@ const PostClient: React.FC<PostClientProps> = ({ post }) => {
 };
 
 export default PostClient;
+
 
 
 
