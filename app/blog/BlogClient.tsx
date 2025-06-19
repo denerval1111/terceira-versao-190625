@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useMemo } from 'react';
-import { FaSearch, FaCalendar, FaUser, FaClock, FaTag, FaArrowRight } from 'react-icons/fa';
+import { FaSearch, FaCalendar, FaUser, FaClock, FaArrowRight } from 'react-icons/fa';
 
 interface Post {
   slug: string;
@@ -32,7 +32,7 @@ const BlogClient: React.FC<BlogClientProps> = ({ posts }) => {
       date: '2024-06-13',
       author: 'Dr. Denerval',
       category: 'Saúde Mental',
-      image: '/images/blog/ansiedade-estresse.jpg',
+      image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
       readTime: '6 min de leitura',
       tags: ['ansiedade', 'estresse', 'saúde mental', 'bem-estar', 'mindfulness', 'respiração']
     },
@@ -43,7 +43,7 @@ const BlogClient: React.FC<BlogClientProps> = ({ posts }) => {
       date: '2024-06-13',
       author: 'Dr. Denerval',
       category: 'Medicina Regenerativa',
-      image: '/images/blog/autofagia-celular.jpg',
+      image: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
       readTime: '6 min de leitura',
       tags: ['autofagia', 'regeneração celular', 'longevidade', 'jejum intermitente', 'anti-aging', 'saúde celular']
     },
@@ -54,7 +54,7 @@ const BlogClient: React.FC<BlogClientProps> = ({ posts }) => {
       date: '2024-06-14',
       author: 'Dr. Denerval',
       category: 'Nutrologia',
-      image: '/images/blog/dieta-mediterranea-asiatica.jpg',
+      image: 'https://images.unsplash.com/photo-1490645935967-10de6ba17061?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
       readTime: '8 min de leitura',
       tags: ['dieta mediterrânea', 'culinária asiática', 'longevidade', 'antioxidantes', 'ômega-3', 'anti-inflamatório']
     },
@@ -65,7 +65,7 @@ const BlogClient: React.FC<BlogClientProps> = ({ posts }) => {
       date: '2024-06-15',
       author: 'Dr. Denerval',
       category: 'Gerenciamento de Peso',
-      image: '/images/blog/gerenciamento-peso.jpg',
+      image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
       readTime: '7 min de leitura',
       tags: ['controle de peso', 'metabolismo', 'nutrologia', 'longevidade', 'composição corporal', 'saúde metabólica']
     },
@@ -76,7 +76,7 @@ const BlogClient: React.FC<BlogClientProps> = ({ posts }) => {
       date: '2024-06-14',
       author: 'Dr. Denerval',
       category: 'Medicina Regenerativa',
-      image: '/images/blog/pilares-longevidade.jpg',
+      image: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
       readTime: '10 min de leitura',
       tags: ['longevidade', 'medicina regenerativa', 'nutrologia', 'saúde mental', 'gerenciamento de peso', 'autofagia', 'telômeros']
     }
@@ -113,91 +113,46 @@ const BlogClient: React.FC<BlogClientProps> = ({ posts }) => {
     });
   }, [activePosts, searchTerm, selectedCategory]);
 
-  // Função para obter cor da categoria
-  const getCategoryColor = (category: string) => {
-    const colors = {
-      'Medicina Regenerativa': 'linear-gradient(135deg, #10b981, #059669)',
-      'Nutrologia': 'linear-gradient(135deg, #f59e0b, #d97706)',
-      'Saúde Mental': 'linear-gradient(135deg, #3b82f6, #2563eb)',
-      'Gerenciamento de Peso': 'linear-gradient(135deg, #8b5cf6, #7c3aed)',
-    };
-    return colors[category as keyof typeof colors] || 'linear-gradient(135deg, #6b7280, #4b5563)';
-  };
-
-  // Função para obter placeholder da imagem
-  const getImagePlaceholder = (category: string) => {
-    const gradients = {
-      'Medicina Regenerativa': 'linear-gradient(135deg, #10b981, #059669)',
-      'Nutrologia': 'linear-gradient(135deg, #f59e0b, #d97706)',
-      'Saúde Mental': 'linear-gradient(135deg, #3b82f6, #2563eb)',
-      'Gerenciamento de Peso': 'linear-gradient(135deg, #8b5cf6, #7c3aed)',
-    };
-    return gradients[category as keyof typeof gradients] || 'linear-gradient(135deg, #6b7280, #4b5563)';
-  };
-
   return (
     <div style={{ 
       minHeight: '100vh', 
-      background: 'linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 50%, #f0f9ff 100%)', 
+      background: '#f8f9fa',
       padding: '2rem 0' 
     }}>
       <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 1rem' }}>
         
-        {/* ETAPA 1: Hero Section com Imagem */}
+        {/* Header Section - Igual aos Pilares */}
         <div style={{ 
-          position: 'relative',
-          backgroundImage: 'url(https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          borderRadius: '20px', 
-          padding: '4rem 2rem', 
-          marginBottom: '3rem', 
-          color: 'white', 
-          textAlign: 'center', 
-          boxShadow: '0 20px 40px rgba(0,0,0,0.1)',
-          overflow: 'hidden'
+          textAlign: 'center',
+          marginBottom: '3rem',
+          padding: '2rem 0'
         }}>
-          {/* Overlay escuro */}
-          <div style={{
-            position: 'absolute',
-            top: 0,
-            left: 0,
-            right: 0,
-            bottom: 0,
-            background: 'rgba(0, 0, 0, 0.6)',
-            borderRadius: '20px'
-          }} />
-          
-          {/* Conteúdo */}
-          <div style={{ position: 'relative', zIndex: 2 }}>
-            <h1 style={{ 
-              fontSize: '3rem', 
-              fontWeight: '800', 
-              marginBottom: '1rem', 
-              textShadow: '0 2px 4px rgba(0,0,0,0.5)' 
-            }}>
-              Blog Desafio Vitalidade
-            </h1>
-            <p style={{ 
-              fontSize: '1.25rem', 
-              opacity: 0.95, 
-              maxWidth: '600px', 
-              margin: '0 auto', 
-              lineHeight: '1.6',
-              textShadow: '0 1px 2px rgba(0,0,0,0.5)'
-            }}>
-              Transforme sua saúde com conteúdo científico sobre os 4 pilares da longevidade
-            </p>
-          </div>
+          <h1 style={{ 
+            fontSize: '2.5rem', 
+            fontWeight: '700', 
+            marginBottom: '1rem', 
+            color: '#374151'
+          }}>
+            Blog Desafio Vitalidade
+          </h1>
+          <p style={{ 
+            fontSize: '1.125rem', 
+            color: '#6b7280', 
+            maxWidth: '600px', 
+            margin: '0 auto', 
+            lineHeight: '1.6'
+          }}>
+            Transforme sua saúde com conteúdo científico sobre os 4 pilares da longevidade
+          </p>
         </div>
 
         {/* Controles de Busca e Filtro */}
         <div style={{ 
           background: 'white', 
-          borderRadius: '16px', 
+          borderRadius: '12px', 
           padding: '2rem', 
-          marginBottom: '2rem', 
-          boxShadow: '0 10px 30px rgba(0,0,0,0.08)', 
+          marginBottom: '3rem', 
+          boxShadow: '0 4px 6px rgba(0, 0, 0, 0.05)', 
           border: '1px solid #e5e7eb' 
         }}>
           
@@ -209,8 +164,8 @@ const BlogClient: React.FC<BlogClientProps> = ({ posts }) => {
                 left: '1rem', 
                 top: '50%', 
                 transform: 'translateY(-50%)', 
-                color: '#6b7280', 
-                fontSize: '1.1rem' 
+                color: '#9ca3af', 
+                fontSize: '1rem' 
               }} />
               <input
                 type="text"
@@ -219,15 +174,15 @@ const BlogClient: React.FC<BlogClientProps> = ({ posts }) => {
                 onChange={(e) => setSearchTerm(e.target.value)}
                 style={{
                   width: '100%',
-                  padding: '1rem 1rem 1rem 3rem',
-                  border: '2px solid #e5e7eb',
-                  borderRadius: '12px',
+                  padding: '0.75rem 1rem 0.75rem 2.5rem',
+                  border: '1px solid #d1d5db',
+                  borderRadius: '8px',
                   fontSize: '1rem',
-                  transition: 'all 0.3s ease',
+                  transition: 'all 0.2s ease',
                   outline: 'none'
                 }}
                 onFocus={(e) => (e.target as HTMLInputElement).style.borderColor = '#10b981'}
-                onBlur={(e) => (e.target as HTMLInputElement).style.borderColor = '#e5e7eb'}
+                onBlur={(e) => (e.target as HTMLInputElement).style.borderColor = '#d1d5db'}
               />
             </div>
           </div>
@@ -235,47 +190,41 @@ const BlogClient: React.FC<BlogClientProps> = ({ posts }) => {
           {/* Filtros de Categoria */}
           <div>
             <h3 style={{ 
-              fontSize: '1.1rem', 
+              fontSize: '1rem', 
               fontWeight: '600', 
               marginBottom: '1rem', 
               color: '#374151' 
             }}>
               Filtrar por categoria:
             </h3>
-            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.75rem' }}>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
               {categories.map(category => (
                 <button
                   key={category}
                   onClick={() => setSelectedCategory(category)}
                   style={{
-                    padding: '0.75rem 1.5rem',
-                    borderRadius: '25px',
-                    border: 'none',
-                    fontSize: '0.9rem',
-                    fontWeight: '600',
+                    padding: '0.5rem 1rem',
+                    borderRadius: '20px',
+                    border: '1px solid #d1d5db',
+                    fontSize: '0.875rem',
+                    fontWeight: '500',
                     cursor: 'pointer',
-                    transition: 'all 0.3s ease',
+                    transition: 'all 0.2s ease',
                     background: selectedCategory === category 
                       ? '#10b981' 
-                      : '#f3f4f6',
+                      : 'white',
                     color: selectedCategory === category 
                       ? 'white' 
-                      : '#374151',
-                    transform: selectedCategory === category 
-                      ? 'translateY(-2px)' 
-                      : 'none',
-                    boxShadow: selectedCategory === category 
-                      ? '0 4px 12px rgba(16, 185, 129, 0.3)' 
-                      : '0 2px 4px rgba(0,0,0,0.1)'
+                      : '#374151'
                   }}
                   onMouseEnter={(e) => {
                     if (selectedCategory !== category) {
-                      (e.target as HTMLButtonElement).style.backgroundColor = '#e5e7eb';
+                      (e.target as HTMLButtonElement).style.backgroundColor = '#f3f4f6';
                     }
                   }}
                   onMouseLeave={(e) => {
                     if (selectedCategory !== category) {
-                      (e.target as HTMLButtonElement).style.backgroundColor = '#f3f4f6';
+                      (e.target as HTMLButtonElement).style.backgroundColor = 'white';
                     }
                   }}
                 >
@@ -286,71 +235,66 @@ const BlogClient: React.FC<BlogClientProps> = ({ posts }) => {
           </div>
         </div>
 
-        {/* Grid de Posts */}
+        {/* Grid de Posts - Layout dos Pilares */}
         <div style={{ 
           display: 'grid', 
           gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', 
-          gap: '2rem' 
+          gap: '2rem',
+          marginBottom: '3rem'
         }}>
           {filteredPosts.map((post, index) => (
             <article
               key={post.slug}
               style={{
                 background: 'white',
-                borderRadius: '16px',
+                borderRadius: '12px',
                 overflow: 'hidden',
-                boxShadow: '0 10px 30px rgba(0,0,0,0.08)',
+                boxShadow: '0 4px 6px rgba(0, 0, 0, 0.05)',
                 border: '1px solid #e5e7eb',
-                transition: 'all 0.3s ease',
+                transition: 'all 0.2s ease',
                 cursor: 'pointer'
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.transform = 'translateY(-8px)';
-                e.currentTarget.style.boxShadow = '0 20px 40px rgba(0,0,0,0.15)';
+                e.currentTarget.style.transform = 'translateY(-4px)';
+                e.currentTarget.style.boxShadow = '0 8px 25px rgba(0, 0, 0, 0.1)';
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.transform = 'translateY(0)';
-                e.currentTarget.style.boxShadow = '0 10px 30px rgba(0,0,0,0.08)';
+                e.currentTarget.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.05)';
               }}
             >
-              {/* Placeholder da Imagem */}
+              {/* Imagem do Post */}
               <div style={{
                 height: '200px',
-                background: getImagePlaceholder(post.category),
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                color: 'white',
-                fontSize: '1.5rem',
-                fontWeight: '600',
-                textAlign: 'center',
-                padding: '1rem'
+                backgroundImage: `url(${post.image})`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                position: 'relative'
               }}>
-                {post.category}
-              </div>
-
-              {/* Conteúdo */}
-              <div style={{ padding: '1.5rem' }}>
-                {/* Categoria */}
+                {/* Categoria Badge */}
                 <div style={{
-                  display: 'inline-block',
+                  position: 'absolute',
+                  top: '1rem',
+                  left: '1rem',
                   padding: '0.25rem 0.75rem',
                   borderRadius: '20px',
                   fontSize: '0.75rem',
                   fontWeight: '600',
-                  marginBottom: '1rem',
-                  background: getCategoryColor(post.category),
+                  background: '#10b981',
                   color: 'white'
                 }}>
                   {post.category}
                 </div>
+              </div>
 
+              {/* Conteúdo */}
+              <div style={{ padding: '1.5rem' }}>
                 {/* Título */}
                 <h2 style={{
                   fontSize: '1.25rem',
-                  fontWeight: '700',
+                  fontWeight: '600',
                   marginBottom: '0.75rem',
-                  color: '#1f2937',
+                  color: '#374151',
                   lineHeight: '1.4'
                 }}>
                   {post.title}
@@ -361,7 +305,7 @@ const BlogClient: React.FC<BlogClientProps> = ({ posts }) => {
                   color: '#6b7280',
                   marginBottom: '1rem',
                   lineHeight: '1.6',
-                  fontSize: '0.9rem'
+                  fontSize: '0.875rem'
                 }}>
                   {post.excerpt}
                 </p>
@@ -371,7 +315,7 @@ const BlogClient: React.FC<BlogClientProps> = ({ posts }) => {
                   display: 'flex',
                   alignItems: 'center',
                   gap: '1rem',
-                  fontSize: '0.8rem',
+                  fontSize: '0.75rem',
                   color: '#9ca3af',
                   marginBottom: '1rem'
                 }}>
@@ -389,41 +333,18 @@ const BlogClient: React.FC<BlogClientProps> = ({ posts }) => {
                   </div>
                 </div>
 
-                {/* Tags */}
-                <div style={{
-                  display: 'flex',
-                  flexWrap: 'wrap',
-                  gap: '0.5rem',
-                  marginBottom: '1rem'
-                }}>
-                  {post.tags.slice(0, 3).map(tag => (
-                    <span
-                      key={tag}
-                      style={{
-                        padding: '0.25rem 0.5rem',
-                        background: '#f3f4f6',
-                        color: '#6b7280',
-                        borderRadius: '12px',
-                        fontSize: '0.7rem',
-                        fontWeight: '500'
-                      }}
-                    >
-                      #{tag}
-                    </span>
-                  ))}
-                </div>
-
-                {/* Link para ler mais */}
+                {/* Link para ler mais - Estilo dos Pilares */}
                 <div style={{
                   display: 'flex',
                   alignItems: 'center',
                   gap: '0.5rem',
                   color: '#10b981',
                   fontWeight: '600',
-                  fontSize: '0.9rem'
+                  fontSize: '0.875rem',
+                  textDecoration: 'none'
                 }}>
-                  <span>Ler artigo completo</span>
-                  <FaArrowRight style={{ fontSize: '0.8rem' }} />
+                  <span>Saiba mais</span>
+                  <FaArrowRight style={{ fontSize: '0.75rem' }} />
                 </div>
               </div>
             </article>
@@ -435,7 +356,10 @@ const BlogClient: React.FC<BlogClientProps> = ({ posts }) => {
           <div style={{
             textAlign: 'center',
             padding: '3rem',
-            color: '#6b7280'
+            color: '#6b7280',
+            background: 'white',
+            borderRadius: '12px',
+            border: '1px solid #e5e7eb'
           }}>
             <p style={{ fontSize: '1.1rem', marginBottom: '0.5rem' }}>
               Nenhum artigo encontrado
@@ -451,6 +375,8 @@ const BlogClient: React.FC<BlogClientProps> = ({ posts }) => {
 };
 
 export default BlogClient;
+
+
 
 
 
