@@ -17,7 +17,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
   ctaLink = "/inscricao",
   secondaryCtaText,
   secondaryCtaLink,
-  backgroundImage = "/mulher-aquarela-blog.png", // NOVA IMAGEM AQUARELA
+  backgroundImage = "/images/mulher-aquarela-blog.png", // CAMINHO CORRETO DA IMAGEM
 }) => {
   // Estado para controlar se as animações devem ser exibidas
   const [animationsEnabled, setAnimationsEnabled] = useState(true);
@@ -31,7 +31,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
   }, []);
 
   // Garantir que sempre temos uma imagem de fundo, mesmo se não for passada
-  const bgImage = backgroundImage || "/mulher-aquarela-blog.png";
+  const bgImage = backgroundImage || "/images/mulher-aquarela-blog.png";
 
   return (
     <div
@@ -169,6 +169,8 @@ const HeroSection: React.FC<HeroSectionProps> = ({
 };
 
 export default HeroSection;
+
+
 
 
 
