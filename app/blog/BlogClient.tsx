@@ -89,10 +89,7 @@ const BlogClient: React.FC<BlogClientProps> = ({ posts }) => {
   if (posts && Array.isArray(posts) && posts.length > 0) {
     // Verificar se os posts têm estrutura válida
     const validPosts = posts.filter(post => 
-      post && 
-      typeof post === 'object' && 
-      post.title && 
-      post.category
+      post && typeof post === 'object' && post.title && post.category
     );
     
     if (validPosts.length > 0) {
@@ -110,7 +107,7 @@ const BlogClient: React.FC<BlogClientProps> = ({ posts }) => {
   const filteredPosts = useMemo(() => {
     return activePosts.filter(post => {
       const matchesSearch = post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                          post.excerpt.toLowerCase().includes(searchTerm.toLowerCase());
+                           post.excerpt.toLowerCase().includes(searchTerm.toLowerCase());
       const matchesCategory = selectedCategory === 'Todos' || post.category === selectedCategory;
       return matchesSearch && matchesCategory;
     });
@@ -140,61 +137,80 @@ const BlogClient: React.FC<BlogClientProps> = ({ posts }) => {
 
   return (
     <div style={{ 
-      minHeight: '100vh',
-      background: 'linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 50%, #f0f9ff 100%)',
-      padding: '2rem 0'
+      minHeight: '100vh', 
+      background: 'linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 50%, #f0f9ff 100%)', 
+      padding: '2rem 0' 
     }}>
       <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 1rem' }}>
         
-        {/* Header */}
-        <div style={{
-          background: 'linear-gradient(135deg, #10b981, #3b82f6)',
-          borderRadius: '20px',
-          padding: '3rem 2rem',
-          marginBottom: '3rem',
-          color: 'white',
-          textAlign: 'center',
-          boxShadow: '0 20px 40px rgba(0,0,0,0.1)'
+        {/* ETAPA 1: Hero Section com Imagem */}
+        <div style={{ 
+          position: 'relative',
+          backgroundImage: 'url(https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          borderRadius: '20px', 
+          padding: '4rem 2rem', 
+          marginBottom: '3rem', 
+          color: 'white', 
+          textAlign: 'center', 
+          boxShadow: '0 20px 40px rgba(0,0,0,0.1)',
+          overflow: 'hidden'
         }}>
-          <h1 style={{
-            fontSize: '3rem',
-            fontWeight: '800',
-            marginBottom: '1rem',
-            textShadow: '0 2px 4px rgba(0,0,0,0.3)'
-          }}>
-            Blog Desafio Vitalidade
-          </h1>
-          <p style={{
-            fontSize: '1.25rem',
-            opacity: 0.9,
-            maxWidth: '600px',
-            margin: '0 auto',
-            lineHeight: '1.6'
-          }}>
-            Transforme sua saúde com conteúdo científico sobre os 4 pilares da longevidade
-          </p>
+          {/* Overlay escuro */}
+          <div style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            background: 'rgba(0, 0, 0, 0.6)',
+            borderRadius: '20px'
+          }} />
+          
+          {/* Conteúdo */}
+          <div style={{ position: 'relative', zIndex: 2 }}>
+            <h1 style={{ 
+              fontSize: '3rem', 
+              fontWeight: '800', 
+              marginBottom: '1rem', 
+              textShadow: '0 2px 4px rgba(0,0,0,0.5)' 
+            }}>
+              Blog Desafio Vitalidade
+            </h1>
+            <p style={{ 
+              fontSize: '1.25rem', 
+              opacity: 0.95, 
+              maxWidth: '600px', 
+              margin: '0 auto', 
+              lineHeight: '1.6',
+              textShadow: '0 1px 2px rgba(0,0,0,0.5)'
+            }}>
+              Transforme sua saúde com conteúdo científico sobre os 4 pilares da longevidade
+            </p>
+          </div>
         </div>
 
         {/* Controles de Busca e Filtro */}
-        <div style={{
-          background: 'white',
-          borderRadius: '16px',
-          padding: '2rem',
-          marginBottom: '2rem',
-          boxShadow: '0 10px 30px rgba(0,0,0,0.08)',
-          border: '1px solid #e5e7eb'
+        <div style={{ 
+          background: 'white', 
+          borderRadius: '16px', 
+          padding: '2rem', 
+          marginBottom: '2rem', 
+          boxShadow: '0 10px 30px rgba(0,0,0,0.08)', 
+          border: '1px solid #e5e7eb' 
         }}>
           
           {/* Busca */}
           <div style={{ marginBottom: '1.5rem' }}>
             <div style={{ position: 'relative' }}>
-              <FaSearch style={{
-                position: 'absolute',
-                left: '1rem',
-                top: '50%',
-                transform: 'translateY(-50%)',
-                color: '#6b7280',
-                fontSize: '1.1rem'
+              <FaSearch style={{ 
+                position: 'absolute', 
+                left: '1rem', 
+                top: '50%', 
+                transform: 'translateY(-50%)', 
+                color: '#6b7280', 
+                fontSize: '1.1rem' 
               }} />
               <input
                 type="text"
@@ -210,27 +226,23 @@ const BlogClient: React.FC<BlogClientProps> = ({ posts }) => {
                   transition: 'all 0.3s ease',
                   outline: 'none'
                 }}
-                onFocus={(e) => e.target.style.borderColor = '#10b981'}
-                onBlur={(e) => e.target.style.borderColor = '#e5e7eb'}
+                onFocus={(e) => (e.target as HTMLInputElement).style.borderColor = '#10b981'}
+                onBlur={(e) => (e.target as HTMLInputElement).style.borderColor = '#e5e7eb'}
               />
             </div>
           </div>
 
           {/* Filtros de Categoria */}
           <div>
-            <h3 style={{
-              fontSize: '1.1rem',
-              fontWeight: '600',
-              marginBottom: '1rem',
-              color: '#374151'
+            <h3 style={{ 
+              fontSize: '1.1rem', 
+              fontWeight: '600', 
+              marginBottom: '1rem', 
+              color: '#374151' 
             }}>
               Filtrar por categoria:
             </h3>
-            <div style={{
-              display: 'flex',
-              flexWrap: 'wrap',
-              gap: '0.75rem'
-            }}>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.75rem' }}>
               {categories.map(category => (
                 <button
                   key={category}
@@ -244,13 +256,27 @@ const BlogClient: React.FC<BlogClientProps> = ({ posts }) => {
                     cursor: 'pointer',
                     transition: 'all 0.3s ease',
                     background: selectedCategory === category 
-                      ? 'linear-gradient(135deg, #10b981, #059669)'
-                      : '#f9fafb',
-                    color: selectedCategory === category ? 'white' : '#374151',
+                      ? '#10b981' 
+                      : '#f3f4f6',
+                    color: selectedCategory === category 
+                      ? 'white' 
+                      : '#374151',
+                    transform: selectedCategory === category 
+                      ? 'translateY(-2px)' 
+                      : 'none',
                     boxShadow: selectedCategory === category 
-                      ? '0 4px 12px rgba(16, 185, 129, 0.3)'
-                      : '0 2px 4px rgba(0,0,0,0.05)',
-                    transform: selectedCategory === category ? 'translateY(-1px)' : 'none'
+                      ? '0 4px 12px rgba(16, 185, 129, 0.3)' 
+                      : '0 2px 4px rgba(0,0,0,0.1)'
+                  }}
+                  onMouseEnter={(e) => {
+                    if (selectedCategory !== category) {
+                      (e.target as HTMLButtonElement).style.backgroundColor = '#e5e7eb';
+                    }
+                  }}
+                  onMouseLeave={(e) => {
+                    if (selectedCategory !== category) {
+                      (e.target as HTMLButtonElement).style.backgroundColor = '#f3f4f6';
+                    }
                   }}
                 >
                   {category}
@@ -261,18 +287,17 @@ const BlogClient: React.FC<BlogClientProps> = ({ posts }) => {
         </div>
 
         {/* Grid de Posts */}
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))',
-          gap: '2rem',
-          marginBottom: '3rem'
+        <div style={{ 
+          display: 'grid', 
+          gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', 
+          gap: '2rem' 
         }}>
-          {filteredPosts.map((post) => (
+          {filteredPosts.map((post, index) => (
             <article
               key={post.slug}
               style={{
                 background: 'white',
-                borderRadius: '20px',
+                borderRadius: '16px',
                 overflow: 'hidden',
                 boxShadow: '0 10px 30px rgba(0,0,0,0.08)',
                 border: '1px solid #e5e7eb',
@@ -288,8 +313,7 @@ const BlogClient: React.FC<BlogClientProps> = ({ posts }) => {
                 e.currentTarget.style.boxShadow = '0 10px 30px rgba(0,0,0,0.08)';
               }}
             >
-              
-              {/* Imagem Placeholder */}
+              {/* Placeholder da Imagem */}
               <div style={{
                 height: '200px',
                 background: getImagePlaceholder(post.category),
@@ -297,7 +321,7 @@ const BlogClient: React.FC<BlogClientProps> = ({ posts }) => {
                 alignItems: 'center',
                 justifyContent: 'center',
                 color: 'white',
-                fontSize: '1.2rem',
+                fontSize: '1.5rem',
                 fontWeight: '600',
                 textAlign: 'center',
                 padding: '1rem'
@@ -307,32 +331,27 @@ const BlogClient: React.FC<BlogClientProps> = ({ posts }) => {
 
               {/* Conteúdo */}
               <div style={{ padding: '1.5rem' }}>
-                
-                {/* Categoria Badge */}
+                {/* Categoria */}
                 <div style={{
                   display: 'inline-block',
-                  background: getCategoryColor(post.category),
-                  color: 'white',
-                  padding: '0.5rem 1rem',
+                  padding: '0.25rem 0.75rem',
                   borderRadius: '20px',
-                  fontSize: '0.8rem',
+                  fontSize: '0.75rem',
                   fontWeight: '600',
-                  marginBottom: '1rem'
+                  marginBottom: '1rem',
+                  background: getCategoryColor(post.category),
+                  color: 'white'
                 }}>
                   {post.category}
                 </div>
 
                 {/* Título */}
                 <h2 style={{
-                  fontSize: '1.3rem',
+                  fontSize: '1.25rem',
                   fontWeight: '700',
                   marginBottom: '0.75rem',
                   color: '#1f2937',
-                  lineHeight: '1.4',
-                  display: '-webkit-box',
-                  WebkitLineClamp: 2,
-                  WebkitBoxOrient: 'vertical',
-                  overflow: 'hidden'
+                  lineHeight: '1.4'
                 }}>
                   {post.title}
                 </h2>
@@ -340,12 +359,9 @@ const BlogClient: React.FC<BlogClientProps> = ({ posts }) => {
                 {/* Excerpt */}
                 <p style={{
                   color: '#6b7280',
-                  lineHeight: '1.6',
                   marginBottom: '1rem',
-                  display: '-webkit-box',
-                  WebkitLineClamp: 3,
-                  WebkitBoxOrient: 'vertical',
-                  overflow: 'hidden'
+                  lineHeight: '1.6',
+                  fontSize: '0.9rem'
                 }}>
                   {post.excerpt}
                 </p>
@@ -353,21 +369,21 @@ const BlogClient: React.FC<BlogClientProps> = ({ posts }) => {
                 {/* Metadados */}
                 <div style={{
                   display: 'flex',
-                  flexWrap: 'wrap',
+                  alignItems: 'center',
                   gap: '1rem',
-                  marginBottom: '1rem',
-                  fontSize: '0.85rem',
-                  color: '#6b7280'
+                  fontSize: '0.8rem',
+                  color: '#9ca3af',
+                  marginBottom: '1rem'
                 }}>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.25rem' }}>
                     <FaCalendar />
                     <span>{new Date(post.date).toLocaleDateString('pt-BR')}</span>
                   </div>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.25rem' }}>
                     <FaUser />
                     <span>{post.author}</span>
                   </div>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.25rem' }}>
                     <FaClock />
                     <span>{post.readTime}</span>
                   </div>
@@ -378,57 +394,37 @@ const BlogClient: React.FC<BlogClientProps> = ({ posts }) => {
                   display: 'flex',
                   flexWrap: 'wrap',
                   gap: '0.5rem',
-                  marginBottom: '1.5rem'
+                  marginBottom: '1rem'
                 }}>
-                  {post.tags.slice(0, 3).map((tag, index) => (
+                  {post.tags.slice(0, 3).map(tag => (
                     <span
-                      key={index}
+                      key={tag}
                       style={{
-                        display: 'flex',
-                        alignItems: 'center',
-                        gap: '0.25rem',
+                        padding: '0.25rem 0.5rem',
                         background: '#f3f4f6',
                         color: '#6b7280',
-                        padding: '0.25rem 0.75rem',
                         borderRadius: '12px',
-                        fontSize: '0.75rem',
+                        fontSize: '0.7rem',
                         fontWeight: '500'
                       }}
                     >
-                      <FaTag style={{ fontSize: '0.7rem' }} />
-                      {tag}
+                      #{tag}
                     </span>
                   ))}
                 </div>
 
-                {/* Link para o artigo */}
-                <a
-                  href={`/blog/${post.slug}`}
-                  style={{
-                    display: 'inline-flex',
-                    alignItems: 'center',
-                    gap: '0.5rem',
-                    background: 'linear-gradient(135deg, #10b981, #059669)',
-                    color: 'white',
-                    padding: '0.75rem 1.5rem',
-                    borderRadius: '12px',
-                    textDecoration: 'none',
-                    fontSize: '0.9rem',
-                    fontWeight: '600',
-                    transition: 'all 0.3s ease'
-                  }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.transform = 'translateX(4px)';
-                    e.currentTarget.style.boxShadow = '0 4px 12px rgba(16, 185, 129, 0.3)';
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.transform = 'translateX(0)';
-                    e.currentTarget.style.boxShadow = 'none';
-                  }}
-                >
-                  Ler artigo completo
-                  <FaArrowRight />
-                </a>
+                {/* Link para ler mais */}
+                <div style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '0.5rem',
+                  color: '#10b981',
+                  fontWeight: '600',
+                  fontSize: '0.9rem'
+                }}>
+                  <span>Ler artigo completo</span>
+                  <FaArrowRight style={{ fontSize: '0.8rem' }} />
+                </div>
               </div>
             </article>
           ))}
@@ -437,86 +433,26 @@ const BlogClient: React.FC<BlogClientProps> = ({ posts }) => {
         {/* Mensagem quando não há posts */}
         {filteredPosts.length === 0 && (
           <div style={{
-            background: 'white',
-            borderRadius: '16px',
-            padding: '3rem',
             textAlign: 'center',
-            boxShadow: '0 10px 30px rgba(0,0,0,0.08)',
-            border: '1px solid #e5e7eb'
+            padding: '3rem',
+            color: '#6b7280'
           }}>
-            <h3 style={{
-              fontSize: '1.5rem',
-              fontWeight: '600',
-              color: '#374151',
-              marginBottom: '1rem'
-            }}>
+            <p style={{ fontSize: '1.1rem', marginBottom: '0.5rem' }}>
               Nenhum artigo encontrado
-            </h3>
-            <p style={{ color: '#6b7280' }}>
-              Tente ajustar os filtros ou termos de busca para encontrar o conteúdo desejado.
+            </p>
+            <p style={{ fontSize: '0.9rem' }}>
+              Tente ajustar os filtros ou termo de busca
             </p>
           </div>
         )}
-
-        {/* Call to Action */}
-        <div style={{
-          background: 'linear-gradient(135deg, #1f2937, #111827)',
-          borderRadius: '20px',
-          padding: '3rem 2rem',
-          textAlign: 'center',
-          color: 'white',
-          marginTop: '3rem'
-        }}>
-          <h2 style={{
-            fontSize: '2rem',
-            fontWeight: '700',
-            marginBottom: '1rem'
-          }}>
-            Pronto para Transformar sua Saúde?
-          </h2>
-          <p style={{
-            fontSize: '1.1rem',
-            opacity: 0.9,
-            marginBottom: '2rem',
-            maxWidth: '600px',
-            margin: '0 auto 2rem'
-          }}>
-            Junte-se ao Desafio Vitalidade e descubra como alcançar longevidade saudável com os 4 pilares
-          </p>
-          <a
-            href="#"
-            style={{
-              display: 'inline-flex',
-              alignItems: 'center',
-              gap: '0.75rem',
-              background: 'linear-gradient(135deg, #10b981, #059669)',
-              color: 'white',
-              padding: '1rem 2rem',
-              borderRadius: '12px',
-              textDecoration: 'none',
-              fontSize: '1.1rem',
-              fontWeight: '600',
-              transition: 'all 0.3s ease'
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.transform = 'translateY(-2px)';
-              e.currentTarget.style.boxShadow = '0 8px 20px rgba(16, 185, 129, 0.4)';
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.transform = 'translateY(0)';
-              e.currentTarget.style.boxShadow = 'none';
-            }}
-          >
-            Participar do Desafio Vitalidade
-            <FaArrowRight />
-          </a>
-        </div>
       </div>
     </div>
   );
 };
 
 export default BlogClient;
+
+
 
 
 
