@@ -21,7 +21,7 @@ interface PostClientProps {
 
 const PostClient: React.FC<PostClientProps> = ({ post }) => {
   
-  // Conteúdo completo dos artigos
+  // Conteúdo completo dos artigos - SLUGS CORRIGIDOS
   const getFullContent = (slug: string): string => {
     const contents: { [key: string]: string } = {
       'ansiedade-estresse-moderno': `
@@ -389,6 +389,7 @@ const PostClient: React.FC<PostClientProps> = ({ post }) => {
         <p>O gerenciamento do peso saudável é uma jornada multifacetada que requer abordagem científica, personalização e sustentabilidade. Ao focar na saúde metabólica e composição corporal, em vez de apenas números na balança, é possível alcançar resultados duradouros que promovem longevidade e qualidade de vida.</p>
       `,
       
+      // SLUG CORRIGIDO: pilares-longevidade-saudavel
       'pilares-longevidade-saudavel': `
         <h2>Introdução aos Pilares da Longevidade</h2>
         <p>A longevidade saudável não é resultado de um único fator, mas da integração harmoniosa de múltiplas dimensões da saúde. O Desafio Vitalidade baseia-se em quatro pilares fundamentais, cada um apoiado por evidências científicas robustas e práticas clínicas comprovadas.</p>
@@ -593,7 +594,11 @@ const PostClient: React.FC<PostClientProps> = ({ post }) => {
       `
     };
 
-    return contents[slug] || '<p>Conteúdo em desenvolvimento...</p>';
+    return contents[slug] || `
+      <h2>Artigo em Desenvolvimento</h2>
+      <p>Este artigo está sendo preparado com conteúdo científico de alta qualidade. Em breve estará disponível com informações detalhadas sobre ${post.title}.</p>
+      <p>Enquanto isso, explore nossos outros artigos disponíveis ou inscreva-se no Desafio Vitalidade para ter acesso ao conteúdo completo.</p>
+    `;
   };
 
   const handleBackClick = () => {
@@ -829,6 +834,7 @@ const PostClient: React.FC<PostClientProps> = ({ post }) => {
 };
 
 export default PostClient;
+
 
 
 
