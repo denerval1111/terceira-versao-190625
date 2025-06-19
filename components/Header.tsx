@@ -39,16 +39,28 @@ export default function Header() {
         justifyContent: 'space-between',
         height: '70px'
       }}>
-        {/* Logo */}
-        <Link href="/" style={{
-          fontSize: '1.5rem',
-          fontWeight: 'bold',
-          color: '#2563eb',
-          textDecoration: 'none',
-          display: 'flex',
-          alignItems: 'center'
-        }}>
+        {/* Logo com Imagem */}
+        <Link 
+          href="/" 
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            textDecoration: 'none',
+            gap: '0.75rem'
+          }}
+        >
+          <img 
+            src="/images/logo-desafio-vitalidade.png" 
+            alt="Desafio Vitalidade" 
+            style={{
+              height: '45px',
+              width: 'auto',
+              objectFit: 'contain'
+            }}
+          />
           <span style={{
+            fontSize: '1.5rem',
+            fontWeight: 'bold',
             background: 'linear-gradient(135deg, #2563eb, #10b981)',
             WebkitBackgroundClip: 'text',
             WebkitTextFillColor: 'transparent',
@@ -64,34 +76,42 @@ export default function Header() {
           alignItems: 'center',
           gap: '2rem'
         }} className="desktop-menu">
-          <Link href="/" style={{
-            color: '#374151',
-            textDecoration: 'none',
-            fontWeight: '500',
-            padding: '0.5rem 1rem',
-            borderRadius: '6px',
-            transition: 'all 0.3s ease'
-          }} className="nav-link">
+          <Link 
+            href="/" 
+            style={{
+              color: '#374151',
+              textDecoration: 'none',
+              fontWeight: '500',
+              padding: '0.5rem 1rem',
+              borderRadius: '6px',
+              transition: 'all 0.3s ease'
+            }} 
+            className="nav-link"
+          >
             Início
           </Link>
 
-          <Link href="/sobre/programa" style={{
-            color: '#374151',
-            textDecoration: 'none',
-            fontWeight: '500',
-            padding: '0.5rem 1rem',
-            borderRadius: '6px',
-            transition: 'all 0.3s ease'
-          }} className="nav-link">
+          <Link 
+            href="/sobre/programa" 
+            style={{
+              color: '#374151',
+              textDecoration: 'none',
+              fontWeight: '500',
+              padding: '0.5rem 1rem',
+              borderRadius: '6px',
+              transition: 'all 0.3s ease'
+            }} 
+            className="nav-link"
+          >
             O Programa
           </Link>
 
           {/* Dropdown Pilares */}
-          <div style={{
-            position: 'relative'
-          }} 
-          onMouseEnter={() => setIsPilaresOpen(true)}
-          onMouseLeave={() => setIsPilaresOpen(false)}>
+          <div 
+            style={{ position: 'relative' }}
+            onMouseEnter={() => setIsPilaresOpen(true)}
+            onMouseLeave={() => setIsPilaresOpen(false)}
+          >
             <button style={{
               color: '#374151',
               background: 'none',
@@ -129,15 +149,19 @@ export default function Header() {
               transition: 'all 0.3s ease',
               border: '1px solid #e5e7eb'
             }}>
-              <Link href="/pilares/medicina-regenerativa" style={{
-                display: 'flex',
-                alignItems: 'center',
-                padding: '0.75rem 1rem',
-                color: '#374151',
-                textDecoration: 'none',
-                transition: 'background-color 0.2s ease',
-                gap: '0.75rem'
-              }} className="dropdown-link">
+              <Link 
+                href="/pilares/medicina-regenerativa" 
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  padding: '0.75rem 1rem',
+                  color: '#374151',
+                  textDecoration: 'none',
+                  transition: 'background-color 0.2s ease',
+                  gap: '0.75rem'
+                }} 
+                className="dropdown-link"
+              >
                 <span style={{
                   width: '8px',
                   height: '8px',
@@ -147,15 +171,19 @@ export default function Header() {
                 Medicina Regenerativa
               </Link>
 
-              <Link href="/pilares/nutrologia" style={{
-                display: 'flex',
-                alignItems: 'center',
-                padding: '0.75rem 1rem',
-                color: '#374151',
-                textDecoration: 'none',
-                transition: 'background-color 0.2s ease',
-                gap: '0.75rem'
-              }} className="dropdown-link">
+              <Link 
+                href="/pilares/nutrologia" 
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  padding: '0.75rem 1rem',
+                  color: '#374151',
+                  textDecoration: 'none',
+                  transition: 'background-color 0.2s ease',
+                  gap: '0.75rem'
+                }} 
+                className="dropdown-link"
+              >
                 <span style={{
                   width: '8px',
                   height: '8px',
@@ -165,15 +193,19 @@ export default function Header() {
                 Nutrologia
               </Link>
 
-              <Link href="/pilares/saude-mental" style={{
-                display: 'flex',
-                alignItems: 'center',
-                padding: '0.75rem 1rem',
-                color: '#374151',
-                textDecoration: 'none',
-                transition: 'background-color 0.2s ease',
-                gap: '0.75rem'
-              }} className="dropdown-link">
+              <Link 
+                href="/pilares/saude-mental" 
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  padding: '0.75rem 1rem',
+                  color: '#374151',
+                  textDecoration: 'none',
+                  transition: 'background-color 0.2s ease',
+                  gap: '0.75rem'
+                }} 
+                className="dropdown-link"
+              >
                 <span style={{
                   width: '8px',
                   height: '8px',
@@ -183,15 +215,19 @@ export default function Header() {
                 Saúde Mental
               </Link>
 
-              <Link href="/pilares/peso-saudavel" style={{
-                display: 'flex',
-                alignItems: 'center',
-                padding: '0.75rem 1rem',
-                color: '#374151',
-                textDecoration: 'none',
-                transition: 'background-color 0.2s ease',
-                gap: '0.75rem'
-              }} className="dropdown-link">
+              <Link 
+                href="/pilares/peso-saudavel" 
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  padding: '0.75rem 1rem',
+                  color: '#374151',
+                  textDecoration: 'none',
+                  transition: 'background-color 0.2s ease',
+                  gap: '0.75rem'
+                }} 
+                className="dropdown-link"
+              >
                 <span style={{
                   width: '8px',
                   height: '8px',
@@ -203,37 +239,49 @@ export default function Header() {
             </div>
           </div>
 
-          <Link href="/depoimentos" style={{
-            color: '#374151',
-            textDecoration: 'none',
-            fontWeight: '500',
-            padding: '0.5rem 1rem',
-            borderRadius: '6px',
-            transition: 'all 0.3s ease'
-          }} className="nav-link">
+          <Link 
+            href="/depoimentos" 
+            style={{
+              color: '#374151',
+              textDecoration: 'none',
+              fontWeight: '500',
+              padding: '0.5rem 1rem',
+              borderRadius: '6px',
+              transition: 'all 0.3s ease'
+            }} 
+            className="nav-link"
+          >
             Depoimentos
           </Link>
 
-          <Link href="/blog" style={{
-            color: '#374151',
-            textDecoration: 'none',
-            fontWeight: '500',
-            padding: '0.5rem 1rem',
-            borderRadius: '6px',
-            transition: 'all 0.3s ease'
-          }} className="nav-link">
+          <Link 
+            href="/blog" 
+            style={{
+              color: '#374151',
+              textDecoration: 'none',
+              fontWeight: '500',
+              padding: '0.5rem 1rem',
+              borderRadius: '6px',
+              transition: 'all 0.3s ease'
+            }} 
+            className="nav-link"
+          >
             Blog
           </Link>
 
-          <Link href="/inscricao" style={{
-            backgroundColor: '#2563eb',
-            color: 'white',
-            textDecoration: 'none',
-            fontWeight: '600',
-            padding: '0.75rem 1.5rem',
-            borderRadius: '8px',
-            transition: 'all 0.3s ease'
-          }} className="cta-button">
+          <Link 
+            href="/inscricao" 
+            style={{
+              backgroundColor: '#2563eb',
+              color: 'white',
+              textDecoration: 'none',
+              fontWeight: '600',
+              padding: '0.75rem 1.5rem',
+              borderRadius: '8px',
+              transition: 'all 0.3s ease'
+            }} 
+            className="cta-button"
+          >
             Inscreva-se
           </Link>
         </nav>
@@ -249,7 +297,7 @@ export default function Header() {
             border: 'none',
             cursor: 'pointer',
             padding: '0.5rem'
-          }}
+          }} 
           className="mobile-menu-button"
         >
           <span style={{
@@ -291,164 +339,178 @@ export default function Header() {
           flexDirection: 'column',
           gap: '0.5rem'
         }}>
-          <Link href="/" onClick={closeMobileMenu} style={{
-            color: '#374151',
-            textDecoration: 'none',
-            padding: '0.75rem 1rem',
-            borderRadius: '6px',
-            transition: 'background-color 0.2s ease'
-          }} className="mobile-nav-link">
+          <Link 
+            href="/" 
+            onClick={closeMobileMenu}
+            style={{
+              color: '#374151',
+              textDecoration: 'none',
+              padding: '0.75rem 1rem',
+              borderRadius: '6px',
+              transition: 'background-color 0.2s ease'
+            }} 
+            className="mobile-nav-link"
+          >
             Início
           </Link>
 
-          <Link href="/sobre/programa" onClick={closeMobileMenu} style={{
-            color: '#374151',
-            textDecoration: 'none',
-            padding: '0.75rem 1rem',
-            borderRadius: '6px',
-            transition: 'background-color 0.2s ease'
-          }} className="mobile-nav-link">
+          <Link 
+            href="/sobre/programa" 
+            onClick={closeMobileMenu}
+            style={{
+              color: '#374151',
+              textDecoration: 'none',
+              padding: '0.75rem 1rem',
+              borderRadius: '6px',
+              transition: 'background-color 0.2s ease'
+            }} 
+            className="mobile-nav-link"
+          >
             O Programa
           </Link>
 
           {/* Mobile Pilares */}
-          <div>
-            <button onClick={togglePilares} style={{
-              width: '100%',
-              textAlign: 'left',
+          <button 
+            onClick={togglePilares}
+            style={{
               color: '#374151',
               background: 'none',
               border: 'none',
+              textAlign: 'left',
               padding: '0.75rem 1rem',
               borderRadius: '6px',
               cursor: 'pointer',
+              width: '100%',
               display: 'flex',
-              alignItems: 'center',
               justifyContent: 'space-between',
-              fontSize: '1rem'
-            }} className="mobile-nav-link">
-              Pilares
-              <span style={{
-                transform: isPilaresOpen ? 'rotate(180deg)' : 'rotate(0deg)',
-                transition: 'transform 0.3s ease'
-              }}>▼</span>
-            </button>
+              alignItems: 'center',
+              transition: 'background-color 0.2s ease'
+            }} 
+            className="mobile-nav-link"
+          >
+            Pilares
+            <span style={{
+              transform: isPilaresOpen ? 'rotate(180deg)' : 'rotate(0deg)',
+              transition: 'transform 0.3s ease'
+            }}>▼</span>
+          </button>
 
-            {isPilaresOpen && (
-              <div style={{
-                paddingLeft: '1rem',
-                marginTop: '0.5rem'
-              }}>
-                <Link href="/pilares/medicina-regenerativa" onClick={closeMobileMenu} style={{
-                  display: 'flex',
-                  alignItems: 'center',
+          {isPilaresOpen && (
+            <div style={{
+              paddingLeft: '1rem',
+              display: 'flex',
+              flexDirection: 'column',
+              gap: '0.25rem'
+            }}>
+              <Link 
+                href="/pilares/medicina-regenerativa" 
+                onClick={closeMobileMenu}
+                style={{
                   color: '#374151',
                   textDecoration: 'none',
                   padding: '0.5rem 1rem',
                   borderRadius: '6px',
                   transition: 'background-color 0.2s ease',
-                  gap: '0.75rem'
-                }} className="mobile-nav-link">
-                  <span style={{
-                    width: '6px',
-                    height: '6px',
-                    borderRadius: '50%',
-                    backgroundColor: '#10b981'
-                  }}></span>
-                  Medicina Regenerativa
-                </Link>
-
-                <Link href="/pilares/nutrologia" onClick={closeMobileMenu} style={{
-                  display: 'flex',
-                  alignItems: 'center',
+                  fontSize: '0.9rem'
+                }} 
+                className="mobile-nav-link"
+              >
+                Medicina Regenerativa
+              </Link>
+              <Link 
+                href="/pilares/nutrologia" 
+                onClick={closeMobileMenu}
+                style={{
                   color: '#374151',
                   textDecoration: 'none',
                   padding: '0.5rem 1rem',
                   borderRadius: '6px',
                   transition: 'background-color 0.2s ease',
-                  gap: '0.75rem'
-                }} className="mobile-nav-link">
-                  <span style={{
-                    width: '6px',
-                    height: '6px',
-                    borderRadius: '50%',
-                    backgroundColor: '#f59e0b'
-                  }}></span>
-                  Nutrologia
-                </Link>
-
-                <Link href="/pilares/saude-mental" onClick={closeMobileMenu} style={{
-                  display: 'flex',
-                  alignItems: 'center',
+                  fontSize: '0.9rem'
+                }} 
+                className="mobile-nav-link"
+              >
+                Nutrologia
+              </Link>
+              <Link 
+                href="/pilares/saude-mental" 
+                onClick={closeMobileMenu}
+                style={{
                   color: '#374151',
                   textDecoration: 'none',
                   padding: '0.5rem 1rem',
                   borderRadius: '6px',
                   transition: 'background-color 0.2s ease',
-                  gap: '0.75rem'
-                }} className="mobile-nav-link">
-                  <span style={{
-                    width: '6px',
-                    height: '6px',
-                    borderRadius: '50%',
-                    backgroundColor: '#3b82f6'
-                  }}></span>
-                  Saúde Mental
-                </Link>
-
-                <Link href="/pilares/peso-saudavel" onClick={closeMobileMenu} style={{
-                  display: 'flex',
-                  alignItems: 'center',
+                  fontSize: '0.9rem'
+                }} 
+                className="mobile-nav-link"
+              >
+                Saúde Mental
+              </Link>
+              <Link 
+                href="/pilares/peso-saudavel" 
+                onClick={closeMobileMenu}
+                style={{
                   color: '#374151',
                   textDecoration: 'none',
                   padding: '0.5rem 1rem',
                   borderRadius: '6px',
                   transition: 'background-color 0.2s ease',
-                  gap: '0.75rem'
-                }} className="mobile-nav-link">
-                  <span style={{
-                    width: '6px',
-                    height: '6px',
-                    borderRadius: '50%',
-                    backgroundColor: '#8b5cf6'
-                  }}></span>
-                  Gerenciamento de Peso
-                </Link>
-              </div>
-            )}
-          </div>
+                  fontSize: '0.9rem'
+                }} 
+                className="mobile-nav-link"
+              >
+                Gerenciamento de Peso
+              </Link>
+            </div>
+          )}
 
-          <Link href="/depoimentos" onClick={closeMobileMenu} style={{
-            color: '#374151',
-            textDecoration: 'none',
-            padding: '0.75rem 1rem',
-            borderRadius: '6px',
-            transition: 'background-color 0.2s ease'
-          }} className="mobile-nav-link">
+          <Link 
+            href="/depoimentos" 
+            onClick={closeMobileMenu}
+            style={{
+              color: '#374151',
+              textDecoration: 'none',
+              padding: '0.75rem 1rem',
+              borderRadius: '6px',
+              transition: 'background-color 0.2s ease'
+            }} 
+            className="mobile-nav-link"
+          >
             Depoimentos
           </Link>
 
-          <Link href="/blog" onClick={closeMobileMenu} style={{
-            color: '#374151',
-            textDecoration: 'none',
-            padding: '0.75rem 1rem',
-            borderRadius: '6px',
-            transition: 'background-color 0.2s ease'
-          }} className="mobile-nav-link">
+          <Link 
+            href="/blog" 
+            onClick={closeMobileMenu}
+            style={{
+              color: '#374151',
+              textDecoration: 'none',
+              padding: '0.75rem 1rem',
+              borderRadius: '6px',
+              transition: 'background-color 0.2s ease'
+            }} 
+            className="mobile-nav-link"
+          >
             Blog
           </Link>
 
-          <Link href="/inscricao" onClick={closeMobileMenu} style={{
-            backgroundColor: '#2563eb',
-            color: 'white',
-            textDecoration: 'none',
-            fontWeight: '600',
-            padding: '0.75rem 1.5rem',
-            borderRadius: '8px',
-            textAlign: 'center',
-            marginTop: '1rem',
-            display: 'block'
-          }}>
+          <Link 
+            href="/inscricao" 
+            onClick={closeMobileMenu}
+            style={{
+              backgroundColor: '#2563eb',
+              color: 'white',
+              textDecoration: 'none',
+              fontWeight: '600',
+              padding: '0.75rem 1.5rem',
+              borderRadius: '8px',
+              textAlign: 'center',
+              marginTop: '0.5rem',
+              transition: 'all 0.3s ease'
+            }} 
+            className="mobile-cta-button"
+          >
             Inscreva-se
           </Link>
         </div>
@@ -465,27 +527,33 @@ export default function Header() {
         }
 
         .nav-link:hover {
-          background-color: #f3f4f6 !important;
-          color: #2563eb !important;
+          background-color: #f3f4f6;
+          color: #2563eb;
         }
 
         .dropdown-link:hover {
-          background-color: #f3f4f6 !important;
+          background-color: #f9fafb;
         }
 
         .mobile-nav-link:hover {
-          background-color: #f3f4f6 !important;
+          background-color: #f3f4f6;
         }
 
         .cta-button:hover {
-          background-color: #1d4ed8 !important;
+          background-color: #1d4ed8;
           transform: translateY(-1px);
           box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+        }
+
+        .mobile-cta-button:hover {
+          background-color: #1d4ed8;
         }
       `}</style>
     </header>
   );
 }
+
+
 
 
 
