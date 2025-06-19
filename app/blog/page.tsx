@@ -1,26 +1,23 @@
-import { getSortedPostsData } from '../../lib/posts';
 import BlogClient from './BlogClient';
 
-export const metadata = {
-  title: 'Blog | Desafio Vitalidade',
-  description: 'Artigos sobre longevidade saudável, medicina regenerativa, nutrologia e saúde mental. Descubra os segredos da vitalidade e do envelhecimento saudável.',
-  keywords: 'longevidade, saúde, medicina regenerativa, nutrologia, saúde mental, envelhecimento saudável, vitalidade',
-  openGraph: {
-    title: 'Blog Desafio Vitalidade',
-    description: 'Artigos científicos sobre longevidade saudável e bem-estar.',
-    type: 'website',
-  },
-};
-
 export default function BlogPage() {
-  const allPostsData = getSortedPostsData();
+  // Dados dos posts (podem vir de uma API ou arquivo)
+  const allPostsData = [
+    // Posts serão carregados pelo BlogClient via fallback
+  ];
 
   return (
     <BlogClient 
-      posts={allPostsData as any} 
+      initialPosts={allPostsData as any} 
     />
   );
 }
+
+export async function generateStaticParams() {
+  return [];
+}
+
+
 
 
 
