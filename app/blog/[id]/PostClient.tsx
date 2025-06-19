@@ -1,71 +1,44 @@
 'use client';
 
 import React from 'react';
-import { FaCalendar, FaUser, FaClock, FaTag, FaArrowLeft } from 'react-icons/fa';
-
-interface PostData {
-  title: string;
-  excerpt: string;
-  content: string;
-  date: string;
-  author: string;
-  category: string;
-  image: string;
-  readTime: string;
-  tags: string[];
-}
 
 interface PostClientProps {
-  post: PostData;
+  post: {
+    title: string;
+    excerpt: string;
+    content: string;
+    date: string;
+    author: string;
+    category: string;
+    image: string;
+    readTime: string;
+    tags?: string[];
+  };
 }
 
-const PostClient: React.FC<PostClientProps> = ({ post }) => {
-  const handleBackClick = () => {
-    if (typeof window !== 'undefined') {
-      window.history.back();
-    }
-  };
-
-  const handleProgramClick = () => {
-    if (typeof window !== 'undefined') {
-      window.location.href = '/inscricao';
-    }
-  };
-
+const PostClient = ({ post }: PostClientProps) => {
   return (
     <div style={{ 
       minHeight: '100vh', 
-      background: '#f8f9fa'
+      background: '#f8f9fa',
+      padding: '2rem 0'
     }}>
-      {/* Hero Section com Imagem - Igual aos Pilares */}
       <div style={{ 
-        position: 'relative',
-        backgroundImage: `url(${post.image})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        padding: '4rem 2rem', 
-        color: 'white', 
-        textAlign: 'center',
-        overflow: 'hidden'
+        maxWidth: '800px', 
+        margin: '0 auto', 
+        padding: '0 1rem' 
       }}>
-        {/* Overlay escuro */}
-        <div style={{
-          position: 'absolute',
-          top: 0,
-          left: 0,
-          right: 0,
-          bottom: 0,
-          background: 'rgba(0, 0, 0, 0.6)'
-        }} />
         
-        {/* Conteúdo */}
-        <div style={{ 
-          position: 'relative', 
-          zIndex: 2,
-          maxWidth: '800px',
-          margin: '0 auto'
+        {/* Header Simples */}
+        <div style={{
+          background: 'white',
+          borderRadius: '12px',
+          padding: '3rem',
+          marginBottom: '2rem',
+          boxShadow: '0 4px 6px rgba(0, 0, 0, 0.05)',
+          border: '1px solid #e5e7eb',
+          textAlign: 'center'
         }}>
-          {/* Categoria Badge */}
           <div style={{
             display: 'inline-block',
             padding: '0.5rem 1rem',
@@ -83,7 +56,7 @@ const PostClient: React.FC<PostClientProps> = ({ post }) => {
             fontSize: '2.5rem', 
             fontWeight: '700', 
             marginBottom: '1rem', 
-            textShadow: '0 2px 4px rgba(0,0,0,0.5)',
+            color: '#374151',
             lineHeight: '1.2'
           }}>
             {post.title}
@@ -91,56 +64,137 @@ const PostClient: React.FC<PostClientProps> = ({ post }) => {
           
           <p style={{ 
             fontSize: '1.125rem', 
-            opacity: 0.95, 
+            color: '#6b7280',
             maxWidth: '600px', 
             margin: '0 auto 2rem', 
-            lineHeight: '1.6',
-            textShadow: '0 1px 2px rgba(0,0,0,0.5)'
+            lineHeight: '1.6'
           }}>
             {post.excerpt}
           </p>
 
-          {/* Metadados */}
           <div style={{
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
             gap: '2rem',
             fontSize: '0.875rem',
-            opacity: 0.9,
+            color: '#9ca3af',
             flexWrap: 'wrap'
           }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-              <FaCalendar />
-              <span>{new Date(post.date).toLocaleDateString('pt-BR')}</span>
-            </div>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-              <FaUser />
-              <span>{post.author}</span>
-            </div>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-              <FaClock />
-              <span>{post.readTime}</span>
-            </div>
+            <span>📅 {new Date(post.date).toLocaleDateString('pt-BR')}</span>
+            <span>👤 {post.author}</span>
+            <span>⏱️ {post.readTime}</span>
           </div>
         </div>
-      </div>
 
-      {/* Conteúdo do Artigo */}
-      <div style={{ 
-        maxWidth: '800px', 
-        margin: '0 auto', 
-        padding: '3rem 1rem' 
-      }}>
-        
-        {/* Botão Voltar */}
-        <div style={{ marginBottom: '2rem' }}>
-          <button
-            onClick={handleBackClick}
-            style={{
+        {/* Conteúdo */}
+        <div style={{
+          background: 'white',
+          borderRadius: '12px',
+          padding: '3rem',
+          boxShadow: '0 4px 6px rgba(0, 0, 0, 0.05)',
+          border: '1px solid #e5e7eb',
+          marginBottom: '2rem'
+        }}>
+          <div style={{
+            fontSize: '1.125rem',
+            lineHeight: '1.8',
+            color: '#374151'
+          }}>
+            {post.content}
+          </div>
+        </div>
+
+        {/* Tags */}
+        {post.tags && post.tags.length > 0 && (
+          <div style={{
+            background: 'white',
+            borderRadius: '12px',
+            padding: '2rem',
+            boxShadow: '0 4px 6px rgba(0, 0, 0, 0.05)',
+            border: '1px solid #e5e7eb',
+            marginBottom: '2rem'
+          }}>
+            <h3 style={{
+              fontSize: '1rem',
+              fontWeight: '600',
+              marginBottom: '1rem',
+              color: '#374151'
+            }}>
+              🏷️ Tags
+            </h3>
+            <div style={{
               display: 'flex',
-              alignItems: 'center',
-              gap: '0.5rem',
+              flexWrap: 'wrap',
+              gap: '0.75rem'
+            }}>
+              {post.tags.map((tag, index) => (
+                <span
+                  key={index}
+                  style={{
+                    padding: '0.5rem 1rem',
+                    background: '#f3f4f6',
+                    color: '#6b7280',
+                    borderRadius: '20px',
+                    fontSize: '0.875rem',
+                    fontWeight: '500'
+                  }}
+                >
+                  #{tag}
+                </span>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* Call to Action */}
+        <div style={{
+          background: 'linear-gradient(135deg, #10b981, #059669)',
+          borderRadius: '12px',
+          padding: '2rem',
+          textAlign: 'center',
+          color: 'white'
+        }}>
+          <h3 style={{
+            fontSize: '1.25rem',
+            fontWeight: '600',
+            marginBottom: '1rem'
+          }}>
+            Transforme sua Saúde com o Desafio Vitalidade
+          </h3>
+          <p style={{
+            marginBottom: '1.5rem',
+            opacity: 0.9
+          }}>
+            Descubra como nosso programa de 30 dias pode revolucionar sua longevidade e bem-estar.
+          </p>
+          <a
+            href="/inscricao"
+            style={{
+              display: 'inline-block',
+              padding: '0.75rem 2rem',
+              background: 'white',
+              color: '#10b981',
+              textDecoration: 'none',
+              borderRadius: '8px',
+              fontSize: '1rem',
+              fontWeight: '600',
+              transition: 'all 0.2s ease'
+            }}
+          >
+            Saiba Mais sobre o Programa
+          </a>
+        </div>
+
+        {/* Voltar */}
+        <div style={{ 
+          textAlign: 'center',
+          marginTop: '2rem'
+        }}>
+          <a
+            href="/blog"
+            style={{
+              display: 'inline-block',
               padding: '0.75rem 1.5rem',
               background: 'white',
               border: '1px solid #d1d5db',
@@ -148,123 +202,20 @@ const PostClient: React.FC<PostClientProps> = ({ post }) => {
               color: '#374151',
               fontSize: '0.875rem',
               fontWeight: '500',
-              cursor: 'pointer',
-              transition: 'all 0.2s ease'
+              textDecoration: 'none'
             }}
           >
-            <FaArrowLeft />
-            <span>Voltar ao Blog</span>
-          </button>
+            ← Voltar ao Blog
+          </a>
         </div>
-
-        {/* Conteúdo Principal */}
-        <article style={{
-          background: 'white',
-          borderRadius: '12px',
-          padding: '3rem',
-          boxShadow: '0 4px 6px rgba(0, 0, 0, 0.05)',
-          border: '1px solid #e5e7eb'
-        }}>
-          
-          {/* Conteúdo do Post */}
-          <div 
-            style={{
-              fontSize: '1.125rem',
-              lineHeight: '1.8',
-              color: '#374151'
-            }}
-            dangerouslySetInnerHTML={{ __html: post.content }}
-          />
-
-          {/* Tags */}
-          {post.tags && post.tags.length > 0 && (
-            <div style={{
-              marginTop: '3rem',
-              paddingTop: '2rem',
-              borderTop: '1px solid #e5e7eb'
-            }}>
-              <h3 style={{
-                fontSize: '1rem',
-                fontWeight: '600',
-                marginBottom: '1rem',
-                color: '#374151',
-                display: 'flex',
-                alignItems: 'center',
-                gap: '0.5rem'
-              }}>
-                <FaTag />
-                Tags
-              </h3>
-              <div style={{
-                display: 'flex',
-                flexWrap: 'wrap',
-                gap: '0.75rem'
-              }}>
-                {post.tags.map((tag, index) => (
-                  <span
-                    key={`${tag}-${index}`}
-                    style={{
-                      padding: '0.5rem 1rem',
-                      background: '#f3f4f6',
-                      color: '#6b7280',
-                      borderRadius: '20px',
-                      fontSize: '0.875rem',
-                      fontWeight: '500'
-                    }}
-                  >
-                    #{tag}
-                  </span>
-                ))}
-              </div>
-            </div>
-          )}
-
-          {/* Call to Action */}
-          <div style={{
-            marginTop: '3rem',
-            padding: '2rem',
-            background: 'linear-gradient(135deg, #10b981, #059669)',
-            borderRadius: '12px',
-            textAlign: 'center',
-            color: 'white'
-          }}>
-            <h3 style={{
-              fontSize: '1.25rem',
-              fontWeight: '600',
-              marginBottom: '1rem'
-            }}>
-              Transforme sua Saúde com o Desafio Vitalidade
-            </h3>
-            <p style={{
-              marginBottom: '1.5rem',
-              opacity: 0.9
-            }}>
-              Descubra como nosso programa de 30 dias pode revolucionar sua longevidade e bem-estar.
-            </p>
-            <button
-              onClick={handleProgramClick}
-              style={{
-                padding: '0.75rem 2rem',
-                background: 'white',
-                color: '#10b981',
-                border: 'none',
-                borderRadius: '8px',
-                fontSize: '1rem',
-                fontWeight: '600',
-                cursor: 'pointer',
-                transition: 'all 0.2s ease'
-              }}
-            >
-              Saiba Mais sobre o Programa
-            </button>
-          </div>
-        </article>
       </div>
     </div>
   );
 };
 
 export default PostClient;
+
+
 
 
 
