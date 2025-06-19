@@ -21,19 +21,8 @@ export default async function Post({ params }: PageProps) {
     notFound();
   }
 
-  const allPosts = getSortedPostsData();
-  
-  const relatedPosts = allPosts
-    .filter((p: any) => {
-      return p.id !== id && 
-             p.category && 
-             (post as any).category && 
-             p.category === (post as any).category;
-    })
-    .slice(0, 3);
-
-  // Correção final: type assertion para ambos os props
-  return <PostClient post={post as any} relatedPosts={relatedPosts as any} />;
+  // Correção: Passar apenas o post, sem relatedPosts
+  return <PostClient post={post as any} />;
 }
 
 export async function generateStaticParams() {
@@ -55,7 +44,7 @@ export async function generateMetadata({ params }: PageProps) {
         description: 'O post solicitado não foi encontrado.',
       };
     }
-    
+
     return {
       title: `${(post as any).title || 'Post'} | Blog Desafio Vitalidade`,
       description: (post as any).excerpt || (post as any).title || 'Artigo do blog Desafio Vitalidade',
@@ -72,6 +61,8 @@ export async function generateMetadata({ params }: PageProps) {
     };
   }
 }
+
+
 
 
 
