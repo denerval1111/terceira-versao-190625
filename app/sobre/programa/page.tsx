@@ -61,7 +61,7 @@ export default function SobreProgramaPage() {
           lineHeight: '1.6',
           marginBottom: '1.5rem'
         }}>
-          O Desafio Vitalidade não é apenas mais um programa de saúde. É uma <strong>jornada transformadora de 30 dias</strong> que combina os mais avançados conhecimentos em medicina regenerativa, nutrologia, saúde mental e gerenciamento de peso.
+          O Desafio Vitalidade não é apenas mais um programa de saúde. É uma <strong>jornada transformadora de 30 dias</strong> cuidadosamente estruturada por especialistas, que integra os mais recentes avanços científicos em medicina regenerativa, nutrologia, saúde mental e gerenciamento de peso.
         </p>
         <p style={{
           fontSize: '1.1rem',
@@ -69,8 +69,33 @@ export default function SobreProgramaPage() {
           lineHeight: '1.6',
           marginBottom: '1.5rem'
         }}>
-          Desenvolvido por uma equipe multidisciplinar de especialistas, nosso programa oferece uma abordagem única e personalizada para cada participante, garantindo resultados duradouros e transformadores.
+          Com turmas limitadas a apenas <strong>20 participantes</strong>, garantimos atenção personalizada e resultados excepcionais. Nossa próxima turma está com vagas se esgotando rapidamente, e centenas de pessoas já experimentaram uma transformação profunda em sua saúde e qualidade de vida.
         </p>
+        
+        {/* Depoimento em destaque */}
+        <div style={{
+          backgroundColor: '#f8f9fa',
+          padding: '1.5rem',
+          borderLeft: '4px solid #10b981',
+          marginTop: '2rem',
+          fontStyle: 'italic'
+        }}>
+          <p style={{
+            fontSize: '1rem',
+            color: '#555',
+            marginBottom: '0.5rem'
+          }}>
+            "Após 30 dias no Desafio Vitalidade, não apenas perdi 7kg, mas minha energia diária aumentou drasticamente e meus exames de sangue melhoraram significativamente. Foi uma transformação completa que vai muito além da estética."
+          </p>
+          <p style={{
+            fontSize: '0.9rem',
+            color: '#10b981',
+            fontWeight: '600',
+            marginBottom: '0'
+          }}>
+            — Maria C., 52 anos
+          </p>
+        </div>
       </div>
 
       {/* Os 4 Pilares */}
@@ -450,6 +475,8 @@ export default function SobreProgramaPage() {
     </div>
   );
 }
+
+
 
 
 
