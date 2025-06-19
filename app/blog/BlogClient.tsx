@@ -1,7 +1,6 @@
 'use client';
 
 import React, { useState, useMemo } from 'react';
-import { FaSearch, FaCalendar, FaUser, FaClock, FaArrowRight } from 'react-icons/fa';
 
 interface Post {
   slug: string;
@@ -159,14 +158,16 @@ const BlogClient: React.FC<BlogClientProps> = ({ posts }) => {
           {/* Busca */}
           <div style={{ marginBottom: '1.5rem' }}>
             <div style={{ position: 'relative' }}>
-              <FaSearch style={{ 
+              <span style={{ 
                 position: 'absolute', 
                 left: '1rem', 
                 top: '50%', 
                 transform: 'translateY(-50%)', 
                 color: '#9ca3af', 
                 fontSize: '1rem' 
-              }} />
+              }}>
+                🔍
+              </span>
               <input
                 type="text"
                 placeholder="Buscar artigos..."
@@ -262,6 +263,11 @@ const BlogClient: React.FC<BlogClientProps> = ({ posts }) => {
                 e.currentTarget.style.transform = 'translateY(0)';
                 e.currentTarget.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.05)';
               }}
+              onClick={() => {
+                if (typeof window !== 'undefined') {
+                  window.location.href = `/blog/${post.slug}`;
+                }
+              }}
             >
               {/* Imagem do Post */}
               <div style={{
@@ -320,15 +326,15 @@ const BlogClient: React.FC<BlogClientProps> = ({ posts }) => {
                   marginBottom: '1rem'
                 }}>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '0.25rem' }}>
-                    <FaCalendar />
+                    <span>📅</span>
                     <span>{new Date(post.date).toLocaleDateString('pt-BR')}</span>
                   </div>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '0.25rem' }}>
-                    <FaUser />
+                    <span>👤</span>
                     <span>{post.author}</span>
                   </div>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '0.25rem' }}>
-                    <FaClock />
+                    <span>⏱️</span>
                     <span>{post.readTime}</span>
                   </div>
                 </div>
@@ -344,7 +350,7 @@ const BlogClient: React.FC<BlogClientProps> = ({ posts }) => {
                   textDecoration: 'none'
                 }}>
                   <span>Saiba mais</span>
-                  <FaArrowRight style={{ fontSize: '0.75rem' }} />
+                  <span style={{ fontSize: '0.75rem' }}>→</span>
                 </div>
               </div>
             </article>
@@ -375,6 +381,8 @@ const BlogClient: React.FC<BlogClientProps> = ({ posts }) => {
 };
 
 export default BlogClient;
+
+
 
 
 
