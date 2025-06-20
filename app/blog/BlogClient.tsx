@@ -24,6 +24,17 @@ const BlogClient: React.FC<BlogClientProps> = ({ initialPosts = [] }) => {
   // Posts garantidos com SLUGS CORRIGIDOS
   const fallbackPosts: PostData[] = [
     {
+  slug: 'cinco-habitos-longevidade',
+  title: '5 Hábitos Diários para Aumentar sua Longevidade: A Ciência por Trás de uma Vida Mais Longa e Saudável',
+  excerpt: 'Descubra os 5 hábitos cientificamente comprovados que podem adicionar até 14 anos à sua vida. Baseado em pesquisas de Harvard com mais de 123.000 participantes.',
+  date: '2024-12-20',
+  author: 'Dr. Denerval',
+  category: 'Medicina Regenerativa',
+  image: '/images/cincohabitosdiarios.png',
+  readTime: '12 min de leitura',
+  tags: ['longevidade', 'hábitos saudáveis', 'medicina regenerativa', 'exercício', 'sono']
+},
+    {
       slug: 'ansiedade-estresse-moderno',
       title: 'Ansiedade e Estresse Moderno: Estratégias Baseadas em Ciência para o Bem-Estar Mental',
       excerpt: 'Aprenda técnicas comprovadas cientificamente para gerenciar ansiedade, combater o estresse do mundo moderno e cultivar uma mente mais equilibrada e resiliente.',
