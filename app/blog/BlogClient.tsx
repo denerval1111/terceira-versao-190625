@@ -32,7 +32,7 @@ const BlogClient: React.FC<BlogClientProps> = ({ initialPosts = [] }) => {
   category: 'Medicina Regenerativa',
   image: '/images/exercioaltaintensidadeXbaixa.png',
   readTime: '12 min de leitura',
-  tags: ['exercício de alta intensidade', 'exercício de baixa intensidade', 'envelhecimento saudável', 'queima de gordura', 'perda de peso'']
+  tags: ['exercício de alta intensidade', 'exercício de baixa intensidade', 'envelhecimento saudável', 'queima de gordura', 'perda de peso']
 },
     {
   slug: 'cinco-habitos-longevidade',
