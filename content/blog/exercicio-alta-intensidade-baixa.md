@@ -1,4 +1,16 @@
+title: "Exercício de Alta Intensidade X Baixa Intensidade: O Que É Melhor?"
+excerpt: "No universo do fitness e da saúde, uma das questões mais debatidas é sobre qual modalidade de exercício oferece melhores resultados: alta ou baixa intensidade."
+date: "2025-01-20"
+author: "Dr. Denerval"
+category: "Medicina Regenerativa"
+image: "/images/exercioaltaintensidadeXbaixa.png"
+readTime: "12 min de leitura"
+tags: ["exercício de alta intensidade", "exercício de baixa intensidade", "envelhecimento saudável", "queima de gordura", "perda de peso"]
+---
 
+# Exercício de Alta Intensidade X Baixa Intensidade: O Que É Melhor?
+
+## Introdução
 
 
 <h1
