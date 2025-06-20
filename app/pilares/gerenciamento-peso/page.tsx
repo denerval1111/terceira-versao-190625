@@ -11,7 +11,7 @@ export default function GerenciamentoPesoPage() {
     }}>
       {/* Hero Section */}
       <div style={{
-        backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/images/mulher-gerenciamento-peso.png)',
+        backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/images/mulher-gerenciamento-peso.png?v=' + Date.now() + ')',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         color: 'white',
@@ -328,6 +328,8 @@ export default function GerenciamentoPesoPage() {
     </div>
   );
 }
+
+
 
 
 
