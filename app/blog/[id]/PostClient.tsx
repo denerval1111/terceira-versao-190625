@@ -38,23 +38,24 @@ const PostClient: React.FC<PostClientProps> = ({ post }) => {
       .replace(/^\d+\.\s+(.*$)/gim, '<li>$1</li>')
       // Listas não ordenadas
       .replace(/^[-*]\s+(.*$)/gim, '<li>$1</li>')
-      // Parágrafos
-      .replace(/\n\n/g, '</p><p>')
-      // Quebras de linha
-      .replace(/\n/g, '<br>');
-    
-    // Envolver em parágrafos se não começar com tag HTML
-    if (!html.startsWith('<')) {
-      html = '<p>' + html + '</p>';
-    }
-    
-    // Envolver listas em tags apropriadas
-    html = html.replace(/(<li>.*?<\/li>)/gs, (match) => {
-      if (match.includes('<li>')) {
-        return '<ul>' + match + '</ul>';
-      }
-      return match;
-    });
+      // Parágrafos (dividir por linha dupla)
+      .split('\n\n')
+      .map(paragraph => {
+        if (paragraph.trim()) {
+          // Se contém <li>, envolver em <ul>
+          if (paragraph.includes('<li>')) {
+            return '<ul>' + paragraph + '</ul>';
+          }
+          // Se já é uma tag HTML, manter como está
+          if (paragraph.trim().startsWith('<')) {
+            return paragraph;
+          }
+          // Senão, envolver em <p>
+          return '<p>' + paragraph.replace(/\n/g, '<br>') + '</p>';
+        }
+        return '';
+      })
+      .join('');
     
     return html;
   };
@@ -174,33 +175,7 @@ const PostClient: React.FC<PostClientProps> = ({ post }) => {
           <div 
             dangerouslySetInnerHTML={{ __html: getFullContent() }}
             style={{
-              '& h1, & h2, & h3': {
-                color: '#1f2937',
-                marginTop: '2rem',
-                marginBottom: '1rem',
-                fontWeight: 'bold'
-              },
-              '& h1': { fontSize: '2rem' },
-              '& h2': { fontSize: '1.5rem' },
-              '& h3': { fontSize: '1.25rem' },
-              '& p': {
-                marginBottom: '1rem',
-                color: '#374151'
-              },
-              '& ul, & ol': {
-                marginBottom: '1rem',
-                paddingLeft: '1.5rem'
-              },
-              '& li': {
-                marginBottom: '0.5rem'
-              },
-              '& strong': {
-                fontWeight: 'bold',
-                color: '#1f2937'
-              },
-              '& em': {
-                fontStyle: 'italic'
-              }
+              color: '#374151'
             }}
           />
         </div>
@@ -248,10 +223,9 @@ const PostClient: React.FC<PostClientProps> = ({ post }) => {
           color: 'white'
         }}>
           <h3 style={{
-            fontSize: '1rem',
+            fontSize: '1.5rem',
             fontWeight: '600',
-            marginBottom: '1rem',
-            color: '#374151'
+            marginBottom: '1rem'
           }}>
             Transforme sua saúde com o Desafio Vitalidade
           </h3>
@@ -284,6 +258,7 @@ const PostClient: React.FC<PostClientProps> = ({ post }) => {
 };
 
 export default PostClient;
+
 
 
 
