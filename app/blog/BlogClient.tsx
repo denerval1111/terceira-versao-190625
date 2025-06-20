@@ -23,7 +23,8 @@ const BlogClient: React.FC<BlogClientProps> = ({ initialPosts = [] }) => {
 
   // Posts garantidos com SLUGS CORRIGIDOS
   const fallbackPosts: PostData[] = [
-     slug: 'exercicio-alta-intensidade-baixa',
+    { 
+    slug: 'exercicio-alta-intensidade-baixa',
   title: 'Exercício de Alta Intensidade X Baixa Intensidade: O Que É Melhor?',
   excerpt: 'No universo do fitness e da saúde, uma das questões mais debatidas entre profissionais e praticantes é sobre qual modalidade de exercício 
 oferece melhores resultados: os treinos de alta intensidade ou os de
