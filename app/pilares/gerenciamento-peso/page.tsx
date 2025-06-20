@@ -9,9 +9,9 @@ export default function GerenciamentoPesoPage() {
       margin: '0 auto',
       padding: '2rem 1rem'
     }}>
-      {/* Hero Section - FORÇANDO NOVA IMAGEM */}
+      {/* Hero Section - NOVA IMAGEM COM NOME DIFERENTE */}
       <div style={{
-        backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(/images/hero-background.jpeg)',
+        backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(/images/mulher-fitness-2025.png)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         color: 'white',
@@ -328,6 +328,8 @@ export default function GerenciamentoPesoPage() {
     </div>
   );
 }
+
+
 
 
 
