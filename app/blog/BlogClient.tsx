@@ -74,7 +74,7 @@ const BlogClient: React.FC<BlogClientProps> = ({ initialPosts = [] }) => {
       date: '2024-06-16',
       author: 'Dr. Denerval',
       category: 'Medicina Regenerativa',
-      image: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      image: '/images/quatropilareslongevidade.png',
       readTime: '12 min de leitura',
       tags: ['longevidade', 'medicina regenerativa', 'nutrologia', 'saúde mental', 'gerenciamento de peso']
     }
