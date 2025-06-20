@@ -3,9 +3,6 @@ import React from 'react';
 import ActionButton from '@/components/ActionButton';
 
 export default function GerenciamentoPesoPage() {
-  // Timestamp fixo para cache-busting
-  const imageUrl = `/images/mulher-gerenciamento-peso.png?v=20250620`;
-  
   return (
     <div style={{
       maxWidth: '1200px',
@@ -14,7 +11,7 @@ export default function GerenciamentoPesoPage() {
     }}>
       {/* Hero Section */}
       <div style={{
-        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${imageUrl})`,
+        backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(/images/mulher-gerenciamento-peso.png)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         color: 'white',
@@ -54,21 +51,21 @@ export default function GerenciamentoPesoPage() {
             marginBottom: '1rem',
             fontWeight: '600'
           }}>
-            Abordagem Científica do Peso
+            Abordagem Científica
           </h2>
           <p style={{
             lineHeight: '1.6',
             color: '#555',
             marginBottom: '1.5rem'
           }}>
-            Nosso programa de gerenciamento de peso vai além das dietas tradicionais. Focamos na composição corporal, saúde metabólica e sustentabilidade a longo prazo, utilizando estratégias baseadas em evidências científicas.
+            Nossa abordagem para gerenciamento de peso integra as mais recentes descobertas em metabolismo, composição corporal e sustentabilidade. Desenvolvemos estratégias personalizadas que vão muito além das dietas tradicionais.
           </p>
           <p style={{
             lineHeight: '1.6',
             color: '#555',
             marginBottom: '1.5rem'
           }}>
-            Através de análises personalizadas, desenvolvemos protocolos que respeitam sua individualidade biológica, preferências alimentares e estilo de vida, garantindo resultados duradouros.
+            Reconhecemos que cada pessoa tem uma individualidade biológica única, e nossos protocolos respeitam suas preferências alimentares e estilo de vida para garantir resultados duradouros.
           </p>
         </div>
 
@@ -79,7 +76,7 @@ export default function GerenciamentoPesoPage() {
             marginBottom: '1rem',
             fontWeight: '600'
           }}>
-            Metabolismo e Composição Corporal
+            Composição Corporal
           </h2>
           <p style={{
             lineHeight: '1.6',
@@ -93,7 +90,7 @@ export default function GerenciamentoPesoPage() {
             color: '#555',
             marginBottom: '1.5rem'
           }}>
-            Utilizamos estratégias de flexibilidade metabólica, timing nutricional e exercícios específicos para maximizar a queima de gordura e preservação muscular.
+            Nosso objetivo é capacitá-lo com estratégias que continuarão beneficiando sua saúde e forma física muito além dos 30 dias do programa.
           </p>
         </div>
       </div>
@@ -112,7 +109,7 @@ export default function GerenciamentoPesoPage() {
           fontWeight: '600',
           textAlign: 'center'
         }}>
-          Benefícios do Gerenciamento de Peso Científico
+          O que Você Vai Aprender
         </h2>
         
         <div style={{
@@ -140,7 +137,7 @@ export default function GerenciamentoPesoPage() {
               color: '#666',
               lineHeight: '1.5'
             }}>
-              Estratégias para aumentar o metabolismo basal e otimizar a queima de calorias.
+              Estratégias para aumentar o metabolismo basal e otimizar a queima de calorias naturalmente.
             </p>
           </div>
 
@@ -164,7 +161,7 @@ export default function GerenciamentoPesoPage() {
               color: '#666',
               lineHeight: '1.5'
             }}>
-              Protocolos para manter e aumentar massa muscular durante o processo de emagrecimento.
+              Protocolos para manter e aumentar massa muscular durante o processo de transformação corporal.
             </p>
           </div>
 
@@ -181,14 +178,14 @@ export default function GerenciamentoPesoPage() {
               marginBottom: '1rem',
               fontWeight: '600'
             }}>
-              🎯 Controle Hormonal
+              🎯 Flexibilidade Metabólica
             </h3>
             <p style={{
               fontSize: '0.95rem',
               color: '#666',
               lineHeight: '1.5'
             }}>
-              Regulação de hormônios relacionados à fome, saciedade e metabolismo.
+              Técnicas para otimizar o uso de gordura e carboidratos como fonte de energia.
             </p>
           </div>
 
@@ -212,7 +209,7 @@ export default function GerenciamentoPesoPage() {
               color: '#666',
               lineHeight: '1.5'
             }}>
-              Criação de hábitos duradouros que mantêm os resultados a longo prazo.
+              Criação de hábitos alimentares e de exercícios que se mantêm a longo prazo.
             </p>
           </div>
         </div>
@@ -254,7 +251,7 @@ export default function GerenciamentoPesoPage() {
               marginBottom: '1rem',
               fontStyle: 'italic'
             }}>
-              "Perdi 12kg em 30 dias, mas o mais importante foi aprender a manter o peso. Já se passaram 6 meses e continuo no meu peso ideal."
+              "Perdi 12kg em 30 dias, mas o mais importante foi aprender a manter o peso. Já se passaram 6 meses e continuo no meu peso ideal sem fazer dietas restritivas."
             </p>
             <p style={{
               fontSize: '0.9rem',
@@ -278,7 +275,7 @@ export default function GerenciamentoPesoPage() {
               marginBottom: '1rem',
               fontStyle: 'italic'
             }}>
-              "Não foi só o peso que mudou, mas toda minha relação com a comida. Agora tenho controle e não vivo fazendo dietas malucas."
+              "Não foi só o peso que mudou, mas toda minha relação com a comida. Agora tenho controle e energia para treinar todos os dias."
             </p>
             <p style={{
               fontSize: '0.9rem',
@@ -331,6 +328,7 @@ export default function GerenciamentoPesoPage() {
     </div>
   );
 }
+
 
 
 
