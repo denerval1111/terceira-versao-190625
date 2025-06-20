@@ -3,6 +3,9 @@ import React from 'react';
 import ActionButton from '@/components/ActionButton';
 
 export default function GerenciamentoPesoPage() {
+  // Timestamp fixo para cache-busting
+  const imageUrl = `/images/mulher-gerenciamento-peso.png?v=20250620`;
+  
   return (
     <div style={{
       maxWidth: '1200px',
@@ -11,7 +14,7 @@ export default function GerenciamentoPesoPage() {
     }}>
       {/* Hero Section */}
       <div style={{
-        backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/images/mulher-gerenciamento-peso.png?v=' + Date.now() + ')',
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${imageUrl})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         color: 'white',
@@ -328,6 +331,8 @@ export default function GerenciamentoPesoPage() {
     </div>
   );
 }
+
+
 
 
 
