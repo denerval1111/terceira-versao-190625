@@ -9,9 +9,9 @@ export default function GerenciamentoPesoPage() {
       margin: '0 auto',
       padding: '2rem 1rem'
     }}>
-      {/* Hero Section - TESTE COM IMAGEM QUE FUNCIONA */}
+      {/* Hero Section - FORÇANDO NOVA IMAGEM */}
       <div style={{
-        backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(/images/sessao-terapia-saude-mental.png)',
+        backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(/images/hero-background.jpeg)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         color: 'white',
@@ -25,7 +25,7 @@ export default function GerenciamentoPesoPage() {
           marginBottom: '1rem',
           fontWeight: 'bold'
         }}>
-          Gerenciamento de Peso - TESTE
+          Gerenciamento de Peso
         </h1>
         <p style={{
           fontSize: '1.25rem',
@@ -33,7 +33,7 @@ export default function GerenciamentoPesoPage() {
           margin: '0 auto 2rem auto',
           lineHeight: '1.6'
         }}>
-          TESTE: Se esta imagem aparecer, o problema é específico com o arquivo mulher-gerenciamento-peso.png
+          Estratégias científicas para controle de peso saudável, focando em composição corporal, metabolismo e sustentabilidade a longo prazo.
         </p>
       </div>
 
@@ -51,21 +51,21 @@ export default function GerenciamentoPesoPage() {
             marginBottom: '1rem',
             fontWeight: '600'
           }}>
-            Teste de Diagnóstico
+            Abordagem Científica
           </h2>
           <p style={{
             lineHeight: '1.6',
             color: '#555',
             marginBottom: '1.5rem'
           }}>
-            Esta é uma versão de teste usando a imagem da sessão de terapia que sabemos que funciona. Se esta imagem aparecer, confirma que o problema é específico com o arquivo mulher-gerenciamento-peso.png.
+            Nossa abordagem para gerenciamento de peso integra as mais recentes descobertas em metabolismo, composição corporal e sustentabilidade. Desenvolvemos estratégias personalizadas que vão muito além das dietas tradicionais.
           </p>
           <p style={{
             lineHeight: '1.6',
             color: '#555',
             marginBottom: '1.5rem'
           }}>
-            Neste caso, precisaremos fazer upload da imagem novamente com um nome diferente ou verificar se há algum problema com o arquivo original.
+            Reconhecemos que cada pessoa tem uma individualidade biológica única, e nossos protocolos respeitam suas preferências alimentares e estilo de vida para garantir resultados duradouros.
           </p>
         </div>
 
@@ -76,22 +76,215 @@ export default function GerenciamentoPesoPage() {
             marginBottom: '1rem',
             fontWeight: '600'
           }}>
-            Próximos Passos
+            Composição Corporal
           </h2>
           <p style={{
             lineHeight: '1.6',
             color: '#555',
             marginBottom: '1.5rem'
           }}>
-            Se a imagem da sessão de terapia aparecer aqui, vamos renomear o arquivo da mulher para algo como "mulher-correndo-peso.png" e fazer upload novamente.
+            Priorizamos a otimização da composição corporal - aumentando massa muscular magra e reduzindo gordura visceral - em vez de focar apenas no número da balança. Isso resulta em melhor saúde metabólica e aparência física.
           </p>
           <p style={{
             lineHeight: '1.6',
             color: '#555',
             marginBottom: '1.5rem'
           }}>
-            Às vezes arquivos específicos podem ter problemas de codificação ou caracteres especiais que impedem o carregamento.
+            Nosso objetivo é capacitá-lo com estratégias que continuarão beneficiando sua saúde e forma física muito além dos 30 dias do programa.
           </p>
+        </div>
+      </div>
+
+      {/* Seção de Benefícios */}
+      <div style={{
+        backgroundColor: '#f8f9fa',
+        padding: '3rem 2rem',
+        borderRadius: '8px',
+        marginBottom: '3rem'
+      }}>
+        <h2 style={{
+          fontSize: '2rem',
+          color: '#343A40',
+          marginBottom: '2rem',
+          fontWeight: '600',
+          textAlign: 'center'
+        }}>
+          O que Você Vai Aprender
+        </h2>
+        
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
+          gap: '2rem'
+        }}>
+          <div style={{
+            backgroundColor: 'white',
+            padding: '1.5rem',
+            borderRadius: '8px',
+            boxShadow: '0 2px 4px rgba(0,0,0,0.1)',
+            textAlign: 'center'
+          }}>
+            <h3 style={{
+              fontSize: '1.25rem',
+              color: '#8b5cf6',
+              marginBottom: '1rem',
+              fontWeight: '600'
+            }}>
+              🔥 Aceleração Metabólica
+            </h3>
+            <p style={{
+              fontSize: '0.95rem',
+              color: '#666',
+              lineHeight: '1.5'
+            }}>
+              Estratégias para aumentar o metabolismo basal e otimizar a queima de calorias naturalmente.
+            </p>
+          </div>
+
+          <div style={{
+            backgroundColor: 'white',
+            padding: '1.5rem',
+            borderRadius: '8px',
+            boxShadow: '0 2px 4px rgba(0,0,0,0.1)',
+            textAlign: 'center'
+          }}>
+            <h3 style={{
+              fontSize: '1.25rem',
+              color: '#8b5cf6',
+              marginBottom: '1rem',
+              fontWeight: '600'
+            }}>
+              💪 Preservação Muscular
+            </h3>
+            <p style={{
+              fontSize: '0.95rem',
+              color: '#666',
+              lineHeight: '1.5'
+            }}>
+              Protocolos para manter e aumentar massa muscular durante o processo de transformação corporal.
+            </p>
+          </div>
+
+          <div style={{
+            backgroundColor: 'white',
+            padding: '1.5rem',
+            borderRadius: '8px',
+            boxShadow: '0 2px 4px rgba(0,0,0,0.1)',
+            textAlign: 'center'
+          }}>
+            <h3 style={{
+              fontSize: '1.25rem',
+              color: '#8b5cf6',
+              marginBottom: '1rem',
+              fontWeight: '600'
+            }}>
+              🎯 Flexibilidade Metabólica
+            </h3>
+            <p style={{
+              fontSize: '0.95rem',
+              color: '#666',
+              lineHeight: '1.5'
+            }}>
+              Técnicas para otimizar o uso de gordura e carboidratos como fonte de energia.
+            </p>
+          </div>
+
+          <div style={{
+            backgroundColor: 'white',
+            padding: '1.5rem',
+            borderRadius: '8px',
+            boxShadow: '0 2px 4px rgba(0,0,0,0.1)',
+            textAlign: 'center'
+          }}>
+            <h3 style={{
+              fontSize: '1.25rem',
+              color: '#8b5cf6',
+              marginBottom: '1rem',
+              fontWeight: '600'
+            }}>
+              🔄 Sustentabilidade
+            </h3>
+            <p style={{
+              fontSize: '0.95rem',
+              color: '#666',
+              lineHeight: '1.5'
+            }}>
+              Criação de hábitos alimentares e de exercícios que se mantêm a longo prazo.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Depoimentos */}
+      <div style={{
+        backgroundColor: 'white',
+        padding: '3rem 2rem',
+        borderRadius: '8px',
+        boxShadow: '0 4px 6px rgba(0,0,0,0.05)',
+        marginBottom: '3rem'
+      }}>
+        <h2 style={{
+          fontSize: '2rem',
+          color: '#343A40',
+          marginBottom: '2rem',
+          fontWeight: '600',
+          textAlign: 'center'
+        }}>
+          Transformações Reais
+        </h2>
+        
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+          gap: '2rem'
+        }}>
+          <div style={{
+            backgroundColor: '#f8f9fa',
+            padding: '2rem',
+            borderRadius: '8px',
+            borderLeft: '4px solid #8b5cf6'
+          }}>
+            <p style={{
+              fontSize: '1rem',
+              color: '#555',
+              lineHeight: '1.6',
+              marginBottom: '1rem',
+              fontStyle: 'italic'
+            }}>
+              "Perdi 12kg em 30 dias, mas o mais importante foi aprender a manter o peso. Já se passaram 6 meses e continuo no meu peso ideal sem fazer dietas restritivas."
+            </p>
+            <p style={{
+              fontSize: '0.9rem',
+              color: '#8b5cf6',
+              fontWeight: '600'
+            }}>
+              - Ana Paula, 38 anos
+            </p>
+          </div>
+
+          <div style={{
+            backgroundColor: '#f8f9fa',
+            padding: '2rem',
+            borderRadius: '8px',
+            borderLeft: '4px solid #8b5cf6'
+          }}>
+            <p style={{
+              fontSize: '1rem',
+              color: '#555',
+              lineHeight: '1.6',
+              marginBottom: '1rem',
+              fontStyle: 'italic'
+            }}>
+              "Não foi só o peso que mudou, mas toda minha relação com a comida. Agora tenho controle e energia para treinar todos os dias."
+            </p>
+            <p style={{
+              fontSize: '0.9rem',
+              color: '#8b5cf6',
+              fontWeight: '600'
+            }}>
+              - Carlos Eduardo, 45 anos
+            </p>
+          </div>
         </div>
       </div>
 
@@ -108,7 +301,7 @@ export default function GerenciamentoPesoPage() {
           marginBottom: '1rem',
           fontWeight: '600'
         }}>
-          Teste de Diagnóstico
+          Transforme seu Corpo de Forma Sustentável
         </h2>
         <p style={{
           fontSize: '1.1rem',
@@ -117,7 +310,7 @@ export default function GerenciamentoPesoPage() {
           margin: '0 auto 2rem auto',
           lineHeight: '1.6'
         }}>
-          Verificando se o problema é específico com o arquivo da imagem da mulher.
+          Aprenda estratégias científicas para alcançar e manter seu peso ideal sem dietas restritivas ou métodos extremos.
         </p>
         <div style={{
           display: 'flex',
@@ -135,6 +328,8 @@ export default function GerenciamentoPesoPage() {
     </div>
   );
 }
+
+
 
 
 
