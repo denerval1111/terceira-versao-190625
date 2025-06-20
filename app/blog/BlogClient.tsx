@@ -63,7 +63,7 @@ const BlogClient: React.FC<BlogClientProps> = ({ initialPosts = [] }) => {
       date: '2024-06-14',
       author: 'Dr. Denerval',
       category: 'Gerenciamento de Peso',
-      image: '/images/gerenciamentopeso.jpg',
+      image: '/images/gerenciamentopeso11.jpg',
       readTime: '7 min de leitura',
       tags: ['controle de peso', 'metabolismo', 'nutrologia', 'longevidade', 'composição corporal', 'saúde metabólica']
     },
