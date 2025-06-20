@@ -9,9 +9,9 @@ export default function GerenciamentoPesoPage() {
       margin: '0 auto',
       padding: '2rem 1rem'
     }}>
-      {/* Hero Section - USANDO ARQUIVO COM NOME CORRETO */}
+      {/* Hero Section - TESTE COM IMAGEM QUE FUNCIONA */}
       <div style={{
-        backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(/images/mulher-fitness-2025.png.png)',
+        backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(/images/sessao-terapia-saude-mental.png)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         color: 'white',
@@ -328,6 +328,8 @@ export default function GerenciamentoPesoPage() {
     </div>
   );
 }
+
+
 
 
 
