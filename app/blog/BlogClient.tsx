@@ -41,7 +41,7 @@ const BlogClient: React.FC<BlogClientProps> = ({ initialPosts = [] }) => {
       date: '2024-06-12',
       author: 'Dr. Denerval',
       category: 'Medicina Regenerativa',
-      image: '/images/autofagia-celular.jpg',
+      image: '/images/autofagiacelular.jpg',
       readTime: '6 min de leitura',
       tags: ['autofagia', 'regeneração celular', 'jejum intermitente', 'longevidade', 'anti-aging']
     },
