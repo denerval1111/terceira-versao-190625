@@ -26,12 +26,7 @@ const BlogClient: React.FC<BlogClientProps> = ({ initialPosts = [] }) => {
     { 
     slug: 'exercicio-alta-intensidade-baixa',
   title: 'Exercício de Alta Intensidade X Baixa Intensidade: O Que É Melhor?',
-  excerpt: 'No universo do fitness e da saúde, uma das questões mais debatidas entre profissionais e praticantes é sobre qual modalidade de exercício 
-oferece melhores resultados: os treinos de alta intensidade ou os de
-baixa intensidade. Esta discussão ganha ainda mais relevância quando
-consideramos o público do Desafio Vitalidade - homens e mulheres acima
-de 40 anos que buscam não apenas melhorar sua forma física, mas também
-promover um envelhecimento saudável e com vitalidade',
+  excerpt: 'No universo do fitness e da saúde, uma das questões mais debatidas é sobre qual modalidade de exercício oferece melhores resultados: alta ou baixa intensidade.',
   date: '2025-01-20',
   author: 'Dr. Denerval',
   category: 'Medicina Regenerativa',
