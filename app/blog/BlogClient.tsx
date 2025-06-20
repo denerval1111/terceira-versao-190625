@@ -30,7 +30,7 @@ const BlogClient: React.FC<BlogClientProps> = ({ initialPosts = [] }) => {
       date: '2024-06-10',
       author: 'Dr. Denerval',
       category: 'Saúde Mental',
-      image: 'images/artigo estresse.png',
+      image: 'https://images/artigo-estresse.png',
       readTime: '9 min de leitura',
       tags: ['ansiedade', 'estresse', 'saúde mental', 'mindfulness', 'respiração']
     },
