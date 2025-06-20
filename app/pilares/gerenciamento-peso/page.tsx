@@ -5,16 +5,18 @@ import ActionButton from '@/components/ActionButton';
 export default function GerenciamentoPesoPage() {
   return (
     <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '2rem 1rem' }}>
-      {/* Hero Section - AGORA COM A IMAGEM CORRETA DA MULHER CORRENDO */}
+      {/* Hero Section - FORÇANDO IMAGEM COM !IMPORTANT */}
       <div style={{
-        backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/images/mulher-fitness-2025.png)',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
+        backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/images/mulher-fitness-2025.png) !important',
+        backgroundSize: 'cover !important',
+        backgroundPosition: 'center !important',
+        backgroundRepeat: 'no-repeat !important',
         color: 'white',
         padding: '4rem 2rem',
         borderRadius: '8px',
         marginBottom: '3rem',
-        textAlign: 'center'
+        textAlign: 'center',
+        minHeight: '400px'
       }}>
         <h1 style={{ fontSize: '2.5rem', marginBottom: '1rem', fontWeight: 'bold' }}>
           Gerenciamento de Peso
@@ -154,6 +156,8 @@ export default function GerenciamentoPesoPage() {
     </div>
   );
 }
+
+
 
 
 
