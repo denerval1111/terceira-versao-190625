@@ -30,7 +30,7 @@ const BlogClient: React.FC<BlogClientProps> = ({ initialPosts = [] }) => {
   date: '2025-01-30',
   author: 'Dr. Denerval',
   category: 'Saúde Mental',
-  image: '/images/exercioaltaintensidadeXbaixa.png',
+  image: '/images/inflamacao-cerebral.png',
   readTime: '10 min de leitura',
   tags:["inflamação cerebral", "alzheimere", "envelhecimento cerebral", "memória", "depressão"]
 },
