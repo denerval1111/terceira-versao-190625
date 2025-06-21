@@ -29,7 +29,7 @@ const BlogClient: React.FC<BlogClientProps> = ({ initialPosts = [] }) => {
   excerpt: 'O jejum intermitente emergiu como uma das estratégias nutricionais mais investigadas cientificamente na última década,',
   date: '2025-02-20',
   author: 'Dr. Denerval',
-  category: 'Nutrologia',
+  category: 'Gerenciamento de Peso',
   image: '/images/jejum-intermitente.jpg',
   readTime: '10 min de leitura',
   tags:["jejum", "emagrecimento", "perda de peso", "jeum intermitente", "comer saudavel"]
