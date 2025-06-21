@@ -23,10 +23,21 @@ const BlogClient: React.FC<BlogClientProps> = ({ initialPosts = [] }) => {
 
   // Posts garantidos com SLUGS CORRIGIDOS
   const fallbackPosts: PostData[] = [
-      { 
+    { 
+    slug: 'jejum-intermitente',
+  title: 'Jejum Intermitente: Evidências Científicas e Aplicações Práticas',
+  excerpt: 'O jejum intermitente emergiu como uma das estratégias nutricionais mais investigadas cientificamente na última década,',
+  date: '2025-02-20',
+  author: 'Dr. Denerval',
+  category: 'Nutrologia',
+  image: '/images/jejum-intermitente.jpgg',
+  readTime: '10 min de leitura',
+  tags:["jejum", "emagrecimento", "perda de peso", "jeum intermitente", "comer saudavel"]
+},
+   { 
     slug: 'inflamacao-cerebral',
   title: 'Inflamação Cerebral e Prevenção de Doenças Neurológicas Crônicas: Protegendo seu Cérebro para uma Vida Longa e Saudável',
-  excerpt: '"Imagine que seu cérebro possui um sistema de alarme interno, projetado para protegê-lo de ameaças e manter suas funções em perfeito funcionamento',
+  excerpt: 'Imagine que seu cérebro possui um sistema de alarme interno, projetado para protegê-lo de ameaças e manter suas funções em perfeito funcionamento',
   date: '2025-01-30',
   author: 'Dr. Denerval',
   category: 'Saúde Mental',
