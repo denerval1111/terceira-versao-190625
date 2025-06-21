@@ -11,7 +11,7 @@ tags: ["inflamação cerebral", "alzheimere", "envelhecimento cerebral", "memór
 
 
 
-## Introdução O Alarme Silencioso que Ameaça seu Cérebro
+
 <h1
 id="inflamação-cerebral-e-prevenção-de-doenças-neurológicas-crônicas-protegendo-seu-cérebro-para-uma-vida-longa-e-saudável">Inflamação
 Cerebral e Prevenção de Doenças Neurológicas Crônicas: Protegendo seu
