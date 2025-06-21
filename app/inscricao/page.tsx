@@ -121,17 +121,30 @@ export default function InscricaoPage() {
         </p>
       </div>
 
-      {/* Formulário ou Mensagem de Sucesso */}
-      {submitted ? (
-        <div style={{
-          backgroundColor: '#f8f9fa',
-          padding: '3rem 2rem',
-          borderRadius: '8px',
-          textAlign: 'center',
-          maxWidth: '800px',
-          margin: '0 auto',
-          boxShadow: '0 4px 6px rgba(0, 0, 0, 0.05)'
-        }}>
+ {/* Google Forms - Inscrição Desafio Vitalidade */}
+<div style={{
+  maxWidth: '800px',
+  margin: '0 auto',
+  padding: '2rem',
+  background: 'white',
+  borderRadius: '12px',
+  boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)'
+}}>
+  <iframe 
+    src="https://docs.google.com/forms/d/e/1FAIpQLSdbWaC9kXhYtuCu3wPrHrw7Yw_kck7lxQcG64wTmDpYyxyoEA/viewform?embedded=true" 
+    width="100%" 
+    height="1160" 
+    frameborder="0" 
+    marginheight="0" 
+    marginwidth="0"
+    style={{
+      borderRadius: '8px',
+      border: 'none'
+    }}
+  >
+    Carregando formulário de inscrição...
+  </iframe>
+</div>
           <div style={{
             width: '80px',
             height: '80px',
