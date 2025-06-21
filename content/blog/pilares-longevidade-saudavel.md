@@ -4,7 +4,7 @@ excerpt: "Descubra como os quatro pilares fundamentais do Desafio Vitalidade - m
 date: "2024-06-14"
 author: "Dr. Denerval"
 category: "Medicina Regenerativa"
-image: "/images/placeholder_nature_minimalist.jpg"
+image: "/images/quatropilareslongevidade.jpg"
 readTime: "10 min de leitura"
 tags: ["longevidade", "medicina regenerativa", "nutrologia", "saúde mental", "gerenciamento de peso", "autofagia", "telômeros"]
 ---
