@@ -30,7 +30,7 @@ const BlogClient: React.FC<BlogClientProps> = ({ initialPosts = [] }) => {
   date: '2025-02-20',
   author: 'Dr. Denerval',
   category: 'Nutrologia',
-  image: '/images/jejum-intermitente.jpgg',
+  image: '/images/jejum-intermitente.jpg',
   readTime: '10 min de leitura',
   tags:["jejum", "emagrecimento", "perda de peso", "jeum intermitente", "comer saudavel"]
 },
