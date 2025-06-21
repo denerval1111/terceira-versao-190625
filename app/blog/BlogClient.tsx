@@ -24,6 +24,17 @@ const BlogClient: React.FC<BlogClientProps> = ({ initialPosts = [] }) => {
   // Posts garantidos com SLUGS CORRIGIDOS
   const fallbackPosts: PostData[] = [
     { 
+    slug: 'nutricao antiinflamtoria',
+  title: 'Nutrição Antiinflamatória: O que Comer e o que Evitar para uma Vida Mais Saudável',
+  excerpt: 'Imagine se existisse uma forma simples e natural de reduzir significativamente seu risco de desenvolver doenças cardíacas, diabetes, depressão e até mesmo alguns tipos de câncer.',
+  date: '2025-03-23',
+  author: 'Dr. Denerval',
+  category: 'Nutrologia',
+  image: '/images/nutricao-inflamacao-celular1.jpg',
+  readTime: '12 min de leitura',
+  tags:["inflamação", "alimentos antiinflamatórios", "diabetes", "dieta saudavel", "comer saudavel", "causas da inflamção crônica"]
+},
+    { 
     slug: 'jejum-intermitente',
   title: 'Jejum Intermitente: Evidências Científicas e Aplicações Práticas',
   excerpt: 'O jejum intermitente emergiu como uma das estratégias nutricionais mais investigadas cientificamente na última década,',
