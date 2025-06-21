@@ -1,3 +1,4 @@
+---
 title: "Inflamação Cerebral e Prevenção de Doenças Neurológicas Crônicas: Protegendo seu Cérebro para uma Vida Longa e Saudável"
 excerpt: "Imagine que seu cérebro possui um sistema de alarme interno, projetado para protegê-lo de ameaças e manter suas funções em perfeito funcionamento"
 date: "2025-01-30"
@@ -6,7 +7,8 @@ category: "Saude Mental"
 image: "/images/inflamacao-cerebral.png"
 readTime: "10 min de leitura"
 tags: ["inflamação cerebral", "alzheimere", "envelhecimento cerebral", "memória", "depressão"]
---
+---
+
 
 # Protegendo seu Cérebro para uma Vida Longa e Saudável
 
