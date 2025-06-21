@@ -10,7 +10,6 @@ tags: ["inflamação cerebral", "alzheimere", "envelhecimento cerebral", "memór
 ---
 
 
-# Protegendo seu Cérebro para uma Vida Longa e Saudável
 
 ## Introdução O Alarme Silencioso que Ameaça seu Cérebro
 <h1
