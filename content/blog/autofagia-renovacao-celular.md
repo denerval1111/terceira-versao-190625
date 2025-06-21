@@ -4,7 +4,8 @@ excerpt: "Entenda como o processo natural de autofagia pode ser otimizado atrav�
 date: "2024-06-13"
 author: "Dr. Denerval"
 category: "Medicina Regenerativa"
-image: "/images/blog/autofagia-celular.jpg"
+image: "/images/autofagiacelular.jpg
+"
 readTime: "6 min de leitura"
 tags: ["autofagia", "regeneração celular", "jejum intermitente", "longevidade", "anti-aging"]
 ---
