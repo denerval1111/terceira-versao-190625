@@ -4,7 +4,7 @@ excerpt: "Aprenda técnicas comprovadas cientificamente para gerenciar ansiedade
 date: "2024-06-11"
 author: "Dr. Denerval"
 category: "Saúde Mental"
-image: "/images/blog/ansiedade-estresse-moderno.jpg"
+image: "/images/artigo-estresse.png"
 readTime: "9 min de leitura"
 tags: ["ansiedade", "estresse", "saúde mental", "mindfulness", "respiração", "bem-estar"]
 ---
