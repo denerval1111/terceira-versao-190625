@@ -23,6 +23,17 @@ const BlogClient: React.FC<BlogClientProps> = ({ initialPosts = [] }) => {
 
   // Posts garantidos com SLUGS CORRIGIDOS
   const fallbackPosts: PostData[] = [
+      { 
+    slug: 'inflamacao-cerebral',
+  title: 'Inflamação Cerebral e Prevenção de Doenças Neurológicas Crônicas: Protegendo seu Cérebro para uma Vida Longa e Saudável',
+  excerpt: '"Imagine que seu cérebro possui um sistema de alarme interno, projetado para protegê-lo de ameaças e manter suas funções em perfeito funcionamento',
+  date: '2025-01-30',
+  author: 'Dr. Denerval',
+  category: 'Saúde Mental',
+  image: '/images/exercioaltaintensidadeXbaixa.png',
+  readTime: '10 min de leitura',
+  tags:["inflamação cerebral", "alzheimere", "envelhecimento cerebral", "memória", "depressão"]
+},
     { 
     slug: 'exercicio-alta-intensidade-baixa',
   title: 'Exercício de Alta Intensidade X Baixa Intensidade: O Que É Melhor?',
