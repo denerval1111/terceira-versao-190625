@@ -4,7 +4,7 @@ excerpt: "Explore como a combinação das tradições culinárias mediterrânea 
 date: "2024-06-14"
 author: "Dr. Denerval"
 category: "Nutrologia"
-image: "/images/blog/dieta-mediterranea-asiatica.jpg"
+image: "/images/dieta-mediterranea-asiatica.jpg"
 readTime: "8 min de leitura"
 tags: ["dieta mediterrânea", "culinária asiática", "longevidade", "antioxidantes", "ômega-3", "anti-inflamatório"]
 ---
