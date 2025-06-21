@@ -4,7 +4,7 @@ excerpt: "Imagine se existisse uma forma simples e natural de reduzir significat
 date: "2025-03-23"
 author: "Dr. Denerval"
 category: "Nutrologia"
-image: "/images/nutricao-inflamacao-celular"
+image: "/images/nutricao-inflamacao-celular.jpg"
 readTime: "12 min de leitura"
 tags: ["inflamação", "alimentos antiinflamatórios", "diabetes", "dieta saudavel", "comer saudavel", "causas da inflamção crônica"]
 ---
