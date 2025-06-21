@@ -195,7 +195,7 @@ export default function InscricaoPage() {
             Nova Inscrição
           </button>
         </div>
-      ) : (
+   
         <div style={{
           backgroundColor: 'white',
           padding: '2rem',
