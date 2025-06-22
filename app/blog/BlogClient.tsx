@@ -30,7 +30,7 @@ const BlogClient: React.FC<BlogClientProps> = ({ initialPosts = [] }) => {
   date: '2025-04-20',
   author: 'Dr. Denerval',
   category: 'Saúde Mental',
-  image: '/images/mulher-dormindo.jpg',
+  image: '/images/idoso-dormindo.jpg',
   readTime: '12 min de leitura',
   tags:["insonia", "dormir melhor", "sono e memoria", "como dormir melhor"]
    }, 
