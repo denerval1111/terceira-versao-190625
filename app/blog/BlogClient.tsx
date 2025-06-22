@@ -25,25 +25,25 @@ const BlogClient: React.FC<BlogClientProps> = ({ initialPosts = [] }) => {
   const fallbackPosts: PostData[] = [
       { 
     slug: 'doencas-autoimunes',
-  title: 'Doenças Autoimunes: Por que o Corpo Ataca o Próprio Corpo? Uma Análise Profunda da Ciência e Estratégias de Prevenção ',
+  title: 'Doenças Autoimunes: Por que o Corpo Ataca o Próprio Corpo? Uma Análise Profunda da Ciência e Estratégias de Prevenção',
   excerpt: 'Imagine que seu corpo é uma fortaleza altamente protegida, com um exército de elite treinado para defender contra qualquer invasor',
   date: '2025-06-22',
   author: 'Dr. Denerval',
   category: 'Medicina Regenerativa',
   image: '/images/autoimune.jpg',
   readTime: '10 min de leitura',
-  tags:["insonia", "dormir melhor", "sono e memoria", "como dormir melhor"]
+  tags:["doenças autoimunes", "imunidade", "tratar doença autoimune", "como o corpo ataca o próprio corpo"]
    }, 
      { 
     slug: 'sono-longevidade',
-  title: 'O Papel do Sono na Regeneração Celular e Longevidade ',
+  title: 'O Papel do Sono na Regeneração Celular e Longevidade',
   excerpt: 'O sono é muito mais do que um simples período de descanso. Trata-se de um processo biológico fundamental para a regeneração celular, consolidação de memórias e otimização de funções vitais. ',
   date: '2025-04-20',
   author: 'Dr. Denerval',
   category: 'Saúde Mental',
   image: '/images/idoso-dormindo.jpg',
   readTime: '12 min de leitura',
-  tags:["doenças autoimunes", "imunidade", "tratar doença autoimune", "como o corpo ataca o próprio corpo"]
+  tags:["insonia", "dormir melhor", "sono e memoria", "como dormir melhor"]
     { 
     slug: 'nutricao-antiinflamatoria',
   title: 'Nutrição Antiinflamatória: O que Comer e o que Evitar para uma Vida Mais Saudável',
