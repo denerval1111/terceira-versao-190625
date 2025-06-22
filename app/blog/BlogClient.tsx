@@ -23,6 +23,16 @@ const BlogClient: React.FC<BlogClientProps> = ({ initialPosts = [] }) => {
 
   // Posts garantidos com SLUGS CORRIGIDOS
   const fallbackPosts: PostData[] = [
+     { 
+    slug: 'sono-longevidade',
+  title: 'O Papel do Sono na Regeneração Celular e Longevidade ',
+  excerpt: 'O sono é muito mais do que um simples período de descanso. Trata-se de um processo biológico fundamental para a regeneração celular, consolidação de memórias e otimização de funções vitais. ',
+  date: '2025-04-20',
+  author: 'Dr. Denerval',
+  category: 'Saúde Mental',
+  image: '/images/mulher-dormindo.jpg',
+  readTime: '12 min de leitura',
+  tags:["insonia", "dormir melhor", "sono e memoria", "como dormir melhor"]
     { 
     slug: 'nutricao-antiinflamatoria',
   title: 'Nutrição Antiinflamatória: O que Comer e o que Evitar para uma Vida Mais Saudável',
