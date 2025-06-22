@@ -44,6 +44,7 @@ const BlogClient: React.FC<BlogClientProps> = ({ initialPosts = [] }) => {
   image: '/images/idoso-dormindo.jpg',
   readTime: '12 min de leitura',
   tags:["insonia", "dormir melhor", "sono e memoria", "como dormir melhor"]
+   },
     { 
     slug: 'nutricao-antiinflamatoria',
   title: 'Nutrição Antiinflamatória: O que Comer e o que Evitar para uma Vida Mais Saudável',
