@@ -4,7 +4,7 @@ excerpt: " O sono é muito mais do que um simples período de descanso. Trata-se
 date: "2025-04-20"
 author: "Dr. Denerval"
 category: "Saúde Mental"
-image: "/images/ mulher-dormindo.jpg"
+image: "/images/mulher-dormindo.jpg"
 readTime: "10 min de leitura"
 tags: ["insonia", "dormir melhor", "sono e memoria", "como dormir melhor"]
 ---
