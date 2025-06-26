@@ -24,6 +24,17 @@ const BlogClient: React.FC<BlogClientProps> = ({ initialPosts = [] }) => {
   // Posts garantidos com SLUGS CORRIGIDOS
   const fallbackPosts: PostData[] = [
       { 
+    slug: 'gene-longevidade',
+ title: " Gene Associado a Longevidade",
+excerpt: “O envelhecimento é um processo biológico complexo que afeta todos os organismos vivos",
+date: "2025-06-25",
+author: "Dr. Denerval",
+category: "Medicina Regenerativa",
+image: "/images/gene-longevidade.jpg",
+readTime: "10 min de leitura",
+tags: ["genética da longevidade", "longevidade", "autofagial", "medicina regenerativa", "vitalidade"]
+ }, 
+      { 
     slug: 'doencas-autoimunes',
   title: 'Doenças Autoimunes: Por que o Corpo Ataca o Próprio Corpo? Uma Análise Profunda da Ciência e Estratégias de Prevenção',
   excerpt: 'Imagine que seu corpo é uma fortaleza altamente protegida, com um exército de elite treinado para defender contra qualquer invasor',
