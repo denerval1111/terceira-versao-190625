@@ -25,8 +25,8 @@ const BlogClient: React.FC<BlogClientProps> = ({ initialPosts = [] }) => {
   const fallbackPosts: PostData[] = [
       { 
     slug: 'gene-longevidade',
- title: " Gene Associado a Longevidade",
-excerpt: “O envelhecimento é um processo biológico complexo que afeta todos os organismos vivos",
+ title: "Gene Associado a Longevidade",
+excerpt: "O envelhecimento é um processo biológico complexo que afeta todos os organismos vivos",
 date: "2025-06-25",
 author: "Dr. Denerval",
 category: "Medicina Regenerativa",
