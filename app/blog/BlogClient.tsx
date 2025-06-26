@@ -23,8 +23,19 @@ const BlogClient: React.FC<BlogClientProps> = ({ initialPosts = [] }) => {
 
   // Posts garantidos com SLUGS CORRIGIDOS
   const fallbackPosts: PostData[] = [
-      { 
-    slug: 'gene-longevidade',
+{ 
+slug: 'longevidade-ciencia',
+title:  “Longevidade Saudável: O que a Ciência nos Mostra sobre Viver Mais e Melhor ",
+excerpt: “A Nova Era da Longevidade Científica: Imagine poder adicionar não apenas anos à sua vida, mas vida aos seus anos. ",
+date: "2025-06-25",
+author: "Dr. Denerval",
+category: "Medicina Regenerativa",
+image: "/images/homem-saltando.jpg",
+readTime: "15 min de leitura",
+tags: ["genética da longevidade", "ciência e longevidade", "envelhecimento saudável", "medicina regenerativa", "medicina do futuro", "como viver melhor", "viver com saúde", "vitalidade"]
+ }, 
+ { 
+ slug: 'gene-longevidade',
  title: "Gene Associado a Longevidade",
 excerpt: "O envelhecimento é um processo biológico complexo que afeta todos os organismos vivos",
 date: "2025-06-25",
