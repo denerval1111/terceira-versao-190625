@@ -31,7 +31,7 @@ date: "2025-06-25",
 author: "Dr. Denerval",
 category: "Medicina Regenerativa",
 image: "/images/gene-longevidade.jpg",
-readTime: "10 min de leitura",
+readTime: "06 min de leitura",
 tags: ["genética da longevidade", "longevidade", "autofagial", "medicina regenerativa", "vitalidade"]
  }, 
       { 
