@@ -26,7 +26,7 @@ Mais do que apenas apresentar dados científicos, este artigo traduz descobertas
 
 A jornada pela longevidade saudável não é sobre buscar a fonte da juventude eterna, mas sobre compreender e aplicar os princípios científicos que nos permitem envelhecer com dignidade, vitalidade e propósito. É sobre transformar o envelhecimento de um processo de declínio inevitável em uma oportunidade de crescimento e realização contínuos.
 
-## Os Três Pilares Biológicos da Longevidade: Desvendando os Segredos Celulares
+## Os Três Pilares Biológicos da Longevidade: "Desvendando os Segredos Celulares"
 
 ### Telômeros: Os Relógios Biológicos das Nossas Células
 
