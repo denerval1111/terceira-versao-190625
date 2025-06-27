@@ -70,7 +70,7 @@ export default function SobreProgramaPage() {
           lineHeight: '1.6',
           marginBottom: '1.5rem'
         }}>
-          O Desafio Vitalidade não é apenas mais um programa de saúde. É uma <strong>jornada transformadora de 30 dias</strong> cuidadosamente estruturada por especialistas, que integra os mais recentes avanços científicos em medicina regenerativa, nutrologia, saúde mental e gerenciamento de peso.
+          O Desafio Vitalidade não é apenas mais um programa de saúde. É uma <strong>jornada transformadora de 30 dias</strong> cuidadosamente estruturada, que integra os mais recentes avanços científicos em medicina regenerativa, nutrologia, saúde mental e gerenciamento de peso.
         </p>
         <p style={{
           fontSize: '1.1rem',
@@ -78,7 +78,7 @@ export default function SobreProgramaPage() {
           lineHeight: '1.6',
           marginBottom: '1.5rem'
         }}>
-          Com turmas limitadas a apenas <strong>20 participantes</strong>, garantimos atenção personalizada e resultados excepcionais. Nossa próxima turma está com vagas se esgotando rapidamente, e centenas de pessoas já experimentaram uma transformação profunda em sua saúde e qualidade de vida.
+          Com turmas limitadas a apenas <strong>20 participantes</strong>, garantimos atenção personalizada (plano prime) e resultados excepcionais. Nossa próxima turma está com vagas, corra! prencha a ficha para garantir dsua vaga, várias pessoas já experimentaram uma transformação profunda em sua saúde e qualidade de vida.
         </p>
         
         {/* Depoimento em destaque */}
@@ -222,7 +222,7 @@ export default function SobreProgramaPage() {
               color: '#666',
               lineHeight: '1.5'
             }}>
-              Abordagem científica para composição corporal ideal, sem dietas restritivas ou métodos extremos.
+              Abordagem científica para composição corporal ideal, sem dietas absolutamente restritivas ou métodos extremos.
             </p>
           </div>
         </div>
@@ -267,7 +267,7 @@ export default function SobreProgramaPage() {
               paddingLeft: '1.5rem'
             }}>
               <li>04 lives ao longo de 30 dias, uma por semana </li>
-              <li>E-books com protocolos detalhados</li>
+              <li>E-books com protocolos detalhados (de acordo com o plano escolhido)</li>
               <li>Planilhas de acompanhamento</li>
               <li>Receitas funcionais exclusivas</li>
             </ul>
@@ -311,7 +311,7 @@ export default function SobreProgramaPage() {
               paddingLeft: '1.5rem'
             }}>
               <li>Protocolo testado e aprovado</li>
-              <li>Acompanhamento diário</li>
+              <li>Acompanhamento diário por meio da planilha</li>
               <li>Ajustes personalizados</li>
               <li>Garantia de satisfação</li>
             </ul>
@@ -332,9 +332,9 @@ export default function SobreProgramaPage() {
               lineHeight: '1.6',
               paddingLeft: '1.5rem'
             }}>
-              <li>Masterclass de Longevidade</li>
+              <li>Masterclass de Longevidade ao final de cada turma</li>
               
-              <li>Acesso vitalício ao conteúdo</li>
+              <li>Acesso vitalício ao conteúdo adquirido</li>
               <li>Certificado de conclusão</li>
             </ul>
           </div>
@@ -459,7 +459,7 @@ export default function SobreProgramaPage() {
           margin: '0 auto 2rem auto',
           lineHeight: '1.6'
         }}>
-          Não deixe para amanhã a decisão que pode transformar sua vida hoje. Junte-se a milhares de pessoas que já descobriram o segredo da vitalidade.
+          Não deixe para amanhã a decisão que pode transformar sua vida hoje. Junte-se a centenas de pessoas que já descobriram o segredo da vitalidade.
         </p>
         <div style={{
           display: 'flex',
