@@ -1,6 +1,6 @@
 ---
 title:  "Qual a Idade Ideal para Começar a Prevenção? O que a Ciência nos Diz"
-excerpt:"uma revolução silenciosa está ocorrendo na ciência da longevidade,a prevenção do envelhecimento pode, e talvez deva começar muito antes do que imaginávamos. Chegaremos ao Útero Materno?"
+excerpt: "uma revolução silenciosa está ocorrendo na ciência da longevidade,a prevenção do envelhecimento pode, e talvez deva começar muito antes do que imaginávamos."
 date: "2025-06-27"
 author: "Dr. Denerval"
 category: "Medicina Regenerativa"
