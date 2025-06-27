@@ -23,6 +23,17 @@ const BlogClient: React.FC<BlogClientProps> = ({ initialPosts = [] }) => {
 
   // Posts garantidos com SLUGS CORRIGIDOS
   const fallbackPosts: PostData[] = [
+ { 
+    slug: 'envelhecimento-prevencao-utero',
+  title: 'Qual a Idade Ideal para Começar a Prevenção do Envelhecimento Saudável? O que a Ciência nos Diz...',
+  excerpt: 'Uma revolução silenciosa está ocorrendo na ciência da longevidade:a prevenção do envelhecimento pode, e talvez deva começar muito antes do que imaginávamos.',
+  date: '2025-03-27',
+  author: 'Dr. Denerval',
+  category: 'Medicina Regerativa',
+  image: '/images/envelhecimento-comeca-utero1.jpg',
+  readTime: '19 min de leitura',
+  tags:["genética da longevidade", "quando começa a prevenção", "prevenção tem idade", "prevenção no útero", "ciência e prevenção", "envelhecimento saudável"]
+},
 { 
 slug: 'longevidade-ciencia',
 title:  "Longevidade Saudável: O que a Ciência nos Mostra sobre Viver Mais e Melhor",
