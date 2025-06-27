@@ -4,7 +4,7 @@ excerpt: "A Nova Era da Longevidade Científica: Imagine poder adicionar não ap
 date: "2025-06-25"
 author: "Dr. Denerval"
 category: "Medicina Regenerativa"
-image: "/images/homem-saltando.jpg"
+image: "/images/casal-no-parque.jpg"
 readTime: "15 min de leitura"
 tags: ["genética da longevidade","ciência e longevidade","envelhecimento saudável","medicina do futuro","viver com saúde","vitalidade"]
 ---
