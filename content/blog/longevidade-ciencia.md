@@ -6,7 +6,7 @@ author: "Dr. Denerval"
 category: "Medicina Regenerativa"
 image: "/images/homem-saltando.jpg"
 readTime: "15 min de leitura"
-tags: ["genética da longevidade", "ciência e longevidade", "envelhecimento saudável", "medicina regenerativa", "medicina do futuro", "como viver melhor", "viver com saúde", "vitalidade"]
+tags: ["genética da longevidade", "ciência e longevidade", "envelhecimento saudável",  "medicina do futuro", "viver com saúde", "vitalidade"]
 ---
 
 # Longevidade Saudável: O que a Ciência nos Mostra sobre Viver Mais e Melhor
