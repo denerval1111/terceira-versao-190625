@@ -71,7 +71,7 @@ export default function SobreProgramaPage() {
           marginBottom: '1.5rem'
         }}>
           O Desafio Vitalidade não é apenas mais um programa de saúde. É uma <strong>jornada transformadora de 30 dias</strong> cuidadosamente estruturada, que integra os mais recentes avanços científicos em medicina regenerativa, nutrologia, saúde mental e gerenciamento de peso.
-        </p>
+         </p>
         <p style={{
           fontSize: '1.1rem',
           color: '#555',
