@@ -25,14 +25,14 @@ const BlogClient: React.FC<BlogClientProps> = ({ initialPosts = [] }) => {
   const fallbackPosts: PostData[] = [
 { 
 slug: 'longevidade-ciencia',
-title:  “Longevidade Saudável: O que a Ciência nos Mostra sobre Viver Mais e Melhor ",
-excerpt: “A Nova Era da Longevidade Científica: Imagine poder adicionar não apenas anos à sua vida, mas vida aos seus anos. ",
+title:  “Longevidade Saudável: O que a Ciência nos Mostra sobre Viver Mais e Melhor",
+excerpt: “A Nova Era da Longevidade Científica: Imagine poder adicionar não apenas anos à sua vida, mas vida aos seus anos.",
 date: "2025-06-25",
 author: "Dr. Denerval",
 category: "Medicina Regenerativa",
 image: "/images/homem-saltando.jpg",
 readTime: "15 min de leitura",
-tags: ["genética da longevidade", "ciência e longevidade", "envelhecimento saudável", "medicina regenerativa", "medicina do futuro", "como viver melhor", "viver com saúde", "vitalidade"]
+tags: ["genética da longevidade", "ciência e longevidade", "envelhecimento saudável", "medicina do futuro", "como viver melhor", "viver com saúde", "vitalidade"]
  }, 
  { 
  slug: 'gene-longevidade',
