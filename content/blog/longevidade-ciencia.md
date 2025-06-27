@@ -1,6 +1,6 @@
 ---
-title:  “Longevidade Saudável: O que a Ciência nos Mostra sobre Viver Mais e Melhor"
-excerpt: “A Nova Era da Longevidade Científica: Imagine poder adicionar não apenas anos à sua vida, mas vida aos seus anos."
+title: "Longevidade Saudável: O que a Ciência nos Mostra sobre Viver Mais e Melhor"
+excerpt: "A Nova Era da Longevidade Científica: Imagine poder adicionar não apenas anos à sua vida, mas vida aos seus anos."
 date: "2025-06-25"
 author: "Dr. Denerval"
 category: "Medicina Regenerativa"
