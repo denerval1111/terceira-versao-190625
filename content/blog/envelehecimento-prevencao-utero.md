@@ -7,7 +7,7 @@ author: "Dr. Denerval"
 category: "Medicina Regenerativa"
 image: "/images/envelhecimento-comeca-utero.jpg"
 readTime: "19 min de leitura"
-tags: ["genética da longevidade", "ciência e longevidade", "prevenção do envelhecimento", "medicina regenerativa", "medicina do futuro", "como prevenir melhor", "quando deve começar a prevencao", "vitalidade"]
+tags: ["genética da longevidade", "ciência e longevidade", "prevenção do envelhecimento", "medicina regenerativa", "medicina do futuro", "como prevenir melhor", "quando deve começar a prevencao"]
 ---
 
 # Qual a Idade Ideal para Começar a Prevenção? O que a Ciência nos Diz - Chegaremos ao Útero Materno?
