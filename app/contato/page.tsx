@@ -20,15 +20,15 @@ export default function ContatoPage() {
               <FaMapMarkerAlt className="text-verde-vitalidade mr-4 w-5 h-5 mt-1" /> {/* Tamanho controlado */}
               <div>
                 <h3 className="text-lg font-semibold mb-1">Endereço</h3>
-                <p>Av. Paulista, 1000 - Bela Vista, São Paulo - SP</p>
+                <p>Curitiba - PR</p>
               </div>
             </div>
             
             <div className="flex items-start mb-6">
               <FaPhone className="text-verde-vitalidade mr-4 w-5 h-5 mt-1" /> {/* Tamanho controlado */}
               <div>
-                <h3 className="text-lg font-semibold mb-1">Telefone</h3>
-                <p>(11) 9999-9999</p>
+                <h3 className="text-lg font-semibold mb-1">Telefone (somente mensagens whatsApp</h3>
+                <p>(18) 99817-9849</p>
               </div>
             </div>
             
