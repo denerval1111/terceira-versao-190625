@@ -84,7 +84,7 @@ export default function Footer() {
             <Link href="/pilares/medicina-regenerativa" style={{ color: '#CCC', textDecoration: 'none', transition: 'color 0.2s' }}>Medicina Regenerativa</Link>
             <Link href="/pilares/nutrologia" style={{ color: '#CCC', textDecoration: 'none', transition: 'color 0.2s' }}>Nutrologia</Link>
             <Link href="/pilares/saude-mental" style={{ color: '#CCC', textDecoration: 'none', transition: 'color 0.2s' }}>Saúde Mental</Link>
-            <Link href="/pilares/gerenciamento-de-peso" style={{ color: '#CCC', textDecoration: 'none', transition: 'color 0.2s' }}>Gerenciamento de Peso</Link>
+            <Link href="/pilares/peso-saudavel" style={{ color: '#CCC', textDecoration: 'none', transition: 'color 0.2s' }}>peso-saudavel</Link>
           </nav>
         </div>
         
