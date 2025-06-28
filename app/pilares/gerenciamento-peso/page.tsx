@@ -7,7 +7,7 @@ export default function GerenciamentoPesoPage() {
     <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '2rem 1rem' }}>
       {/* Hero Section - FORÇANDO IMAGEM COM !IMPORTANT */}
       <div style={{
-        backgroundImage: 'linear-gradient(rgba(5, 0, 0, 0.4), rgba(5, 0, 0, 0.4)), url(/public/images/mulher-fitness-2025.png) !important',
+        backgroundImage: 'linear-gradient(rgba(5, 0, 0, 0.4), rgba(5, 0, 0, 0.4)), url(https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1920&auto=format&fit=crop) !important',
         backgroundSize: 'cover !important',
         backgroundPosition: 'center !important',
         backgroundRepeat: 'no-repeat !important',
