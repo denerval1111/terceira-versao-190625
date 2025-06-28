@@ -78,7 +78,7 @@ export default function SobreProgramaPage() {
           lineHeight: '1.6',
           marginBottom: '1.5rem'
         }}>
-          Com turmas limitadas a apenas <strong>20 participantes</strong>, garantimos atenção personalizada (plano prime) e resultados excepcionais. Nossa próxima turma está com vagas, corra! prencha a ficha para garantir dsua vaga, várias pessoas já experimentaram uma transformação profunda em sua saúde e qualidade de vida.
+          Com turmas limitadas a apenas <strong>20 participantes</strong>, garantimos atenção personalizada (plano prime) e resultados excepcionais. Nossa próxima turma está com vagas, corra! preencha a ficha para garantir sua vaga, várias pessoas já experimentaram uma transformação profunda em sua saúde e qualidade de vida.
         </p>
         
         {/* Depoimento em destaque */}
