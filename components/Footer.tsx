@@ -102,10 +102,10 @@ export default function Footer() {
             <strong>Email:</strong> contato@desafiovitalidade.com.br
           </p>
           <p style={{ color: '#CCC', marginBottom: '0.5rem' }}>
-            <strong>Telefone:</strong> (11) 99999-9999
+            <strong>Telefone:</strong> (18) 99817-9849
           </p>
           <p style={{ color: '#CCC' }}>
-            <strong>Endereço:</strong> São Paulo, SP
+            <strong>Endereço:</strong> Curitiba, PR
           </p>
         </div>
       </div>
@@ -118,7 +118,7 @@ export default function Footer() {
         textAlign: 'center'
       }}>
         <p style={{ color: '#AAA', fontSize: '0.9rem' }}>
-          © {currentYear} Desafio Vitalidade. Todos os direitos reservados.
+          © {currentYear} Desafio Vitalidade. Todos os direitos reservados. Site desenvolvido em parceria com ManusAi; chatGPT e Mid Journey
         </p>
       </div>
     </footer>
