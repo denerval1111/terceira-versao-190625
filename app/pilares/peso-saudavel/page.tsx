@@ -7,7 +7,7 @@ export default function PesoSaudavelPage() {
     <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '2rem 1rem' }}>
       {/* Hero Section */}
       <div style={{
-        backgroundImage: 'linear-gradient(rgba(139, 92, 246, 0.8), rgba(124, 58, 237, 0.8)), url(https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1920&auto=format&fit=crop)',
+        backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.4), rgba(124, 58, 237, 0.8)), url(https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1920&auto=format&fit=crop)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         color: 'white',
