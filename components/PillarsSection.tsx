@@ -27,7 +27,7 @@ export default function PillarsSection() {
       title: "Gerenciamento de Peso",
       description: "Estratégias para emagrecer sem sofrimento, integrando nutrição, atividade física e abordagens comportamentais.",
       link: "/pilares/gerenciamento-peso",
-      image: "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=800&auto=format&fit=crop"
+      image: ""
     }
   ];
 
