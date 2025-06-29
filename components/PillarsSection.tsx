@@ -15,7 +15,7 @@ export default function PillarsSection() {
       title: "Nutrologia",
       description: "Protocolos nutricionais baseados nas culinárias mediterrânea e asiática, otimizando seu metabolismo com suplementação personalizada.",
       link: "/pilares/nutrologia",
-      image: ""
+      image: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=1920&auto=format&fit=crop"
     },
     {
       title: "Saúde Mental",
