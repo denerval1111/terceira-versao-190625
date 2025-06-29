@@ -11,7 +11,7 @@ export default function NutrologiaPage() {
     }}>
       {/* Hero Section */}
       <div style={{
-        backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=1920&auto=format&fit=crop )',
+        backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=1920&auto=format&fit=crop)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         color: 'white',
