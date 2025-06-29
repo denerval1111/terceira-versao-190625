@@ -99,7 +99,7 @@ export default function Footer() {
             Contato
           </h4>
           <p style={{ color: '#CCC', marginBottom: '0.5rem' }}>
-            <strong>Email:</strong> contato@desafiovitalidade.com.br
+            <strong>Email:</strong> contato@desafiovitalidade.com.br</Link>
           </p>
           <p style={{ color: '#CCC', marginBottom: '0.5rem' }}>
             <strong>Telefone:</strong> (18) 99817-9849
