@@ -108,7 +108,7 @@ export default function HomePage() {
                 Abordagem Multidisciplinar
               </h3>
               <p style={{ color: '#6C757D', marginBottom: '1rem', lineHeight: '1.6' }}>
-                Combinamos medicina regenerativa, nutrologia e saúde mental para uma transformação completa.
+                Combinamos medicina regenerativa, nutrologia, saúde mental e gerenciamento inteligente do peso para uma transformação completa.
               </p>
               <p style={{ color: '#6C757D', lineHeight: '1.6' }}>
                 Nossa abordagem integra diferentes especialidades médicas para tratar o corpo como um todo.
