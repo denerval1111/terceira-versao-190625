@@ -6,7 +6,7 @@ author: "Dr. Denerval"
 category: "Nutrologia"
 image: "/images/homocisteina-perigo-silencioso1.jpg"
 readTime: "20 min de leitura"
-tags: ["homocisteina", "avc", "demencia", "arteriosclerose", "infarto do coração", "vitamina b12 e acido folico", "genetica da homocisteina"] 
+tags: ["homocisteina", "avc", "demencia", "aterosclerose", "infarto do coração", "vitamina b12 e acido folico", "genetica da homocisteina"] 
 ---
 
 
@@ -18,7 +18,7 @@ Seu nome é homocisteína, e embora a maioria das pessoas nunca tenha ouvido fal
 
 O que torna a homocisteína particularmente insidiosa é sua natureza silenciosa. Diferentemente do colesterol alto ou da hipertensão, que podem eventualmente produzir sintomas perceptíveis, a hiperhomocisteinemia - o termo médico para níveis elevados de homocisteína - opera nas sombras, causando danos cumulativos ao longo de anos ou décadas antes que suas consequências devastadoras se manifestem.
 
-A história da homocisteína é também uma história de oportunidades perdidas na medicina preventiva. Desde a década de 1960, quando o patologista irlandês Kilmer McCully primeiro propôs a "teoria da homocisteína" para explicar a aterosclerose, evidências científicas têm se acumulado de forma consistente, demonstrando que este aminoácido não é apenas um marcador de risco, mas um agente ativo no processo de envelhecimento acelerado [2].
+A história da homocisteína é também uma história de oportunidades perdidas na medicina preventiva. Desde a década de 1960, quando o patologista irlandês Kilmer McCully primeiro a propor a "teoria da homocisteína" para explicar a aterosclerose, evidências científicas têm se acumulado de forma consistente, demonstrando que este aminoácido não é apenas um marcador de risco, mas um agente ativo no processo de envelhecimento acelerado [2].
 
 Hoje, sabemos que a homocisteína elevada está associada a um risco 30-40% maior de doenças cardiovasculares, um aumento de 70% no risco de AVC, e uma probabilidade duas vezes maior de desenvolver demência na idade avançada [3]. Mais alarmante ainda, estudos populacionais demonstram que homens têm níveis de homocisteína aproximadamente 50% mais altos que mulheres, o que pode explicar parcialmente por que eles desenvolvem doenças cardiovasculares uma década mais cedo [4].
 
