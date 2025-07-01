@@ -4,7 +4,7 @@ excerpt: "Como a neurociência moderna revela que nossos pensamentos e intençõ
 date: "2024-06-29"
 author: "Dr. Denerval"
 category: "Saúde Mental"
-image: "/images/poder-intencao1.png"
+image: "/images/poder-intencao1.jpg"
 readTime: "9 min de leitura"
 tags: ["intenção", "o poder da mente", "saúde mental", "mindfulness", "o poder do pensamento", "bem-estar"]
 ---
