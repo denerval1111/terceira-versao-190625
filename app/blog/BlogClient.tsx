@@ -23,11 +23,22 @@ const BlogClient: React.FC<BlogClientProps> = ({ initialPosts = [] }) => {
 
   // Posts garantidos com SLUGS CORRIGIDOS
   const fallbackPosts: PostData[] = [
+    { 
+    slug: 'poder-intencao',
+  title: 'O Poder da Intenção: O que a Ciência nos Mostra.',
+  excerpt: 'Como a neurociência moderna revela que nossos pensamentos e intenções podem literalmente remodelar nosso cérebro e transformar nossa realidade.',
+  date: '2025-06-29',
+  author: 'Dr. Denerval',
+  category: 'Saúde Mental',
+  image: '/images/envelhecimento-comeca-utero1.jpg',
+  readTime: '09 min de leitura',
+  tags:["genética da longevidade", "quando começa a prevenção", "prevenção tem idade", "prevenção no útero", "ciência e prevenção", "envelhecimento saudável"]
+},
  { 
     slug: 'envelhecimento-prevencao-utero',
   title: 'Qual a Idade Ideal para Começar a Prevenção do Envelhecimento Saudável? O que a Ciência nos Diz...',
   excerpt: 'Uma revolução silenciosa está ocorrendo na ciência da longevidade:a prevenção do envelhecimento pode, e talvez deva começar muito antes do que imaginávamos.',
-  date: '2025-03-27',
+  date: '2025-05-27',
   author: 'Dr. Denerval',
   category: 'Medicina Regerativa',
   image: '/images/envelhecimento-comeca-utero1.jpg',
