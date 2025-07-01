@@ -24,6 +24,17 @@ const BlogClient: React.FC<BlogClientProps> = ({ initialPosts = [] }) => {
   // Posts garantidos com SLUGS CORRIGIDOS
   const fallbackPosts: PostData[] = [
     { 
+    slug: 'homocisteina-perigo-silencioso',
+  title: 'Homocisteína: o Perigo silencioso.',
+  excerpt: 'Como um aminoácido aparentemente inofensivo pode acelerar o envelhecimento e aumentar drasticamente seu risco de doenças cardiovasculares, demência e morte prematura.',
+  date: '2025-07-01',
+  author: 'Dr. Denerval',
+  category: 'Nutrologia',
+  image: '/images/homocisteina-oerigo-silencioso.jpg',
+  readTime: '20 min de leitura',
+  tags:["homocisteina", "avc", "demencia", "arteriosclerose" "infarto do coração", "vitamina b12 e acido folico", "genetica da homocisteina"]
+},
+    { 
     slug: 'poder-intencao',
   title: 'O Poder da Intenção: O que a Ciência nos Mostra.',
   excerpt: 'Como a neurociência moderna revela que nossos pensamentos e intenções podem literalmente remodelar nosso cérebro e transformar nossa realidade.',
