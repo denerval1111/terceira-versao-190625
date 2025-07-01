@@ -30,9 +30,9 @@ const BlogClient: React.FC<BlogClientProps> = ({ initialPosts = [] }) => {
   date: '2025-07-01',
   author: 'Dr. Denerval',
   category: 'Nutrologia',
-  image: '/images/homocisteina-oerigo-silencioso.jpg',
+  image: '/images/homocisteina-perigo-silencioso.jpg',
   readTime: '20 min de leitura',
-  tags:["homocisteina", "avc", "demencia", "arteriosclerose" "infarto do coração", "vitamina b12 e acido folico", "genetica da homocisteina"]
+  tags:["homocisteina", "avc", "demencia", "arteriosclerose", "infarto do coração", "vitamina b12 e acido folico", "genetica da homocisteina"]
 },
     { 
     slug: 'poder-intencao',
