@@ -30,7 +30,7 @@ const BlogClient: React.FC<BlogClientProps> = ({ initialPosts = [] }) => {
   date: '2025-06-29',
   author: 'Dr. Denerval',
   category: 'Saúde Mental',
-  image: '/images/envelhecimento-comeca-utero1.jpg',
+  image: '/images/poder-intencao.jpg',
   readTime: '09 min de leitura',
   tags:["intenção", "o poder da mente", "saúde mental", "mindfulness", "o poder do pensamento", "bem-estar"]
 },
