@@ -32,7 +32,7 @@ const BlogClient: React.FC<BlogClientProps> = ({ initialPosts = [] }) => {
   category: 'Saúde Mental',
   image: '/images/envelhecimento-comeca-utero1.jpg',
   readTime: '09 min de leitura',
-  tags:["genética da longevidade", "quando começa a prevenção", "prevenção tem idade", "prevenção no útero", "ciência e prevenção", "envelhecimento saudável"]
+  tags:["intenção", "o poder da mente", "saúde mental", "mindfulness", "o poder do pensamento", "bem-estar"]
 },
  { 
     slug: 'envelhecimento-prevencao-utero',
