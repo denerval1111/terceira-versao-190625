@@ -146,7 +146,7 @@ export default function InscricaoPage() {
           backgroundColor: '#f8f9fa'
         }}>
           <iframe 
-            src="https://forms.gle/LMmGFrpJGs3ofSXE8" 
+            src="https://docs.google.com/forms/d/e/1FAIpQLScAknNKzkihHk_ZMfABfHccxx9q4VIZVFtd8_YSivxKUhJHMA/viewform?usp=dialog"
             width="100%" 
             height="1200" 
             frameBorder="0" 
@@ -294,3 +294,5 @@ export default function InscricaoPage() {
     </div>
   );
 }
+
+
