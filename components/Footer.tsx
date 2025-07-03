@@ -99,10 +99,36 @@ export default function Footer() {
             Contato
           </h4>
           <p style={{ color: '#CCC', marginBottom: '0.5rem' }}>
-            <strong>Email:</strong> contato@desafiovitalidade.com.br
+            <strong>Email:</strong>{' '}
+            <a 
+              href="mailto:contato@desafiovitalidade.com.br"
+              style={{ 
+                color: '#4CAF50',
+                textDecoration: 'none',
+                transition: 'color 0.2s ease',
+                cursor: 'pointer'
+              }}
+              onMouseEnter={(e) => e.target.style.color = '#66BB6A'}
+              onMouseLeave={(e) => e.target.style.color = '#4CAF50'}
+            >
+              contato@desafiovitalidade.com.br
+            </a>
           </p>
           <p style={{ color: '#CCC', marginBottom: '0.5rem' }}>
-            <strong>Telefone:</strong> (18) 99817-9849
+            <strong>Telefone:</strong>{' '}
+            <a 
+              href="tel:+5518998179849"
+              style={{ 
+                color: '#4CAF50',
+                textDecoration: 'none',
+                transition: 'color 0.2s ease',
+                cursor: 'pointer'
+              }}
+              onMouseEnter={(e) => e.target.style.color = '#66BB6A'}
+              onMouseLeave={(e) => e.target.style.color = '#4CAF50'}
+            >
+              (18) 99817-9849
+            </a>
           </p>
           <p style={{ color: '#CCC' }}>
             <strong>Endereço:</strong> Curitiba, PR
@@ -124,6 +150,8 @@ export default function Footer() {
     </footer>
   );
 }
+
+
 
 
 
