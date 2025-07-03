@@ -1,12 +1,14 @@
 // components/Footer.tsx
 "use client";
 
-import React from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import SocialIcons from './SocialIcons';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
+  const [emailHover, setEmailHover] = useState(false);
+  const [phoneHover, setPhoneHover] = useState(false);
   
   return (
     <footer style={{
@@ -103,13 +105,13 @@ export default function Footer() {
             <a 
               href="mailto:contato@desafiovitalidade.com.br"
               style={{ 
-                color: '#4CAF50',
+                color: emailHover ? '#66BB6A' : '#4CAF50',
                 textDecoration: 'none',
                 transition: 'color 0.2s ease',
                 cursor: 'pointer'
               }}
-              onMouseEnter={(e) => e.target.style.color = '#66BB6A'}
-              onMouseLeave={(e) => e.target.style.color = '#4CAF50'}
+              onMouseEnter={() => setEmailHover(true)}
+              onMouseLeave={() => setEmailHover(false)}
             >
               contato@desafiovitalidade.com.br
             </a>
@@ -119,13 +121,13 @@ export default function Footer() {
             <a 
               href="tel:+5518998179849"
               style={{ 
-                color: '#4CAF50',
+                color: phoneHover ? '#66BB6A' : '#4CAF50',
                 textDecoration: 'none',
                 transition: 'color 0.2s ease',
                 cursor: 'pointer'
               }}
-              onMouseEnter={(e) => e.target.style.color = '#66BB6A'}
-              onMouseLeave={(e) => e.target.style.color = '#4CAF50'}
+              onMouseEnter={() => setPhoneHover(true)}
+              onMouseLeave={() => setPhoneHover(false)}
             >
               (18) 99817-9849
             </a>
@@ -150,6 +152,8 @@ export default function Footer() {
     </footer>
   );
 }
+
+
 
 
 
