@@ -1,11 +1,9 @@
-// app/layout.tsx - VERSÃO ADAPTADA COM ANALYTICS
+// app/layout.tsx - SEU LAYOUT COM GOOGLE ANALYTICS
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
+import Script from 'next/script'; // ← ADICIONAR ESTA LINHA
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-
-// ✅ NOVA LINHA ADICIONADA - Analytics
-import { AnalyticsProvider, ConsentBanner } from '@/components/AnalyticsComplete';
 
 // Importações da estrutura CSS organizada (mantidas)
 import '../style/globals.css';
@@ -32,31 +30,31 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-BR">
+      <head>
+        {/* ========== GOOGLE ANALYTICS - ADICIONAR AQUI ========== */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-ZZ2Z1QZLL8"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-ZZ2Z1QZLL8');
+          `}
+        </Script>
+        {/* ======================================================= */}
+      </head>
       <body className={inter.className}>
-        {/* ✅ ANALYTICS PROVIDER ADICIONADO - Envolve todo o conteúdo */}
-        <AnalyticsProvider
-          config={{
-            gtmId: 'GTM-XXXXXXX',        // ← SUBSTITUA pelo seu ID
-            ga4Id: 'G-XXXXXXXXXX',      // ← SUBSTITUA pelo seu ID
-            clarityId: 'XXXXXXXXX',     // ← SUBSTITUA pelo seu ID
-            enableConversions: true,
-            enableHeatmaps: true,
-            enableAutoTracking: true,
-            requireConsent: true,
-          }}
-        >
-          {/* ✅ ESTRUTURA ORIGINAL MANTIDA */}
-          <Header />
-          {children}
-          <Footer />
-          
-          {/* ✅ BANNER LGPD ADICIONADO */}
-          <ConsentBanner />
-        </AnalyticsProvider>
+        <Header />
+        {children}
+        <Footer />
       </body>
     </html>
   );
 }
+
 
 
 
