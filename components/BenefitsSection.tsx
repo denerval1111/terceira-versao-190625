@@ -46,20 +46,20 @@ export default function BenefitsSection() {
 
   return (
     <section className={`py-10 sm:py-16 bg-white ${animationsEnabled ? 'no-animations' : ''}`}>
-      {/* Título e subtítulo com animações */}
-      <div className="text-center mb-6 sm:mb-12 px-8 sm:px-6">
+      {/* Título e subtítulo alinhados à esquerda */}
+      <div className="text-left mb-6 sm:mb-12 pl-4 sm:pl-8 pr-4">
         <h2 className={`text-xl sm:text-3xl lg:text-4xl font-bold text-gray-800 mb-3 sm:mb-4 ${animationsEnabled ? 'animate-fade-up animate-delay-0' : ''}`}>
           Benefícios do Desafio Vitalidade
         </h2>
-        <p className={`text-sm sm:text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed ${animationsEnabled ? 'animate-fade-up animate-delay-200' : ''}`}>
+        <p className={`text-sm sm:text-lg text-gray-600 max-w-2xl leading-relaxed ${animationsEnabled ? 'animate-fade-up animate-delay-200' : ''}`}>
           Transforme sua saúde e bem-estar com nosso programa de 30 dias cientificamente desenvolvido.
         </p>
       </div>
 
-      {/* Container com padding muito generoso para mobile */}
+      {/* Container deslocado para a esquerda */}
       <div className="w-full">
-        <div className="max-w-5xl mx-auto px-8 sm:px-6 lg:px-8">
-          {/* Grid responsivo - sempre coluna única em mobile */}
+        {/* Cards posicionados mais à esquerda */}
+        <div className="ml-2 sm:ml-4 mr-8 sm:mr-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 sm:gap-6 lg:gap-8">
             {benefits.map((benefit, index) => (
               <div
@@ -69,8 +69,7 @@ export default function BenefitsSection() {
                   shadow-sm hover:shadow-md transition-all duration-300
                   bg-gradient-to-br from-white via-gray-50 to-gray-100
                   border border-gray-200 hover:border-green-300
-                  p-3 sm:p-6 lg:p-8
-                  w-full
+                  w-full max-w-sm sm:max-w-md lg:max-w-lg
                   ${animationsEnabled ? 'animate-fade-right' : ''}
                 `}
                 style={{
@@ -78,43 +77,46 @@ export default function BenefitsSection() {
                   backgroundSize: 'cover',
                   backgroundPosition: 'center',
                   animationDelay: animationsEnabled ? `${200 + (index * 200)}ms` : '0ms',
-                  maxWidth: '100%',
-                  boxSizing: 'border-box'
+                  marginLeft: '0',
+                  marginRight: 'auto'
                 }}
                 role="article"
               >
-                {/* Header do card ultra-compacto */}
-                <div className="flex items-center mb-2 sm:mb-4">
-                  <div 
-                    className={`
-                      flex-shrink-0 rounded-full flex items-center justify-center mr-2 sm:mr-3
-                      w-8 h-8 sm:w-12 sm:h-12 lg:w-14 lg:h-14
-                      bg-green-100 hover:bg-green-200 transition-colors duration-300
-                      ${animationsEnabled ? 'animate-fade-right' : ''}
-                    `}
-                    style={{ 
-                      animationDelay: animationsEnabled ? `${400 + (index * 200)}ms` : '0ms' 
-                    }}
-                  >
-                    <div className="w-4 h-4 sm:w-6 sm:h-6 lg:w-8 lg:h-8 bg-green-500 rounded-full opacity-70"></div>
+                {/* Conteúdo do card alinhado à esquerda */}
+                <div className="p-3 sm:p-5 text-left">
+                  {/* Header do card */}
+                  <div className="flex items-start justify-start mb-2 sm:mb-3">
+                    <div 
+                      className={`
+                        flex-shrink-0 rounded-full flex items-center justify-center mr-2 sm:mr-3
+                        w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12
+                        bg-green-100 hover:bg-green-200 transition-colors duration-300
+                        ${animationsEnabled ? 'animate-fade-right' : ''}
+                      `}
+                      style={{ 
+                        animationDelay: animationsEnabled ? `${400 + (index * 200)}ms` : '0ms' 
+                      }}
+                    >
+                      <div className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 bg-green-500 rounded-full opacity-70"></div>
+                    </div>
+                    
+                    {/* Título alinhado à esquerda */}
+                    <div className="flex-1 text-left">
+                      <h3 className="text-sm sm:text-base lg:text-lg font-bold text-gray-800 leading-tight text-left">
+                        {benefit.title}
+                      </h3>
+                    </div>
                   </div>
-                  
-                  {/* Título ultra-compacto */}
-                  <div className="flex-1 min-w-0">
-                    <h3 className="text-sm sm:text-lg lg:text-xl font-bold text-gray-800 leading-tight">
-                      {benefit.title}
-                    </h3>
-                  </div>
-                </div>
 
-                {/* Conteúdo do card ultra-compacto */}
-                <div className="space-y-1 sm:space-y-3">
-                  <p className="text-xs sm:text-base text-gray-700 leading-relaxed">
-                    {benefit.description}
-                  </p>
-                  <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
-                    {benefit.extendedDescription}
-                  </p>
+                  {/* Conteúdo textual alinhado à esquerda */}
+                  <div className="space-y-1 sm:space-y-2 text-left">
+                    <p className="text-xs sm:text-sm text-gray-700 leading-relaxed text-left">
+                      {benefit.description}
+                    </p>
+                    <p className="text-xs sm:text-sm text-gray-600 leading-relaxed text-left">
+                      {benefit.extendedDescription}
+                    </p>
+                  </div>
                 </div>
 
                 {/* Indicador visual de hover */}
@@ -122,48 +124,60 @@ export default function BenefitsSection() {
               </div>
             ))}
           </div>
+        </div>
 
-          {/* Botão para ativar/desativar animações */}
-          <div className="text-center mt-6 sm:mt-12">
-            <button
-              onClick={() => setAnimationsEnabled(!animationsEnabled)}
-              className="
-                px-3 py-1 sm:px-4 sm:py-2 text-xs sm:text-sm text-gray-600 hover:text-gray-800 
-                border border-gray-300 hover:border-gray-400 rounded-md sm:rounded-lg
-                transition-colors duration-200
-                focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2
-              "
-              aria-label={animationsEnabled ? "Desativar animações" : "Ativar animações"}
-            >
-              {animationsEnabled ? "Desativar animações" : "Ativar animações"}
-            </button>
-          </div>
+        {/* Botão alinhado à esquerda */}
+        <div className="text-left mt-6 sm:mt-12 ml-4 sm:ml-8">
+          <button
+            onClick={() => setAnimationsEnabled(!animationsEnabled)}
+            className="
+              px-3 py-1 sm:px-4 sm:py-2 text-xs sm:text-sm text-gray-600 hover:text-gray-800 
+              border border-gray-300 hover:border-gray-400 rounded-md sm:rounded-lg
+              transition-colors duration-200
+              focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2
+            "
+            aria-label={animationsEnabled ? "Desativar animações" : "Ativar animações"}
+          >
+            {animationsEnabled ? "Desativar animações" : "Ativar animações"}
+          </button>
         </div>
       </div>
 
-      {/* CSS adicional para garantir que não haja overflow */}
+      {/* CSS adicional para forçar alinhamento à esquerda */}
       <style jsx>{`
-        .line-clamp-2 {
-          display: -webkit-box;
-          -webkit-line-clamp: 2;
-          -webkit-box-orient: vertical;
-          overflow: hidden;
+        /* Forçar alinhamento à esquerda em todos os elementos */
+        .text-left * {
+          text-align: left !important;
         }
         
-        /* Garantir que nada saia da tela */
+        /* Garantir que cards fiquem à esquerda */
+        .grid > div {
+          justify-self: start;
+          align-self: start;
+        }
+        
+        /* Prevenir overflow e garantir box-sizing */
         * {
           box-sizing: border-box;
         }
         
-        /* Prevenir overflow horizontal */
+        /* Limitar largura máxima dos cards */
         .grid > div {
-          min-width: 0;
-          max-width: 100%;
+          max-width: calc(100vw - 80px);
+        }
+        
+        /* Responsividade específica para mobile */
+        @media (max-width: 640px) {
+          .grid > div {
+            max-width: calc(100vw - 40px);
+            margin-right: 16px;
+          }
         }
       `}</style>
     </section>
   );
 }
+
 
 
 
