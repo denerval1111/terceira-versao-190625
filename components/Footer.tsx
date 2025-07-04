@@ -9,6 +9,8 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
   const [emailHover, setEmailHover] = useState(false);
   const [phoneHover, setPhoneHover] = useState(false);
+  const [emailButtonHover, setEmailButtonHover] = useState(false);
+  const [phoneButtonHover, setPhoneButtonHover] = useState(false);
   const [copySuccess, setCopySuccess] = useState('');
   
   const copyToClipboard = async (text: string, type: string) => {
@@ -135,23 +137,17 @@ export default function Footer() {
               </a>
               <button
                 onClick={() => copyToClipboard('contato@desafiovitalidade.com.br', 'Email')}
+                onMouseEnter={() => setEmailButtonHover(true)}
+                onMouseLeave={() => setEmailButtonHover(false)}
                 style={{
-                  background: 'transparent',
+                  background: emailButtonHover ? '#4CAF50' : 'transparent',
                   border: '1px solid #4CAF50',
-                  color: '#4CAF50',
+                  color: emailButtonHover ? 'white' : '#4CAF50',
                   padding: '2px 6px',
                   borderRadius: '3px',
                   cursor: 'pointer',
                   fontSize: '0.8rem',
                   transition: 'all 0.2s ease'
-                }}
-                onMouseEnter={(e) => {
-                  e.target.style.backgroundColor = '#4CAF50';
-                  e.target.style.color = 'white';
-                }}
-                onMouseLeave={(e) => {
-                  e.target.style.backgroundColor = 'transparent';
-                  e.target.style.color = '#4CAF50';
                 }}
               >
                 📋 Copiar
@@ -180,23 +176,17 @@ export default function Footer() {
               </a>
               <button
                 onClick={() => copyToClipboard('(18) 99817-9849', 'Telefone')}
+                onMouseEnter={() => setPhoneButtonHover(true)}
+                onMouseLeave={() => setPhoneButtonHover(false)}
                 style={{
-                  background: 'transparent',
+                  background: phoneButtonHover ? '#4CAF50' : 'transparent',
                   border: '1px solid #4CAF50',
-                  color: '#4CAF50',
+                  color: phoneButtonHover ? 'white' : '#4CAF50',
                   padding: '2px 6px',
                   borderRadius: '3px',
                   cursor: 'pointer',
                   fontSize: '0.8rem',
                   transition: 'all 0.2s ease'
-                }}
-                onMouseEnter={(e) => {
-                  e.target.style.backgroundColor = '#4CAF50';
-                  e.target.style.color = 'white';
-                }}
-                onMouseLeave={(e) => {
-                  e.target.style.backgroundColor = 'transparent';
-                  e.target.style.color = '#4CAF50';
                 }}
               >
                 📋 Copiar
@@ -236,6 +226,7 @@ export default function Footer() {
     </footer>
   );
 }
+
 
 
 
