@@ -45,43 +45,47 @@ export default function BenefitsSection() {
   ];
 
   return (
-    <section className={`py-16 bg-white ${animationsEnabled ? 'no-animations' : ''}`}>
+    <section className={`py-12 sm:py-16 bg-white ${animationsEnabled ? 'no-animations' : ''}`}>
       {/* Título e subtítulo com animações */}
-      <h2 className={`titulo-principal ${animationsEnabled ? 'animate-fade-up animate-delay-0' : ''}`}>
-        Benefícios do Desafio Vitalidade
-      </h2>
-      <p className={`subtitulo-principal ${animationsEnabled ? 'animate-fade-up animate-delay-200' : ''}`}>
-        Transforme sua saúde e bem-estar com nosso programa de 30 dias cientificamente desenvolvido.
-      </p>
+      <div className="text-center mb-8 sm:mb-12 px-4">
+        <h2 className={`text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-800 mb-4 ${animationsEnabled ? 'animate-fade-up animate-delay-0' : ''}`}>
+          Benefícios do Desafio Vitalidade
+        </h2>
+        <p className={`text-base sm:text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed ${animationsEnabled ? 'animate-fade-up animate-delay-200' : ''}`}>
+          Transforme sua saúde e bem-estar com nosso programa de 30 dias cientificamente desenvolvido.
+        </p>
+      </div>
 
-      {/* Container responsivo para os cards */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Grid responsivo de cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+      {/* Container com padding generoso para mobile */}
+      <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
+        {/* Grid responsivo de cards - coluna única em mobile */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-8">
           {benefits.map((benefit, index) => (
             <div
               key={index}
               className={`
-                relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300
+                relative overflow-hidden rounded-xl sm:rounded-2xl 
+                shadow-md hover:shadow-lg transition-all duration-300
                 bg-gradient-to-br from-white via-gray-50 to-gray-100
                 border border-gray-200 hover:border-green-300
-                p-6 sm:p-8
+                p-4 sm:p-6 lg:p-8
+                max-w-full
                 ${animationsEnabled ? 'animate-fade-right' : ''}
               `}
               style={{
-                backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url(${benefit.bgImage})`,
+                backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)), url(${benefit.bgImage})`,
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 animationDelay: animationsEnabled ? `${200 + (index * 200)}ms` : '0ms'
               }}
               role="article"
             >
-              {/* Header do card com ícone responsivo */}
-              <div className="flex items-start sm:items-center mb-4 sm:mb-6">
+              {/* Header do card com ícone compacto */}
+              <div className="flex items-center mb-3 sm:mb-4">
                 <div 
                   className={`
-                    flex-shrink-0 rounded-full flex items-center justify-center mr-3 sm:mr-4
-                    w-12 h-12 sm:w-16 sm:h-16
+                    flex-shrink-0 rounded-full flex items-center justify-center mr-3
+                    w-10 h-10 sm:w-12 sm:h-12 lg:w-14 lg:h-14
                     bg-green-100 hover:bg-green-200 transition-colors duration-300
                     ${animationsEnabled ? 'animate-fade-right' : ''}
                   `}
@@ -89,23 +93,23 @@ export default function BenefitsSection() {
                     animationDelay: animationsEnabled ? `${400 + (index * 200)}ms` : '0ms' 
                   }}
                 >
-                  <div className="w-6 h-6 sm:w-10 sm:h-10 bg-green-500 rounded-full opacity-60"></div>
+                  <div className="w-5 h-5 sm:w-6 sm:h-6 lg:w-8 lg:h-8 bg-green-500 rounded-full opacity-70"></div>
                 </div>
                 
-                {/* Título responsivo */}
+                {/* Título compacto */}
                 <div className="flex-1 min-w-0">
-                  <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-800 leading-tight">
+                  <h3 className="text-base sm:text-lg lg:text-xl font-bold text-gray-800 leading-tight">
                     {benefit.title}
                   </h3>
                 </div>
               </div>
 
-              {/* Conteúdo do card */}
-              <div className="space-y-3 sm:space-y-4">
+              {/* Conteúdo do card compacto */}
+              <div className="space-y-2 sm:space-y-3">
                 <p className="text-sm sm:text-base text-gray-700 leading-relaxed">
                   {benefit.description}
                 </p>
-                <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
+                <p className="text-xs sm:text-sm text-gray-600 leading-relaxed line-clamp-2">
                   {benefit.extendedDescription}
                 </p>
               </div>
@@ -121,7 +125,7 @@ export default function BenefitsSection() {
           <button
             onClick={() => setAnimationsEnabled(!animationsEnabled)}
             className="
-              px-4 py-2 text-sm text-gray-600 hover:text-gray-800 
+              px-3 py-2 text-xs sm:text-sm text-gray-600 hover:text-gray-800 
               border border-gray-300 hover:border-gray-400 rounded-lg
               transition-colors duration-200
               focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2
@@ -132,8 +136,20 @@ export default function BenefitsSection() {
           </button>
         </div>
       </div>
+
+      {/* CSS adicional para line-clamp */}
+      <style jsx>{`
+        .line-clamp-2 {
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+        }
+      `}</style>
     </section>
   );
 }
+
+
 
 
