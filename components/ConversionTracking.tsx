@@ -2,14 +2,60 @@
 'use client';
 
 import { useEffect } from 'react';
-import { useAnalytics } from './Analytics';
 
 interface ConversionTrackingProps {
   children: React.ReactNode;
 }
 
+// Hook interno para analytics (evita dependência circular)
+function useInternalAnalytics() {
+  const trackEvent = (eventName: string, parameters?: Record<string, any>) => {
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('event', eventName, {
+        event_category: 'engagement',
+        event_label: parameters?.label || '',
+        value: parameters?.value || 0,
+        ...parameters,
+      });
+    }
+    
+    // Também enviar para dataLayer (GTM)
+    if (typeof window !== 'undefined' && window.dataLayer) {
+      window.dataLayer.push({
+        event: eventName,
+        ...parameters,
+      });
+    }
+  };
+
+  const trackConversion = (conversionId: string, value?: number, currency = 'BRL') => {
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('event', 'conversion', {
+        send_to: conversionId,
+        value: value,
+        currency: currency,
+      });
+    }
+    
+    // Enviar para dataLayer também
+    if (typeof window !== 'undefined' && window.dataLayer) {
+      window.dataLayer.push({
+        event: 'conversion',
+        conversion_id: conversionId,
+        conversion_value: value,
+        currency: currency,
+      });
+    }
+  };
+
+  return {
+    trackEvent,
+    trackConversion,
+  };
+}
+
 export default function ConversionTracking({ children }: ConversionTrackingProps) {
-  const { trackEvent, trackConversion } = useAnalytics();
+  const { trackEvent, trackConversion } = useInternalAnalytics();
 
   useEffect(() => {
     // Configurar tracking automático de eventos importantes
@@ -185,7 +231,7 @@ export function ConversionButton({
   eventName?: string;
   [key: string]: any;
 }) {
-  const { trackEvent, trackConversion } = useAnalytics();
+  const { trackEvent, trackConversion } = useInternalAnalytics();
 
   const handleClick = (e: React.MouseEvent) => {
     // Executar tracking
@@ -214,7 +260,7 @@ export function ConversionButton({
 
 // Hook para tracking manual
 export function useConversionTracking() {
-  const { trackEvent, trackConversion } = useAnalytics();
+  const { trackEvent, trackConversion } = useInternalAnalytics();
 
   const trackInscricao = (source: string = 'unknown') => {
     trackEvent('inscricao_iniciada', {
@@ -258,4 +304,14 @@ export function useConversionTracking() {
     trackVideoPlay,
   };
 }
+
+// Tipos para TypeScript
+declare global {
+  interface Window {
+    dataLayer: any[];
+    gtag: (...args: any[]) => void;
+  }
+}
+
+
 
