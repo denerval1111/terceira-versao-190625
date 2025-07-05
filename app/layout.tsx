@@ -1,7 +1,7 @@
-// app/layout.tsx - SEU LAYOUT COM GOOGLE ANALYTICS
+// app/layout.tsx - SEU LAYOUT COM GA4 + GTM COMPLETO
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
-import Script from 'next/script'; // ← ADICIONAR ESTA LINHA
+import Script from 'next/script'; // ← NECESSÁRIO PARA GTM E GA4
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
@@ -31,7 +31,19 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <head>
-        {/* ========== GOOGLE ANALYTICS - ADICIONAR AQUI ========== */}
+        {/* ========== GOOGLE TAG MANAGER - CÓDIGO 1 (HEAD) ========== */}
+        <Script id="google-tag-manager" strategy="afterInteractive">
+          {`
+            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-KC3VWQJP');
+          `}
+        </Script>
+        {/* ======================================================= */}
+
+        {/* ========== GOOGLE ANALYTICS 4 - OPCIONAL ========== */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-ZZ2Z1QZLL8"
           strategy="afterInteractive"
@@ -44,9 +56,20 @@ export default function RootLayout({
             gtag('config', 'G-ZZ2Z1QZLL8');
           `}
         </Script>
-        {/* ======================================================= */}
+        {/* ================================================== */}
       </head>
       <body className={inter.className}>
+        {/* ========== GOOGLE TAG MANAGER - CÓDIGO 2 (BODY) ========== */}
+        <noscript>
+          <iframe 
+            src="https://www.googletagmanager.com/ns.html?id=GTM-KC3VWQJP"
+            height="0" 
+            width="0" 
+            style={{display:'none', visibility:'hidden'}}
+          />
+        </noscript>
+        {/* ======================================================= */}
+
         <Header />
         {children}
         <Footer />
@@ -54,6 +77,8 @@ export default function RootLayout({
     </html>
   );
 }
+
+
 
 
 
